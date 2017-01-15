@@ -15,6 +15,8 @@
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
 		BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */; };
 		BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */; };
+		BAF6E2081E2B30A400AD89C2 /* Shopping Cart_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */; };
+		BAF6E20A1E2B311F00AD89C2 /* Menu_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLNL Background.png"; sourceTree = "<group>"; };
 		BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Homestead-Display.ttf"; sourceTree = "<group>"; };
+		BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart_000000_25.png"; sourceTree = "<group>"; };
+		BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu_000000_25.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				5221420A1E29565100170BA7 /* ViewController.swift */,
 				5221420C1E29565100170BA7 /* Main.storyboard */,
 				5221420F1E29565100170BA7 /* Assets.xcassets */,
+				BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */,
+				BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */,
 				BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
 				522142141E29565100170BA7 /* Info.plist */,
@@ -187,9 +193,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF6E20A1E2B311F00AD89C2 /* Menu_000000_25.png in Resources */,
 				522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */,
 				522142101E29565100170BA7 /* Assets.xcassets in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
+				BAF6E2081E2B30A400AD89C2 /* Shopping Cart_000000_25.png in Resources */,
 				5221420E1E29565100170BA7 /* Main.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
 			);
