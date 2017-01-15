@@ -17,6 +17,10 @@
 		BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */; };
 		BAF6E2081E2B30A400AD89C2 /* Shopping Cart_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */; };
 		BAF6E20A1E2B311F00AD89C2 /* Menu_000000_25.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */; };
+		BAF6E20C1E2B3CE000AD89C2 /* www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E20B1E2B3CE000AD89C2 /* www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png */; };
+		BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */; };
+		BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */; };
+		BAF6E2121E2B450A00AD89C2 /* LeftDrawerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E2111E2B450A00AD89C2 /* LeftDrawerData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Homestead-Display.ttf"; sourceTree = "<group>"; };
 		BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart_000000_25.png"; sourceTree = "<group>"; };
 		BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menu_000000_25.png; sourceTree = "<group>"; };
+		BAF6E20B1E2B3CE000AD89C2 /* www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png"; sourceTree = "<group>"; };
+		BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellTableViewCell.swift; sourceTree = "<group>"; };
+		BAF6E2111E2B450A00AD89C2 /* LeftDrawerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +98,15 @@
 				5221420A1E29565100170BA7 /* ViewController.swift */,
 				5221420C1E29565100170BA7 /* Main.storyboard */,
 				5221420F1E29565100170BA7 /* Assets.xcassets */,
+				BAF6E20B1E2B3CE000AD89C2 /* www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png */,
 				BAF6E2091E2B311F00AD89C2 /* Menu_000000_25.png */,
 				BAF6E2071E2B30A400AD89C2 /* Shopping Cart_000000_25.png */,
 				BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
 				522142141E29565100170BA7 /* Info.plist */,
+				BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */,
+				BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */,
+				BAF6E2111E2B450A00AD89C2 /* LeftDrawerData.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -196,6 +208,7 @@
 				BAF6E20A1E2B311F00AD89C2 /* Menu_000000_25.png in Resources */,
 				522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */,
 				522142101E29565100170BA7 /* Assets.xcassets in Resources */,
+				BAF6E20C1E2B3CE000AD89C2 /* www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
 				BAF6E2081E2B30A400AD89C2 /* Shopping Cart_000000_25.png in Resources */,
 				5221420E1E29565100170BA7 /* Main.storyboard in Resources */,
@@ -217,8 +230,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAF6E2121E2B450A00AD89C2 /* LeftDrawerData.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
+				BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */,
+				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
