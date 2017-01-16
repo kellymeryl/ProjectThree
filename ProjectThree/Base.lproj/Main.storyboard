@@ -28,10 +28,10 @@
             </objects>
             <point key="canvasLocation" x="-476" y="188"/>
         </scene>
-        <!--View Controller-->
+        <!--All Items Collection View Controller-->
         <scene sceneID="KUH-bC-q3B">
             <objects>
-                <viewController id="3cf-08-5e3" customClass="ViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3cf-08-5e3" customClass="AllItemsCollectionViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qgo-M8-N1s"/>
                         <viewControllerLayoutGuide type="bottom" id="Zvz-G7-LJH"/>
@@ -60,7 +60,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ylz-tE-N41">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="ylz-tE-N41" customClass="AllItemsCollectionViewCell" customModule="ProjectThree" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -68,7 +68,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lumber Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-eu-b8G">
-                                                    <rect key="frame" x="35.5" y="8" width="109" height="108.5"/>
+                                                    <rect key="frame" x="36" y="8" width="109" height="109"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="F1L-eu-b8G" secondAttribute="height" multiplier="1:1" id="RDE-JD-gi0"/>
                                                     </constraints>
@@ -80,7 +80,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsG-rd-TrR" userLabel="Item Price">
-                                                    <rect key="frame" x="8" y="148.5" width="165" height="17.5"/>
+                                                    <rect key="frame" x="8" y="148.5" width="165" height="18"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -101,8 +101,17 @@
                                             <constraint firstItem="F1L-eu-b8G" firstAttribute="width" secondItem="ylz-tE-N41" secondAttribute="width" multiplier="0.6" id="eyR-wf-fhy"/>
                                             <constraint firstItem="LbU-Mq-Wt5" firstAttribute="top" secondItem="F1L-eu-b8G" secondAttribute="bottom" constant="8.5" id="rDG-Ok-cOP"/>
                                         </constraints>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="F1L-eu-b8G" id="f72-FI-oEj"/>
+                                            <outlet property="itemNameLabel" destination="LbU-Mq-Wt5" id="1oO-9s-bmJ"/>
+                                            <outlet property="itemPriceLabel" destination="hsG-rd-TrR" id="t38-aF-KgC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="3cf-08-5e3" id="Pe5-0h-PQH"/>
+                                    <outlet property="delegate" destination="3cf-08-5e3" id="QWm-nO-FH6"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -146,9 +155,27 @@
             <point key="canvasLocation" x="445.60000000000002" y="188.45577211394306"/>
         </scene>
         <!--View Controller-->
+        <scene sceneID="v8y-Lq-4Rq">
+            <objects>
+                <viewController id="Jvd-Q5-PSw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HuB-Gk-0cz"/>
+                        <viewControllerLayoutGuide type="bottom" id="8PW-4s-4ek"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cJa-Pf-S1M">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bKR-PJ-yCV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1321" y="563"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
         <scene sceneID="M1I-h6-Vvj">
             <objects>
-                <viewController id="lod-mM-fuo" sceneMemberID="viewController">
+                <viewController id="lod-mM-fuo" customClass="ShoppingCartViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="9fP-gN-51D"/>
                         <viewControllerLayoutGuide type="bottom" id="o3k-tA-zUz"/>
@@ -161,9 +188,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mgO-sd-gni">
-                                <rect key="frame" x="0.0" y="64" width="375" height="530"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="479"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingCartCell" rowHeight="120" id="Pq7-hS-H8q" customClass="ShoppingCartCellTableViewCell" customModule="ProjectThree" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="120"/>
@@ -178,36 +205,48 @@
                                                         <constraint firstAttribute="width" secondItem="cgU-ZM-mwl" secondAttribute="height" multiplier="1:1" id="0Fd-tj-vS6"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-tm-ffA">
-                                                    <rect key="frame" x="131" y="8" width="236" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PVa-tm-ffA">
+                                                    <rect key="frame" x="131" y="2" width="236" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-rA-4n0">
-                                                    <rect key="frame" x="131" y="37" width="33" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lsu-rA-4n0">
+                                                    <rect key="frame" x="131" y="27" width="236" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2p-hC-Gdb">
-                                                    <rect key="frame" x="131" y="66" width="65" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZD-sX-cLa">
+                                                    <rect key="frame" x="131" y="90" width="236" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CZD-sX-cLa">
-                                                    <rect key="frame" x="131" y="90" width="39" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V2p-hC-Gdb">
+                                                    <rect key="frame" x="131" y="61" width="236" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="CZD-sX-cLa" secondAttribute="trailing" id="1Ae-Se-s3m"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PVa-tm-ffA" secondAttribute="trailing" id="45Z-zB-TlH"/>
+                                                <constraint firstItem="PVa-tm-ffA" firstAttribute="leading" secondItem="cgU-ZM-mwl" secondAttribute="trailing" constant="8" id="9Ku-Rz-bGN"/>
+                                                <constraint firstItem="CZD-sX-cLa" firstAttribute="leading" secondItem="cgU-ZM-mwl" secondAttribute="trailing" constant="8" id="Lgq-IC-kOu"/>
+                                                <constraint firstItem="PVa-tm-ffA" firstAttribute="top" secondItem="cgU-ZM-mwl" secondAttribute="top" id="N5I-im-psR"/>
+                                                <constraint firstItem="CZD-sX-cLa" firstAttribute="top" secondItem="V2p-hC-Gdb" secondAttribute="bottom" constant="8" id="SiR-6C-w4B"/>
+                                                <constraint firstItem="Lsu-rA-4n0" firstAttribute="leading" secondItem="cgU-ZM-mwl" secondAttribute="trailing" constant="8" id="XA2-vz-5IE"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Lsu-rA-4n0" secondAttribute="trailing" id="Y2o-44-s1Z"/>
+                                                <constraint firstItem="V2p-hC-Gdb" firstAttribute="leading" secondItem="cgU-ZM-mwl" secondAttribute="trailing" constant="8" id="chH-SC-hFH"/>
+                                                <constraint firstItem="V2p-hC-Gdb" firstAttribute="top" secondItem="Lsu-rA-4n0" secondAttribute="bottom" constant="13" id="lAf-lF-DPI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="V2p-hC-Gdb" secondAttribute="trailing" id="nmz-vW-3xq"/>
+                                                <constraint firstItem="Lsu-rA-4n0" firstAttribute="top" secondItem="PVa-tm-ffA" secondAttribute="bottom" constant="7.5" id="rUP-S4-7Yh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="cgU-ZM-mwl" firstAttribute="top" secondItem="Pq7-hS-H8q" secondAttribute="top" constant="2" id="9EQ-lm-h9H"/>
                                             <constraint firstAttribute="bottom" secondItem="cgU-ZM-mwl" secondAttribute="bottom" constant="3" id="Jp1-xi-gni"/>
@@ -235,6 +274,13 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subtotal: $###.##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYS-4c-NSX">
+                                <rect key="frame" x="135" y="551" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -265,7 +311,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9E-vL-Yc8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1256.8" y="187.55622188905548"/>
+            <point key="canvasLocation" x="1321" y="-136"/>
         </scene>
     </scenes>
     <resources>
