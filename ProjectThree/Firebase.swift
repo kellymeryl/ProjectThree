@@ -145,3 +145,19 @@ func databaseChanged(snapshot: FIRDataSnapshot) {
    
 }
 
+
+func deleteData(key:String) {
+   
+   let firebaseRef = FIRDatabase.database().reference(withPath: key)
+   firebaseRef.removeValue()
+}
+
+
+
+
+
+
+
+
+
+
