@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
-        <!--Title-->
+        <!--VendorLoginViewController-->
         <scene sceneID="l4K-3B-W2k">
             <objects>
-                <viewController id="tn3-Hu-S79" sceneMemberID="viewController">
+                <viewController title="VendorLoginViewController" id="tn3-Hu-S79" customClass="VendorLoginViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="o1a-rE-ymy"/>
                         <viewControllerLayoutGuide type="bottom" id="czY-AE-DNF"/>
@@ -181,10 +181,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VzH-FQ-G87">
                                 <rect key="frame" x="16" y="467" width="343" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="vendorLoginWasTapped:" destination="tn3-Hu-S79" eventType="touchUpInside" id="wFR-fW-LcD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Zf-ue-KFz">
                                 <rect key="frame" x="16" y="533" width="343" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="vendorSignUpWasTapped:" destination="tn3-Hu-S79" eventType="touchUpInside" id="BPg-0S-ed7"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2JZ-kj-WEA">
                                 <rect key="frame" x="16" y="327" width="343" height="30"/>
@@ -226,6 +232,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="qT8-Da-n9I"/>
+                    <connections>
+                        <outlet property="vendorPasswordTextField" destination="2JZ-kj-WEA" id="sn7-ys-99c"/>
+                        <outlet property="vendorUsernameTextField" destination="l6V-Wh-RxG" id="nyY-jW-vmb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9A6-Hb-yhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
