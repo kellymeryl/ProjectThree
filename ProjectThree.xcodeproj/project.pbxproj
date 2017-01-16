@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B4C012183FBD985700E8BB4 /* Pods_ProjectThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */; };
+		377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */; };
+		377FE3D61E2D168500D2F422 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3D51E2D168500D2F422 /* Firebase.swift */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
 		5221420E1E29565100170BA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221420C1E29565100170BA7 /* Main.storyboard */; };
@@ -26,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		377FE3D51E2D168500D2F422 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -36,6 +41,9 @@
 		522142191E29565200170BA7 /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.release.xcconfig"; sourceTree = "<group>"; };
+		F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.debug.xcconfig"; sourceTree = "<group>"; };
+		FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B4C012183FBD985700E8BB4 /* Pods_ProjectThree.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +65,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02E4022099F4215E175CC7CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1DFB5A3EE103828249C5CB7C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */,
+				7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
 				522142071E29565100170BA7 /* ProjectThree */,
 				5221421C1E29565200170BA7 /* ProjectThreeTests */,
 				522142061E29565100170BA7 /* Products */,
+				1DFB5A3EE103828249C5CB7C /* Pods */,
+				02E4022099F4215E175CC7CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,6 +111,8 @@
 				5221420F1E29565100170BA7 /* Assets.xcassets */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
 				522142141E29565100170BA7 /* Info.plist */,
+				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
+				377FE3D51E2D168500D2F422 /* Firebase.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -103,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 522142221E29565200170BA7 /* Build configuration list for PBXNativeTarget "ProjectThree" */;
 			buildPhases = (
+				9F5304B34296FB8B3006AE0E /* [CP] Check Pods Manifest.lock */,
 				522142011E29565100170BA7 /* Sources */,
 				522142021E29565100170BA7 /* Frameworks */,
 				522142031E29565100170BA7 /* Resources */,
+				A798CFEF44C8574E6D5DAE02 /* [CP] Embed Pods Frameworks */,
+				EF337F6E22C7AB41E09F18D4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +216,7 @@
 			files = (
 				522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */,
 				522142101E29565100170BA7 /* Assets.xcassets in Resources */,
+				377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */,
 				5221420E1E29565100170BA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -196,11 +230,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9F5304B34296FB8B3006AE0E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A798CFEF44C8574E6D5DAE02 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF337F6E22C7AB41E09F18D4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		522142011E29565100170BA7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				377FE3D61E2D168500D2F422 /* Firebase.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
 			);
@@ -339,6 +422,7 @@
 		};
 		522142231E29565200170BA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
@@ -352,6 +436,7 @@
 		};
 		522142241E29565200170BA7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
@@ -412,6 +497,7 @@
 				522142241E29565200170BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		522142251E29565200170BA7 /* Build configuration list for PBXNativeTarget "ProjectThreeTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +506,7 @@
 				522142271E29565200170BA7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
