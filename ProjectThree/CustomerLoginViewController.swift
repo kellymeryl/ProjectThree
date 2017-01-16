@@ -10,6 +10,18 @@ import UIKit
 
 class CustomerLoginViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBAction func loginButtonWasTapped(_ sender: Any) {
+        
+    }
+    
+    @IBAction func signUpButtonWasTapped(_ sender: Any) {
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

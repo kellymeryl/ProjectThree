@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-646" y="139"/>
         </scene>
-        <!--View Controller-->
+        <!--CustomerLoginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CustomerLoginViewController" id="BYZ-38-t0r" customClass="CustomerLoginViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -65,10 +65,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqH-wz-APO">
                                 <rect key="frame" x="16" y="468" width="343" height="30"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="loginButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nWs-Ib-Kec"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPG-6Q-V57">
                                 <rect key="frame" x="16" y="524" width="343" height="30"/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButtonWasTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zJJ-Wc-Ha0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,6 +118,10 @@
                             </subviews>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="YAc-3J-2LL" id="vim-5F-dOq"/>
+                        <outlet property="usernameTextField" destination="q9g-7C-OLW" id="XJF-fw-pQE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
