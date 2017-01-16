@@ -7,6 +7,8 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -47,6 +49,61 @@
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gz9-lY-eYf">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="3yB-4d-dKI">
+                                    <size key="itemSize" width="181" height="181"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ylz-tE-N41">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="181"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lumber Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="F1L-eu-b8G">
+                                                    <rect key="frame" x="35.5" y="8" width="109" height="108.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="F1L-eu-b8G" secondAttribute="height" multiplier="1:1" id="RDE-JD-gi0"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbU-Mq-Wt5" userLabel="Item Name">
+                                                    <rect key="frame" x="8" y="125" width="165" height="21"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsG-rd-TrR" userLabel="Item Price">
+                                                    <rect key="frame" x="8" y="148.5" width="165" height="17.5"/>
+                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="hsG-rd-TrR" firstAttribute="centerX" secondItem="ylz-tE-N41" secondAttribute="centerX" id="0wu-Fj-LTl"/>
+                                            <constraint firstAttribute="leadingMargin" secondItem="hsG-rd-TrR" secondAttribute="leading" id="BNl-6Q-Tu1"/>
+                                            <constraint firstItem="F1L-eu-b8G" firstAttribute="centerX" secondItem="ylz-tE-N41" secondAttribute="centerX" id="Ek4-3w-FiU"/>
+                                            <constraint firstItem="LbU-Mq-Wt5" firstAttribute="centerX" secondItem="ylz-tE-N41" secondAttribute="centerX" id="M3b-my-piz"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="hsG-rd-TrR" secondAttribute="trailing" id="OVa-dZ-Sxk"/>
+                                            <constraint firstAttribute="topMargin" secondItem="F1L-eu-b8G" secondAttribute="top" id="ROf-Af-bgj"/>
+                                            <constraint firstAttribute="leadingMargin" secondItem="LbU-Mq-Wt5" secondAttribute="leading" id="SPU-gJ-y1K"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="LbU-Mq-Wt5" secondAttribute="trailing" id="Snk-aO-YiH"/>
+                                            <constraint firstItem="hsG-rd-TrR" firstAttribute="top" secondItem="LbU-Mq-Wt5" secondAttribute="bottom" constant="6" id="aJS-TU-ERs"/>
+                                            <constraint firstItem="F1L-eu-b8G" firstAttribute="width" secondItem="ylz-tE-N41" secondAttribute="width" multiplier="0.6" id="eyR-wf-fhy"/>
+                                            <constraint firstItem="LbU-Mq-Wt5" firstAttribute="top" secondItem="F1L-eu-b8G" secondAttribute="bottom" constant="8.5" id="rDG-Ok-cOP"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -58,7 +115,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="WGz-38-YrP">
                         <nil key="title"/>
-                        <barButtonItem key="leftBarButtonItem" image="Menu_000000_25.png" id="hfW-CZ-ILI">
+                        <barButtonItem key="leftBarButtonItem" image="Menu 3 Lines.png" id="hfW-CZ-ILI">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="HLi-vu-FZC">
@@ -76,7 +133,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart_000000_25.png" id="fsJ-Cp-zBR">
+                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="fsJ-Cp-zBR">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <segue destination="lod-mM-fuo" kind="show" id="nrZ-6K-FuA"/>
@@ -115,7 +172,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-ZM-mwl">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lumber Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="cgU-ZM-mwl">
                                                     <rect key="frame" x="8" y="2" width="115" height="115"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="cgU-ZM-mwl" secondAttribute="height" multiplier="1:1" id="0Fd-tj-vS6"/>
@@ -213,8 +270,8 @@
     </scenes>
     <resources>
         <image name="FLNL Background.png" width="2047" height="2047"/>
-        <image name="Menu_000000_25.png" width="25" height="25"/>
-        <image name="Shopping Cart_000000_25.png" width="25" height="25"/>
-        <image name="www_thebeardmag_com_wp-content_uploads_2015_04_lumbersexual1_jpeg.png" width="1602" height="1602"/>
+        <image name="Lumber Placeholder.png" width="1602" height="1602"/>
+        <image name="Menu 3 Lines.png" width="25" height="25"/>
+        <image name="Shopping Cart.png" width="25" height="25"/>
     </resources>
 </document>
