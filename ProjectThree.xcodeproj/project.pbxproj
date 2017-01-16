@@ -15,6 +15,7 @@
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
 		527F3E411E2D3E0E00F8C307 /* CustomerLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E401E2D3E0E00F8C307 /* CustomerLoginViewController.swift */; };
 		527F3E431E2D411F00F8C307 /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E421E2D411F00F8C307 /* VendorLoginViewController.swift */; };
+		527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		527F3E401E2D3E0E00F8C307 /* CustomerLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerLoginViewController.swift; sourceTree = "<group>"; };
 		527F3E421E2D411F00F8C307 /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
+		527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				522142141E29565100170BA7 /* Info.plist */,
 				527F3E401E2D3E0E00F8C307 /* CustomerLoginViewController.swift */,
 				527F3E421E2D411F00F8C307 /* VendorLoginViewController.swift */,
+				527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */,
 				527F3E431E2D411F00F8C307 /* VendorLoginViewController.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
