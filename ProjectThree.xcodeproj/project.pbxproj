@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
-		5221420E1E29565100170BA7 /* CustomerUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5221420C1E29565100170BA7 /* CustomerUI.storyboard */; };
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
 		522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522142111E29565100170BA7 /* LaunchScreen.storyboard */; };
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
@@ -20,6 +19,7 @@
 		BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */; };
 		BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */; };
 		BA3179B01E2E60210006D532 /* CheckoutSectionsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179AF1E2E60210006D532 /* CheckoutSectionsData.swift */; };
+		BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */; };
 		BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */; };
 		BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */; };
 		BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2071E2B30A400AD89C2 /* Shopping Cart.png */; };
@@ -44,7 +44,6 @@
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5221420D1E29565100170BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CustomerUI.storyboard; sourceTree = "<group>"; };
 		5221420F1E29565100170BA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		522142121E29565100170BA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		522142141E29565100170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +57,7 @@
 		BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		BA3179AF1E2E60210006D532 /* CheckoutSectionsData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutSectionsData.swift; sourceTree = "<group>"; };
+		BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CustomerUI.storyboard; sourceTree = "<group>"; };
 		BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLNL Background.png"; sourceTree = "<group>"; };
 		BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Homestead-Display.ttf"; sourceTree = "<group>"; };
 		BAF6E2071E2B30A400AD89C2 /* Shopping Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart.png"; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		BA3179A51E2D7FBC0006D532 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				5221420C1E29565100170BA7 /* CustomerUI.storyboard */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
+				BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				BAF6E20C1E2B3CE000AD89C2 /* Lumber Placeholder.png in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
 				BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */,
-				5221420E1E29565100170BA7 /* CustomerUI.storyboard in Resources */,
+				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5221420C1E29565100170BA7 /* CustomerUI.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5221420D1E29565100170BA7 /* Base */,
-			);
-			name = CustomerUI.storyboard;
-			sourceTree = "<group>";
-		};
 		522142111E29565100170BA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
