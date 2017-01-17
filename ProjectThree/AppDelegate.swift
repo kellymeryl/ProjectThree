@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+
 
     var window: UIWindow?
 
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Set translucent. (Default value is already true, so this can be removed if desired.)
         UINavigationBar.appearance().isTranslucent = true
         // Override point for customization after application launch.
+        FIRApp.configure()
         return true
     }
 

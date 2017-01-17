@@ -1,0 +1,6 @@
+framework module Pods_ProjectThree {
+  umbrella header "Pods-ProjectThree-umbrella.h"
+
+  export *
+  module * { export * }
+}
