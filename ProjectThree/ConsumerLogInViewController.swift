@@ -15,7 +15,7 @@ class ConsumerLogInViewController: UIViewController {
     
     @IBAction func signInButtonWasTapped(_ sender: Any) {
         
-        login(email: userPasswordTextField.text!, password: userPasswordTextField.text!, complete: { success in
+        login(email: userUserNameTextField.text!, password: userPasswordTextField.text!, complete: { success in
             
             if success {
             print("success")
