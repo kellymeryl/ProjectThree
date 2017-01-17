@@ -53,7 +53,7 @@ class ConsumerSignUpViewController: UIViewController {
             alertController.addAction(defaultAction)
             self.present(alertController, animated: true, completion: nil)
         }
-        else if consumerPasswordTextField.text!.characters.count < 6 || consumerConfirmPasswordTextField.text!.characters.count < 6 {
+        else if consumerPasswordTextField.text!.characters.count < 6 {
             
             let alertController = UIAlertController(title: "Error", message: "Please enter a password that is longer than 6 characters", preferredStyle: .alert)
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
