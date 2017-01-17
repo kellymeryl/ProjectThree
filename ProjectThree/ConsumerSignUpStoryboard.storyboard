@@ -13,7 +13,7 @@
         <scene sceneID="6kp-WY-gIf">
             <objects>
                 <navigationController id="iWf-89-MPr" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="EwA-vO-Ogc">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EwA-vO-Ogc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -51,7 +51,6 @@
                                 </state>
                                 <connections>
                                     <action selector="consumerSignUpButtonWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="aOn-jk-eWZ"/>
-                                    <action selector="signUpButtonWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="FNe-hy-q1I"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UCi-qU-FiU">
@@ -84,6 +83,7 @@
                                 </state>
                                 <connections>
                                     <action selector="consumerAlreadyAUserButtonWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="025-HH-sv0"/>
+                                    <segue destination="L28-H0-KHS" kind="show" id="gzw-61-kEz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-ez-bJ2">
@@ -133,6 +133,73 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dDb-lu-ooC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
+        </scene>
+        <!--Consumer Log In View Controller-->
+        <scene sceneID="5bi-n5-mOz">
+            <objects>
+                <viewController id="L28-H0-KHS" customClass="ConsumerLogInViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LjD-Kh-eIT"/>
+                        <viewControllerLayoutGuide type="bottom" id="beT-UD-Sny"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FFO-Yz-vMH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FLNL Background.png" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-uz-e0t">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s4O-Dj-fVz">
+                                <rect key="frame" x="16" y="487" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="20"/>
+                                <state key="normal" title="Don't Have An Account?">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="doesntHaveAccountWasTapped:" destination="L28-H0-KHS" eventType="touchUpInside" id="iQq-02-LyM"/>
+                                    <segue destination="A2G-Su-24F" kind="unwind" identifier="unwindFromConsumerLoginVCToConsumerSignUpVC" unwindAction="unwindFromConsumerLoginVCToConsumerSignUpVC:" id="C6U-L1-cxP"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w1e-nL-fKK">
+                                <rect key="frame" x="35" y="162" width="311" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laM-po-g7O">
+                                <rect key="frame" x="35" y="258" width="311" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDR-tA-Baw">
+                                <rect key="frame" x="148" y="430" width="84" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                <state key="normal" title="SIGN IN">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInButtonWasTapped:" destination="L28-H0-KHS" eventType="touchUpInside" id="dLq-tK-SLp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="userPasswordTextField" destination="laM-po-g7O" id="3Xd-Uv-F9I"/>
+                        <outlet property="userUserNameTextField" destination="w1e-nL-fKK" id="HTp-DA-v6A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gvx-Ie-yDt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="A2G-Su-24F" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1812" y="138.98050974512745"/>
         </scene>
     </scenes>
     <resources>

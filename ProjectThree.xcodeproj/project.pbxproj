@@ -19,6 +19,7 @@
 		527F3E431E2D411F00F8C307 /* VendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E421E2D411F00F8C307 /* VendorLoginViewController.swift */; };
 		527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */; };
 		527F3E491E2E72B800F8C307 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527F3E481E2E72B800F8C307 /* LoginStoryboard.storyboard */; };
+		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
 		52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */; };
 		52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */; };
 		BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31799E1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift */; };
@@ -65,6 +66,7 @@
 		527F3E421E2D411F00F8C307 /* VendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorLoginViewController.swift; sourceTree = "<group>"; };
 		527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerDataModel.swift; sourceTree = "<group>"; };
 		527F3E481E2E72B800F8C307 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
+		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerSignUpViewController.swift; sourceTree = "<group>"; };
 		7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		522142071E29565100170BA7 /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+				52A71DA51E2EDADB00906D1E /* Consumer Login */,
 				BA3179A61E2D7FC30006D532 /* Model */,
 				BA3179A51E2D7FBC0006D532 /* UI */,
 				BA3179A41E2D7FB70006D532 /* Images */,
@@ -174,6 +177,15 @@
 			path = ProjectThreeTests;
 			sourceTree = "<group>";
 		};
+		52A71DA51E2EDADB00906D1E /* Consumer Login */ = {
+			isa = PBXGroup;
+			children = (
+				52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */,
+				52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */,
+			);
+			name = "Consumer Login";
+			sourceTree = "<group>";
+		};
 		BA3179A31E2D7FB10006D532 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,7 +198,6 @@
 				BA3179A91E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift */,
 				BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */,
 				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
-				52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -391,6 +402,7 @@
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
 				527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */,
+				52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */,
 				527F3E431E2D411F00F8C307 /* VendorLoginViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
 				BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */,
