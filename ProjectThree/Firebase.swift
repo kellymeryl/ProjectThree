@@ -8,8 +8,7 @@
 
 import Foundation
 import Firebase
-
-
+import FirebaseAuth
 
 
 struct Vendor {
@@ -145,7 +144,7 @@ func databaseChanged(snapshot: FIRDataSnapshot) {
    
 }
 
-
+//To delete anything
 func deleteData(key:String) {
    
    let firebaseRef = FIRDatabase.database().reference(withPath: key)
@@ -153,6 +152,57 @@ func deleteData(key:String) {
 }
 
 
+
+
+//MARK: AUTH FUNCTIONS
+
+
+func newUserSignup(viewController:UIViewController, emailTextField:String, passwordTextField:String) {
+   if emailTextField == "" {
+      let alertController = UIAlertController(title: "Error", message: "Please enter a valid email address", preferredStyle: .alert)
+      
+      let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+      alertController.addAction(defaultAction)
+      
+      viewController.present(alertController, animated: true, completion: nil)
+   } else {
+      FIRAuth.auth()?.createUser(withEmail: emailTextField, password: passwordTextField, completion: { (user, error) in
+         
+         if error == nil {
+            print("Signup successful")
+            
+            let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "Home") //Set home page identifier
+            
+            viewController.present(vc!, animated: true, completion: nil)
+
+         } else {
+            let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            viewController.present(alertController, animated: true, completion: nil)
+         }
+      })
+   }
+}
+
+
+func login(email: String, password: String, complete: @escaping (Bool)->()) {
+   
+   FIRAuth.auth()?.signIn(withEmail: email, password: password) { user, error in
+         complete(user != nil)
+      }
+   }
+
+func logout() {
+   
+   do {
+      try FIRAuth.auth()?.signOut()
+   } catch {
+      print(error)
+   }
+}
 
 
 
