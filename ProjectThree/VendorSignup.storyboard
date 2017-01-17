@@ -114,10 +114,10 @@
             </objects>
             <point key="canvasLocation" x="1076" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--New Vendor Login View Controller-->
         <scene sceneID="5Hg-ol-Mk6">
             <objects>
-                <viewController id="Z7Z-zW-doc" sceneMemberID="viewController">
+                <viewController id="Z7Z-zW-doc" customClass="NewVendorLoginViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Gkv-UX-te0"/>
                         <viewControllerLayoutGuide type="bottom" id="6wf-MQ-HqE"/>
@@ -154,6 +154,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signUpButtonWasTapped:" destination="zJh-WA-PFU" eventType="touchUpInside" id="4Jy-tX-pH9"/>
+                                    <action selector="vendorLoginPressed:" destination="Z7Z-zW-doc" eventType="touchUpInside" id="QrZ-Ao-eRu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-kg-wZa">
@@ -163,6 +164,10 @@
                                 <state key="normal" title="don't have an account?">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="vendorNeedNewAccountPressed:" destination="Z7Z-zW-doc" eventType="touchUpInside" id="qvP-Zl-HxP"/>
+                                    <segue destination="Wgn-ga-uAW" kind="unwind" identifier="unwindFromVendorLoginVCToVendorSignupVC" unwindAction="unwindFromVendorLoginVCToVendorSignupVC:" id="Fun-lI-2TF"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3e-Rh-jDI">
                                 <rect key="frame" x="160" y="90" width="199" height="33"/>
@@ -171,12 +176,20 @@
                                 <state key="normal" title="login as shopper">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="vendorLoginAsShopperPressed:" destination="Z7Z-zW-doc" eventType="touchUpInside" id="Hve-Bd-uFa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="vendorEmailTF" destination="CeH-FN-Po1" id="cgg-uw-351"/>
+                        <outlet property="vendorPasswordTF" destination="tDT-Kr-NO3" id="5IO-hb-tOR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4I-MA-4qn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Wgn-ga-uAW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1804" y="139"/>
         </scene>

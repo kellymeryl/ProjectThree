@@ -26,42 +26,46 @@ class VendorSignupViewController: UIViewController {
          alertController.addAction(defaultAction)
          
          self.present(alertController, animated: true, completion: nil)
-         }
-      if vendorEmailTF.text == "" {
+      } else if vendorEmailTF.text == "" {
          let alertController = UIAlertController(title: "Error", message: "Please enter a valid email address", preferredStyle: .alert)
          
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          
          self.present(alertController, animated: true, completion: nil)
-      }
-      if vendorPasswordTF.text == "" {
+      } else if vendorPasswordTF.text == "" {
          let alertController = UIAlertController(title: "Error", message: "Please enter a password", preferredStyle: .alert)
          
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          
          self.present(alertController, animated: true, completion: nil)
-      }
-      if vendorConfirmPasswordTF.text == "" {
+      } else if (vendorPasswordTF.text?.characters.count)! < 6 {
+         let alertController = UIAlertController(title: "Error", message: "Password must be at least 6 characters long", preferredStyle: .alert)
+         
+         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+         alertController.addAction(defaultAction)
+         
+         self.present(alertController, animated: true, completion: nil)
+      } else if vendorConfirmPasswordTF.text == "" {
          let alertController = UIAlertController(title: "Error", message: "Please confirm your password", preferredStyle: .alert)
          
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          
          self.present(alertController, animated: true, completion: nil)
-      }
-      if vendorConfirmPasswordTF.text != vendorPasswordTF.text {
+      } else if vendorConfirmPasswordTF.text != vendorPasswordTF.text {
          let alertController = UIAlertController(title: "Error", message: "Confirm password does not match password", preferredStyle: .alert)
          
          let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
          alertController.addAction(defaultAction)
          
          self.present(alertController, animated: true, completion: nil)
-      }
-      
-      
-
+      } else {
+         newUserSignup(viewController: self, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!)
+         
+         addVendor(name: vendorNameTF.text!)
+      }   
    }
    
    
@@ -77,7 +81,11 @@ class VendorSignupViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+   
+   
+   @IBAction func unwindFromVendorLoginVCToVendorSignupVC(_ sender: UIStoryboardSegue) {
+      
+   }
 
     /*
     // MARK: - Navigation
