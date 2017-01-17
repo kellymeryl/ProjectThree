@@ -1,29 +1,14 @@
 //
-//  CheckoutViewController.swift
+//  VenderHomeVC.swift
 //  ProjectThree
 //
-//  Created by Andrew Moskowitz on 1/16/17.
+//  Created by Benjamin Landau on 1/17/17.
 //  Copyright © 2017 Kelly McNevin. All rights reserved.
 //
 
 import UIKit
 
-class CheckoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
-        
-        return cell
-
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return checkoutSections.count
-    }
+class VenderHomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +21,10 @@ class CheckoutViewController: UIViewController, UITableViewDataSource, UITableVi
         // Dispose of any resources that can be recreated.
     }
     
-
+//MARK: @IBOUTLETS================================================
+    
+    @IBOutlet weak var collectionViewOutlet: UICollectionView!
+    
     /*
     // MARK: - Navigation
 
