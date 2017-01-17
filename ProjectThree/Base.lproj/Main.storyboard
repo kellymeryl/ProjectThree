@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="445.60000000000002" y="188.45577211394306"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Detail View Controller-->
         <scene sceneID="v8y-Lq-4Rq">
             <objects>
-                <viewController id="Jvd-Q5-PSw" sceneMemberID="viewController">
+                <viewController id="Jvd-Q5-PSw" customClass="ItemDetailViewController" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="HuB-Gk-0cz"/>
                         <viewControllerLayoutGuide type="bottom" id="8PW-4s-4ek"/>
@@ -181,7 +181,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Knw-wY-MHh">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemDetailCell" id="Knw-wY-MHh" customClass="ItemDetailCollectionViewCell" customModule="ProjectThree" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -194,8 +194,15 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="7TT-dx-t46" id="Jry-6E-wKw"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Jvd-Q5-PSw" id="BvX-DC-vMc"/>
+                                    <outlet property="delegate" destination="Jvd-Q5-PSw" id="0Su-ZA-gV6"/>
+                                </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqe-Z4-fSt">
                                 <rect key="frame" x="16" y="223" width="343" height="21"/>
