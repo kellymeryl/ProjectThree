@@ -17,6 +17,8 @@
 		BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179A01E2D7F540006D532 /* AllItemsCollectionViewCell.swift */; };
 		BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179A71E2DC7A70006D532 /* ItemDetailViewController.swift */; };
 		BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179A91E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift */; };
+		BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */; };
+		BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */; };
 		BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */; };
 		BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */; };
 		BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E2071E2B30A400AD89C2 /* Shopping Cart.png */; };
@@ -52,6 +54,8 @@
 		BA3179A01E2D7F540006D532 /* AllItemsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllItemsCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA3179A71E2DC7A70006D532 /* ItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailViewController.swift; sourceTree = "<group>"; };
 		BA3179A91E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		BAF6E2011E2ADE0600AD89C2 /* FLNL Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FLNL Background.png"; sourceTree = "<group>"; };
 		BAF6E2051E2AE12F00AD89C2 /* Homestead-Display.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Homestead-Display.ttf"; sourceTree = "<group>"; };
 		BAF6E2071E2B30A400AD89C2 /* Shopping Cart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Shopping Cart.png"; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				BA3179A01E2D7F540006D532 /* AllItemsCollectionViewCell.swift */,
 				BA3179A71E2DC7A70006D532 /* ItemDetailViewController.swift */,
 				BA3179A91E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift */,
+				BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */,
+				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
 			);
 			name = Logic;
 			sourceTree = "<group>";
@@ -282,7 +288,9 @@
 				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
 				BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
+				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
+				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
