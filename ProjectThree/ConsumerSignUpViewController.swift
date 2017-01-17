@@ -20,13 +20,14 @@ class ConsumerSignUpViewController: UIViewController {
 
     }
     @IBAction func consumerSignUpButtonWasTapped(_ sender: Any) {
-        
+        //signs consumer up as user
     }
     
     @IBAction func consumerAlreadyAUserButtonWasTapped(_ sender: Any) {
-        
+        //segues to consumer login page
     }
     @IBAction func consumerSignUpAsVendorWasTapped(_ sender: Any) {
+        //segues to vendor login page
         
     }
     
