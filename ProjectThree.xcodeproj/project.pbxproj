@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B4C012183FBD985700E8BB4 /* Pods_ProjectThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */; };
 		377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */; };
-		377FE3D61E2D168500D2F422 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3D51E2D168500D2F422 /* Firebase.swift */; };
+		377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3D51E2D168500D2F422 /* DataModel.swift */; };
 		377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */; };
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
@@ -18,7 +18,6 @@
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
 		522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522142111E29565100170BA7 /* LaunchScreen.storyboard */; };
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
-		527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */; };
 		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
 		52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */; };
 		52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */; };
@@ -55,7 +54,7 @@
 
 /* Begin PBXFileReference section */
 		377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		377FE3D51E2D168500D2F422 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		377FE3D51E2D168500D2F422 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorSignup.storyboard; sourceTree = "<group>"; };
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +67,6 @@
 		522142191E29565200170BA7 /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerDataModel.swift; sourceTree = "<group>"; };
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerSignUpViewController.swift; sourceTree = "<group>"; };
@@ -192,8 +190,7 @@
 				BA3179A51E2D7FBC0006D532 /* UI */,
 				BA3179A41E2D7FB70006D532 /* Images */,
 				BA3179A31E2D7FB10006D532 /* View Controllers */,
-				377FE3D51E2D168500D2F422 /* Firebase.swift */,
-				527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */,
+				377FE3D51E2D168500D2F422 /* DataModel.swift */,
 				522142081E29565100170BA7 /* AppDelegate.swift */,
 				522142141E29565100170BA7 /* Info.plist */,
 				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
@@ -430,10 +427,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				377FE3D61E2D168500D2F422 /* Firebase.swift in Sources */,
+				377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
-				527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */,
 				52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
 				377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */,

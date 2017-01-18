@@ -18,7 +18,6 @@ struct Vendor {
    var reference: FIRDatabaseReference?
    
    //Snapshot initializer for creating Struct instances when we observe Vendor
-   
    init(snapshot: FIRDataSnapshot) {
       //For Jay - Is it better practice to use an if/let statement here?
       let vendorName = snapshot.childSnapshot(forPath: "name")
@@ -207,6 +206,46 @@ func observeItems(success: @escaping ([Item]) -> ()) {
       }
       DispatchQueue.main.async {
          success(arrayOfItems)
+      }
+   })
+}
+
+func observeCustomers(success: @escaping ([Customer]) -> ()) {
+   var arrayOfCustomers = [Customer]()
+   
+   let databaseReference = FIRDatabase.database().reference()
+   databaseReference.observe(.value, with: { snapshot in
+      
+      let allCustomersSnapshot = snapshot.childSnapshot(forPath: "customer")
+      for singleCustomer in allCustomersSnapshot.children {
+         
+         if let customerSnapshot = singleCustomer as? FIRDataSnapshot {
+            var customerInstance = Customer(snapshot: customerSnapshot)
+            arrayOfCustomers.append(customerInstance)
+         }
+      }
+      DispatchQueue.main.async {
+         success(arrayOfCustomers)
+      }
+   })
+}
+
+func observeVendors(success: @escaping ([Vendor]) -> ()) {
+   var arrayOfVendors = [Vendor]()
+   
+   let databaseReference = FIRDatabase.database().reference()
+   databaseReference.observe(.value, with: { snapshot in
+      
+      let allVendorsSnapshot = snapshot.childSnapshot(forPath: "vendor")
+      for singleVendor in allVendorsSnapshot.children {
+         
+         if let vendorSnapshot = singleVendor as? FIRDataSnapshot {
+            var vendorInstance = Vendor(snapshot: vendorSnapshot)
+            arrayOfVendors.append(vendorInstance)
+         }
+      }
+      DispatchQueue.main.async {
+         success(arrayOfVendors)
       }
    })
 }
