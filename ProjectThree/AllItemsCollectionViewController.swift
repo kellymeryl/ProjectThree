@@ -12,6 +12,7 @@ import Firebase
 class AllItemsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var allItemsCollection: UICollectionView!
+   
     
     var allItems = [Item]() {
         didSet {

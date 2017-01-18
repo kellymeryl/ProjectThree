@@ -105,16 +105,19 @@ struct Item {
    var category: String
    var size: String
    var price: Float
-   var image: UIImage
+   var image: [UIImage]?
+   var description: String
+   var vendor: String?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   init(name:String, category:String, size:String, price:Float, image:UIImage) {
+   init(name:String, category:String, size:String, price:Float, image:[UIImage]?, description:String) {
       self.name = name
       self.category = category
       self.size = size
       self.price = price
       self.image = image
+      self.description = description
    }
    
    //Snapshot initializer for creating Struct instances when we observe Item
@@ -127,8 +130,9 @@ struct Item {
       size = itemSize.value as! String
       let itemPrice = snapshot.childSnapshot(forPath: "price")
       price = itemPrice.value as! Float
-      let itemImage = snapshot.childSnapshot(forPath: "image")
-      image = itemImage.value as! UIImage
+      let itemDescription = snapshot.childSnapshot(forPath: "description")
+      description = itemDescription.value as! String
+
       
       uID = snapshot.key
       reference = snapshot.ref
@@ -143,6 +147,7 @@ struct Item {
 func addVendor(name: String) {
    let vendorRef = FIRDatabase.database().reference(withPath: "vendor")
    let vendorChild = vendorRef.childByAutoId()
+   
    let vendorName = vendorChild.child("name")
    vendorName.setValue(name)
 }
@@ -157,17 +162,21 @@ func addCustomer(name: String) {
 
 
 //Change inputs to Item properties
-func addItem(name: String, category: String, size: String, price: Int) {
+func addItem(name: String, description:String, category: String, size: String, price: Int, vendorUID: String) {
    let itemRef = FIRDatabase.database().reference(withPath: "item")
    let itemChild = itemRef.childByAutoId()
    let itemName = itemChild.child("name")
    itemName.setValue(name)
+   let itemDescription = itemRef.childByAutoId()
+   itemDescription.setValue(description)
    let itemCategory = itemChild.child("category")
    itemCategory.setValue(category)
    let itemSize = itemChild.child("size")
    itemSize.setValue(size)
    let itemPrice = itemChild.child("price")
    itemPrice.setValue(price)
+   let vendor = itemRef.childByAutoId()
+   vendor.setValue(vendorUID)
 }
 
 
