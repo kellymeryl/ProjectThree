@@ -22,7 +22,7 @@ class CheckoutViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return checkoutSections.count
+        return 3
     }
 
     override func viewDidLoad() {
