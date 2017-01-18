@@ -33,17 +33,63 @@ struct Vendor {
 struct Customer {
    
    var name: String
+   var paymentInformation: PaymentInformation?
+   var shippingInformation: ShippingInformation?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   //Snapshot initializer for creating Struct instances when we observe Customer
    
+      init(name: String, uID: String)
+      {
+         self.name = name
+         self.uID = uID
+      }
+   
+   
+   //Snapshot initializer for creating Struct instances when we observe Customer
    init(snapshot: FIRDataSnapshot) {
       let customerName = snapshot.childSnapshot(forPath: "name")
       name = customerName.value as! String
       
       uID = snapshot.key
       reference = snapshot.ref
+   }
+}
+
+
+struct PaymentInformation {
+   var creditCardNumber: String
+   var creditCardExpiration: String
+   var creditCardSecurityCode: String
+   
+   init(creditCardNumber: String, creditCardExpiration: String, creditCardSecurityCode: String) {
+      self.creditCardNumber = creditCardNumber
+      self.creditCardExpiration = creditCardExpiration
+      self.creditCardSecurityCode = creditCardSecurityCode
+   }
+}
+
+struct ShippingInformation {
+   var firstName: String
+   var lastName: String
+   var streetName: String
+   var streetNumber: String
+   var apartment:String?
+   var zipCode: String
+   var city: String
+   var state: String
+   var country: String
+   
+   init(firstName: String, lastName: String, streetName: String, streetNumber: String, zipCode: String, city: String, state: String, country: String)
+   {
+      self.firstName = firstName
+      self.lastName = lastName
+      self.streetName = streetName
+      self.streetNumber = streetNumber
+      self.zipCode = zipCode
+      self.city = city
+      self.state = state
+      self.country = country
    }
 }
 
@@ -144,6 +190,30 @@ func databaseChanged(snapshot: FIRDataSnapshot) {
    
 }
 
+
+func observeItems(success: @escaping ([Item]) -> ()) {
+   var arrayOfItems = [Item]()
+   
+   let databaseReference = FIRDatabase.database().reference()
+   databaseReference.observe(.value, with: { snapshot in
+      
+      let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
+      for singleItem in allItemsSnapshot.children {
+         
+         if let itemSnapshot = singleItem as? FIRDataSnapshot {
+            var itemInstance = Item(snapshot: itemSnapshot)
+            arrayOfItems.append(itemInstance)
+         }
+      }
+      DispatchQueue.main.async {
+         success(arrayOfItems)
+      }
+   })
+}
+
+
+
+
 //To delete anything
 func deleteData(key:String) {
    
@@ -171,7 +241,9 @@ func newUserSignup(viewController:UIViewController, emailTextField:String, passw
          if error == nil {
             print("Signup successful")
             
-            let vc = viewController.storyboard?.instantiateViewController(withIdentifier: "Home") //Set home page identifier
+            let homeStoryboard: UIStoryboard = UIStoryboard(name: "CustomerUI", bundle: nil)
+            
+            let vc = homeStoryboard.instantiateInitialViewController()
             
             viewController.present(vc!, animated: true, completion: nil)
 

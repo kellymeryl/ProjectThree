@@ -15,8 +15,6 @@ class ConsumerDataModel {
     }
     
     struct Consumer {
-        var firstName: String
-        var lastName: String
         var username: String
         var password: String
         var userID: String //will be firebase reference
@@ -25,8 +23,6 @@ class ConsumerDataModel {
         
         init(firstName: String, lastName: String, username: String, password: String, userID: String)
         {
-            self.firstName = firstName
-            self.lastName = lastName
             self.username = username
             self.password = password
             self.userID = userID
