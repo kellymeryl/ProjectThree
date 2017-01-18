@@ -62,9 +62,9 @@ class VendorSignupViewController: UIViewController {
          
          self.present(alertController, animated: true, completion: nil)
       } else {
-         newUserSignup(viewController: self, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!)
+         FirebaseModel.sharedInstance.newUserSignup(viewController: self, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!)
          
-         addVendor(name: vendorNameTF.text!)
+         FirebaseModel.sharedInstance.addVendor(name: vendorNameTF.text!)
       }   
    }
    

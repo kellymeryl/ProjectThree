@@ -63,12 +63,12 @@ class ConsumerSignUpViewController: UIViewController {
         }
        
         else {
-            addCustomer(name: consumerUsernameTextField.text!)
-            newUserSignup(viewController: self, emailTextField: consumerEmailTextField.text!, passwordTextField: consumerPasswordTextField.text!)
+         FirebaseModel.sharedInstance.addCustomer(name: consumerUsernameTextField.text!)
+         FirebaseModel.sharedInstance.newUserSignup(viewController: self, emailTextField: consumerEmailTextField.text!, passwordTextField: consumerPasswordTextField.text!)
         }
         
     }
-    
+   
     @IBAction func consumerAlreadyAUserButtonWasTapped(_ sender: Any) {
         //segues to consumer login page
         

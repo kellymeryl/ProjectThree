@@ -17,7 +17,7 @@ class NewVendorLoginViewController: UIViewController {
    
    @IBAction func vendorLoginPressed(_ sender: Any) {
       
-      login(email: vendorEmailTF.text!, password: vendorPasswordTF.text!, complete: { success in
+      FirebaseModel.sharedInstance.login(email: vendorEmailTF.text!, password: vendorPasswordTF.text!, complete: { success in
          if success {
             print("login successful!")
          } else {

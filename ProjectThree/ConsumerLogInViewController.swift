@@ -14,9 +14,9 @@ class ConsumerLogInViewController: UIViewController {
     @IBOutlet weak var userPasswordTextField: UITextField!
     
     @IBAction func signInButtonWasTapped(_ sender: Any) {
-        
-        login(email: userUserNameTextField.text!, password: userPasswordTextField.text!, complete: { success in
-            
+      
+      FirebaseModel.sharedInstance.login(email: userUserNameTextField.text!, password: userPasswordTextField.text!, complete: { success in
+         
             if success {
             print("success")
             } else {
