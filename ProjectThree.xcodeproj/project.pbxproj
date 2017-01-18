@@ -14,6 +14,7 @@
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
+		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
@@ -60,6 +61,7 @@
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
+		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */,
+				37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */,
 				D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */,
 				377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */,
 				52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */,
@@ -365,6 +368,7 @@
 				377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */,
 				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
+				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
