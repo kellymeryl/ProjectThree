@@ -23,6 +23,7 @@
 		527F3E451E2D428F00F8C307 /* ConsumerDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */; };
 		527F3E491E2E72B800F8C307 /* LoginStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527F3E481E2E72B800F8C307 /* LoginStoryboard.storyboard */; };
 
+
 		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
 		52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */; };
 		52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */; };
@@ -42,6 +43,12 @@
 		BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */; };
 		BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */; };
 		BAF6E2121E2B450A00AD89C2 /* LeftDrawerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E2111E2B450A00AD89C2 /* LeftDrawerData.swift */; };
+		D5EAD34A1E2EBE5B005F42E0 /* VendorUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */; };
+		D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */; };
+		D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */; };
+		D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */; };
+		D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +81,7 @@
 		527F3E441E2D428F00F8C307 /* ConsumerDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerDataModel.swift; sourceTree = "<group>"; };
 		527F3E481E2E72B800F8C307 /* LoginStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginStoryboard.storyboard; sourceTree = "<group>"; };
 
+
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerSignUpViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +102,12 @@
 		BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellTableViewCell.swift; sourceTree = "<group>"; };
 		BAF6E2111E2B450A00AD89C2 /* LeftDrawerData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftDrawerData.swift; sourceTree = "<group>"; };
+		D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorUI.storyboard; sourceTree = "<group>"; };
+		D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenderHomeVC.swift; sourceTree = "<group>"; };
+		D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemVC.swift; sourceTree = "<group>"; };
+		D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemVC.swift; sourceTree = "<group>"; };
+		D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+
 		F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.debug.xcconfig"; sourceTree = "<group>"; };
 		FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -166,6 +180,8 @@
 		522142071E29565100170BA7 /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+
+				D5EAD34B1E2EBEB5005F42E0 /* Vendor Logic */,
 				377FE3DF1E2EC71100D2F422 /* VendorSignup */,
 				52A71DA51E2EDADB00906D1E /* Consumer Login */,
 				BA3179A61E2D7FC30006D532 /* Model */,
@@ -236,6 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */,
+				D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */,
 				377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */,
 				52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */,
 			);
@@ -249,6 +266,17 @@
 				BA3179AF1E2E60210006D532 /* CheckoutSectionsData.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D5EAD34B1E2EBEB5005F42E0 /* Vendor Logic */ = {
+			isa = PBXGroup;
+			children = (
+				D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */,
+				D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */,
+				D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */,
+				D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */,
+			);
+			name = "Vendor Logic";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -346,6 +374,7 @@
 				52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */,
 				377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */,
 				BAF6E20C1E2B3CE000AD89C2 /* Lumber Placeholder.png in Resources */,
+				D5EAD34A1E2EBE5B005F42E0 /* VendorUI.storyboard in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
 				BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */,
 				377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */,
@@ -429,9 +458,13 @@
 				377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */,
 				BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */,
 				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
+				D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */,
 				BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */,
+				D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */,
+				D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
+				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 				527F3E411E2D3E0E00F8C307 /* CustomerLoginViewController.swift in Sources */,
@@ -572,6 +605,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -588,6 +622,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
