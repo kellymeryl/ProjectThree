@@ -38,11 +38,11 @@ struct Customer {
    var reference: FIRDatabaseReference?
    
    
-      init(name: String, uID: String)
-      {
-         self.name = name
-         self.uID = uID
-      }
+   init(name: String, uID: String)
+   {
+      self.name = name
+      self.uID = uID
+   }
    
    
    //Snapshot initializer for creating Struct instances when we observe Customer
@@ -120,6 +120,8 @@ struct Item {
 }
 
 
+//MARK: Adding to Firebase Functions
+
 
 //Change name input to Vendor.name property
 func addVendor(name: String) {
@@ -153,48 +155,13 @@ func addItem(name: String, category: String, size: String, price: Int) {
 }
 
 
-
-func observeChangesInFirebase() {
-   let databaseReference = FIRDatabase.database().reference()
-   databaseReference.observe(.value, with: { snapshot in databaseChanged(snapshot: snapshot)})
-}
-
-
-// Observes any change throughout the database and calls appropriate child snapshot loop to recreate Struct instances based on snapshot initializers
-func databaseChanged(snapshot: FIRDataSnapshot) {
-   
-   let allVendorsSnapshot = snapshot.childSnapshot(forPath: "vendor")
-   for singleVendor in allVendorsSnapshot.children {
-      
-      if let vendorSnapshot = singleVendor as? FIRDataSnapshot {
-         var vendorInstance = Vendor(snapshot: vendorSnapshot)
-      }
-   }
-   
-   let allCustomersSnapshot = snapshot.childSnapshot(forPath: "customer")
-   for singleCustomer in allCustomersSnapshot.children {
-      
-      if let customerSnapshot = singleCustomer as? FIRDataSnapshot {
-         var customerInstance = Customer(snapshot: customerSnapshot)
-      }
-   }
-   
-   let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
-   for singleItem in allItemsSnapshot.children {
-      
-      if let itemSnapshot = singleItem as? FIRDataSnapshot {
-         var itemInstance = Item(snapshot: itemSnapshot)
-      }
-   }
-   
-}
-
+//MARK: Observing Firebase Functions
 
 func observeItems(success: @escaping ([Item]) -> ()) {
    var arrayOfItems = [Item]()
    
    let databaseReference = FIRDatabase.database().reference()
-   databaseReference.observe(.value, with: { snapshot in
+   databaseReference.observeSingleEvent(of: .value, with: { snapshot in
       
       let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
       for singleItem in allItemsSnapshot.children {
@@ -214,7 +181,7 @@ func observeCustomers(success: @escaping ([Customer]) -> ()) {
    var arrayOfCustomers = [Customer]()
    
    let databaseReference = FIRDatabase.database().reference()
-   databaseReference.observe(.value, with: { snapshot in
+   databaseReference.observeSingleEvent(of: .value, with: { snapshot in
       
       let allCustomersSnapshot = snapshot.childSnapshot(forPath: "customer")
       for singleCustomer in allCustomersSnapshot.children {
@@ -234,7 +201,7 @@ func observeVendors(success: @escaping ([Vendor]) -> ()) {
    var arrayOfVendors = [Vendor]()
    
    let databaseReference = FIRDatabase.database().reference()
-   databaseReference.observe(.value, with: { snapshot in
+   databaseReference.observeSingleEvent(of: .value, with: { snapshot in
       
       let allVendorsSnapshot = snapshot.childSnapshot(forPath: "vendor")
       for singleVendor in allVendorsSnapshot.children {
@@ -251,7 +218,7 @@ func observeVendors(success: @escaping ([Vendor]) -> ()) {
 }
 
 
-
+//MARK: Deleting From Firebase Functions
 
 //To delete anything
 func deleteData(key:String) {
@@ -285,7 +252,7 @@ func newUserSignup(viewController:UIViewController, emailTextField:String, passw
             let vc = homeStoryboard.instantiateInitialViewController()
             
             viewController.present(vc!, animated: true, completion: nil)
-
+            
          } else {
             let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
             
@@ -302,9 +269,9 @@ func newUserSignup(viewController:UIViewController, emailTextField:String, passw
 func login(email: String, password: String, complete: @escaping (Bool)->()) {
    
    FIRAuth.auth()?.signIn(withEmail: email, password: password) { user, error in
-         complete(user != nil)
-      }
+      complete(user != nil)
    }
+}
 
 func logout() {
    
