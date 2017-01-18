@@ -19,7 +19,6 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return allItems.count
     }
