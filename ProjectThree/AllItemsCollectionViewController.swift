@@ -59,25 +59,5 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
      }
      */
     
-    
-    
-    func observeItems(success: @escaping ([Item]) -> ()) {
-        var arrayOfItems = [Item]()
-        
-        let databaseReference = FIRDatabase.database().reference()
-        databaseReference.observe(.value, with: { snapshot in
-            
-            let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
-            for singleItem in allItemsSnapshot.children {
-                
-                if let itemSnapshot = singleItem as? FIRDataSnapshot {
-                    var itemInstance = Item(snapshot: itemSnapshot)
-                    arrayOfItems.append(itemInstance)
-                }
-            }
-            DispatchQueue.main.async {
-                success(arrayOfItems)
-            }
-        })
-    }
+
 }

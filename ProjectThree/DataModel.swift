@@ -9,6 +9,8 @@
 import Foundation
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
+import UIKit
 
 
 struct Vendor {
@@ -16,6 +18,10 @@ struct Vendor {
    var name: String
    var uID: String?
    var reference: FIRDatabaseReference?
+   
+   init(name:String) {
+      self.name = name
+   }
    
    //Snapshot initializer for creating Struct instances when we observe Vendor
    init(snapshot: FIRDataSnapshot) {
@@ -98,12 +104,20 @@ struct Item {
    var name: String
    var category: String
    var size: String
-   var price: Int
+   var price: Float
+   var image: UIImage
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   //Snapshot initializer for creating Struct instances when we observe Item
+   init(name:String, category:String, size:String, price:Float, image:UIImage) {
+      self.name = name
+      self.category = category
+      self.size = size
+      self.price = price
+      self.image = image
+   }
    
+   //Snapshot initializer for creating Struct instances when we observe Item
    init(snapshot: FIRDataSnapshot) {
       let itemName = snapshot.childSnapshot(forPath: "name")
       name = itemName.value as! String
@@ -112,7 +126,9 @@ struct Item {
       let itemSize = snapshot.childSnapshot(forPath: "size")
       size = itemSize.value as! String
       let itemPrice = snapshot.childSnapshot(forPath: "price")
-      price = itemPrice.value as! Int
+      price = itemPrice.value as! Float
+      let itemImage = snapshot.childSnapshot(forPath: "image")
+      image = itemImage.value as! UIImage
       
       uID = snapshot.key
       reference = snapshot.ref
@@ -227,6 +243,35 @@ func deleteData(key:String) {
    firebaseRef.removeValue()
 }
 
+
+//MARK: Firebase Storage
+
+func uploadImageToFirebase(data: Data, imageName: String) {
+   
+   let storageRef = FIRStorage.storage().reference()
+   let imageRef = storageRef.child(NSUUID().uuidString)
+   
+   let _ = imageRef.put(data, metadata: nil) { (metadata, error) in
+      guard let metadata = metadata else {
+         return
+      }
+      let downloadURL = metadata.downloadURL
+      print(downloadURL)
+   }
+}
+
+
+func downloadImage(name: String, complete: @escaping (UIImage?) -> ()) {
+   
+   let imageRef = FIRStorage.storage().reference(withPath: name)
+   imageRef.data(withMaxSize: 1 * 1024 * 1024) { data, error in
+      
+      if let data = data,
+         let image = UIImage(data: data) {
+         complete(image)
+      }
+   }
+}
 
 
 
