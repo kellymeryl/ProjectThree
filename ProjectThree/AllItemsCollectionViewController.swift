@@ -14,7 +14,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var allItemsCollection: UICollectionView!
    
     
-    var allItems = [Item]() {
+    var allItems = [DataModel.sharedInstance.item!] {
         didSet {
             allItemsCollection.reloadData()
         }
@@ -37,7 +37,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        observeItems(success: { [weak self] items in
+      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
             guard let strongSelf = self else {return}
             strongSelf.allItems = items
         })

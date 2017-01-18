@@ -13,6 +13,7 @@
 		377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */; };
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
+		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
@@ -58,6 +59,7 @@
 		377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorSignup.storyboard; sourceTree = "<group>"; };
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
+		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +196,7 @@
 				522142081E29565100170BA7 /* AppDelegate.swift */,
 				522142141E29565100170BA7 /* Info.plist */,
 				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
+				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
 				D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */,
 				BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */,
+				37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */,
 				D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */,
 				D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
