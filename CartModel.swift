@@ -8,23 +8,17 @@
 
 import Foundation
 import UIKit
+import Firebase
+import FirebaseAuth
 
 
 class CartModel {
-    
-  //  let context = (UIApplication.shared.delegate as! AppDelegate).persistentStoreCoordinator.c
-    
-    
-    func addToCart(item: Item) {
-        
-        
-        
-        
-        
-        
-        
-    }
+   
+   lazy var context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+
     
     
     
 }
+

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 var itemsInCart = [Item]()
 
@@ -39,7 +41,14 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
    }
    
    
-   
+   func getCurrentUser() {
+      
+      if FIRAuth.auth()?.currentUser != nil {
+         let vendorEmail = FIRAuth.auth()?.currentUser?.email
+         print(vendorEmail)
+      } else {
+         return
+      }   }
    
    
    
