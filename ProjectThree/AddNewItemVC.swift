@@ -10,8 +10,7 @@ import UIKit
 
 class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let photoPicker = UIImagePickerController()
-    let imagePicker = UIImagePickerController()
+
     
     
     override func viewDidLoad() {
@@ -26,7 +25,10 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
-//MARK: ImagePicker Methods====================================
+//MARK: ImagePicker Methods and Properties====================================
+    
+    let photoPicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
@@ -60,7 +62,6 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         present(photoPicker, animated: true, completion: nil)
         
     }
-    
     
 //MARK: PickerView Properties and Methods==========================
     
@@ -112,6 +113,16 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         
 //        return UICollectionViewCell()
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation
