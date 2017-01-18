@@ -62,6 +62,10 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
       // Dispose of any resources that can be recreated.
    }
    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let itemDetailViewController = segue.destination as! ItemDetailViewController
+        itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
+    }
    
    /*
     // MARK: - Navigation

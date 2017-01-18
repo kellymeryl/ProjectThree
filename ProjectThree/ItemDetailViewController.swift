@@ -10,6 +10,8 @@ import UIKit
 
 class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var selectedIndex: Int?
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailCell", for: indexPath) as! ItemDetailCollectionViewCell
         
