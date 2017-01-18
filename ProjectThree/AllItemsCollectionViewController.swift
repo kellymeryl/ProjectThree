@@ -13,6 +13,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
    
    @IBOutlet weak var allItemsCollection: UICollectionView!
    
+    @IBOutlet weak var searchBar: UISearchBar!
    
    var allItems = [DataModel.sharedInstance.item] {
       didSet {

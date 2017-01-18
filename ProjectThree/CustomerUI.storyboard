@@ -152,6 +152,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="allItemsCollection" destination="Xg9-Ok-9gg" id="RM3-LM-U6m"/>
+                        <outlet property="searchBar" destination="jCn-Ij-aTY" id="IPz-VI-2ua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zs-Pe-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
