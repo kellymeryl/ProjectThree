@@ -113,13 +113,13 @@ struct Item {
    var category: String
    var size: String
    var price: Float
-   var image: [UIImage]?
+   var image: [UIImage] = [UIImage]()
    var description: String
    var vendor: String?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   init(name:String, category:String, size:String, price:Float, image:[UIImage]?, description:String) {
+   init(name:String, category:String, size:String, price:Float, image:[UIImage], description:String) {
       self.name = name
       self.category = category
       self.size = size
