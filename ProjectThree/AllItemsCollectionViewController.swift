@@ -50,13 +50,19 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     
    override func viewDidLoad() {
       super.viewDidLoad()
-      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
-         guard let strongSelf = self else {return}
-         strongSelf.allItems = items
-      })
+//      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
+//         guard let strongSelf = self else {return}
+//         strongSelf.allItems = items
+//      })
       // Do any additional setup after loading the view.
    }
    
+    override func viewDidAppear(_ animated: Bool) {
+        FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
+            guard let strongSelf = self else {return}
+            strongSelf.allItems = items
+        })
+    }
    override func didReceiveMemoryWarning() {
       super.didReceiveMemoryWarning()
       // Dispose of any resources that can be recreated.
