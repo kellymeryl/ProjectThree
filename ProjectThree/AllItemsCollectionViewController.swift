@@ -30,13 +30,24 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
       
       cell.itemNameLabel.text = allItems[indexPath.item]?.name
       if let price = allItems[indexPath.item]?.price {
-         cell.itemPriceLabel.text = "\(price)"
+         cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
       }
-      
+    
       return cell
    }
    
-   
+    func convertToCurrency(num: Float) -> String {
+        
+        let number = NSDecimalNumber(value: num)
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .currency
+        
+        let result = numberFormatter.string(from: number)
+        
+        return result!
+    }
+    
    override func viewDidLoad() {
       super.viewDidLoad()
       FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
