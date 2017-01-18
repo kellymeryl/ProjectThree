@@ -8,17 +8,32 @@
 
 import UIKit
 
-class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let photoPicker = UIImagePickerController()
+    let imagePicker = UIImagePickerController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        imagePicker.delegate = self
         // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+//MARK: ImagePicker Methods====================================
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            //imageOutlet.image = pickedImage
+        }
+//        loadedPhotos.append(pickedImage)
+        imagePicker.dismiss(animated: true, completion: nil)
     }
 //MARK: @IBOUTLETS================================================
     
@@ -39,6 +54,11 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     @IBAction func sizeBtnTapped(_ sender: Any) {
         sizePickerView.isHidden = false
+    }
+    @IBAction func photoBtnTapped(_ sender: Any) {
+        photoPicker.sourceType = .photoLibrary
+        present(photoPicker, animated: true, completion: nil)
+        
     }
     
     
@@ -75,8 +95,22 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             sizeBtn.setTitle(sizes[row], for: UIControlState.normal)
             sizePickerView.isHidden = true
         }
-    
+//MARK: CollectionView Methods and Properties
         
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! PhotoCell
+        
+//        return UICollectionViewCell()
     }
     
     /*

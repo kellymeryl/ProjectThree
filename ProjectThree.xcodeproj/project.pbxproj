@@ -39,6 +39,7 @@
 		D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */; };
 		D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */; };
 		D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */; };
+		D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenderHomeVC.swift; sourceTree = "<group>"; };
 		D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemVC.swift; sourceTree = "<group>"; };
+		D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.debug.xcconfig"; sourceTree = "<group>"; };
 		FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -231,6 +233,7 @@
 				D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */,
 				D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */,
 				D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */,
+				D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */,
 			);
 			name = "Vendor Logic";
 			sourceTree = "<group>";
@@ -415,6 +418,7 @@
 				D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
+				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 				527F3E411E2D3E0E00F8C307 /* CustomerLoginViewController.swift in Sources */,
