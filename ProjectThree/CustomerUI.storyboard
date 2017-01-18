@@ -272,6 +272,11 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemDescriptionTextView" destination="MJv-CG-dM7" id="D4L-jG-yIV"/>
+                        <outlet property="itemNameLabel" destination="5qK-QB-Sff" id="XwW-TX-6yH"/>
+                        <outlet property="itemPriceLabel" destination="veq-q9-LqU" id="x1m-JA-cdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntp-hE-06H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -65,6 +65,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let itemDetailViewController = segue.destination as! ItemDetailViewController
         itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
+        itemDetailViewController.arrayOfItems = allItems
     }
    
    /*
