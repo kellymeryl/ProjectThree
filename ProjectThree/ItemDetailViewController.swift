@@ -33,21 +33,10 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
         super.viewDidLoad()
     
         itemNameLabel.text = arrayOfItems[selectedIndex!]!.name
-        itemPriceLabel.text = "\(convertToCurrency(num: arrayOfItems[selectedIndex!]!.price))"
+        itemPriceLabel.text = "\(AllItemsCollectionViewController().convertToCurrency(num: arrayOfItems[selectedIndex!]!.price))"
         itemDescriptionTextView.text = arrayOfItems[selectedIndex!]!.description
 
         // Do any additional setup after loading the view.
-    }
-    func convertToCurrency(num: Float) -> String {
-        
-        let number = NSDecimalNumber(value: num)
-        
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .currency
-        
-        let result = numberFormatter.string(from: number)
-        
-        return result!
     }
 
     override func didReceiveMemoryWarning() {
