@@ -22,25 +22,23 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-
-            return allItems.count
-
+        
+        return allItems.count
+        
     }
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
-            
-                cell.itemNameLabel.text = allItems[indexPath.item]?.name
-                if let price = allItems[indexPath.item]?.price {
-                    cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
-            }
-            return cell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
+        
+        cell.itemNameLabel.text = allItems[indexPath.item]?.name
+        if let price = allItems[indexPath.item]?.price {
+            cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
         }
+        return cell
+    }
     
-        func convertToCurrency(num: String) -> String {
+    func convertToCurrency(num: String) -> String {
         
         let number = NSDecimalNumber(value: Float(num)!)
         
@@ -52,6 +50,11 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         return result!
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let itemDetailViewController = segue.destination as! ItemDetailViewController
+        itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
+        itemDetailViewController.arrayOfItems = allItems
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

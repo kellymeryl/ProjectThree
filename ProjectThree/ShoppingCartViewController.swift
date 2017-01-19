@@ -10,15 +10,17 @@ import UIKit
 
 class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    var cartArray: [Item] = []
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return cartArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCellTableViewCell
         
-        return cell    }
+        return cell
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
