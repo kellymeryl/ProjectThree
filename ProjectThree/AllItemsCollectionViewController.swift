@@ -58,9 +58,9 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
             }
         }
     
-        func convertToCurrency(num: Float) -> String {
+        func convertToCurrency(num: String) -> String {
         
-        let number = NSDecimalNumber(value: num)
+        let number = NSDecimalNumber(value: Float(num)!)
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .currency
@@ -100,65 +100,4 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-class AllItemsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-   
-   @IBOutlet weak var allItemsCollection: UICollectionView!
-   
-   
-   var allItems = [Item]() {
-      didSet {
-         allItemsCollection.reloadData()
-      }
-   }
-   
-   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      return allItems.count
-   }
-   
-   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-      
-      let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
-      
-      cell.itemNameLabel.text = allItems[indexPath.item].name
-         cell.itemPriceLabel.text = allItems[indexPath.item].price
-      
-      return cell
-   }
-   
-   
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
-         guard let strongSelf = self else {return}
-         strongSelf.allItems = items
-      })
-      // Do any additional setup after loading the view.
-   }
-   
-   override func didReceiveMemoryWarning() {
-      super.didReceiveMemoryWarning()
-      // Dispose of any resources that can be recreated.
-   }
-   
-   
-   /*
-    // MARK: - Navigation
-
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let itemDetailViewController = segue.destination as! ItemDetailViewController
-        itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
-        itemDetailViewController.arrayOfItems = allItems
-    }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
 }
-    
