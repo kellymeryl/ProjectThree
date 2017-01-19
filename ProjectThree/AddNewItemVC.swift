@@ -8,9 +8,11 @@
 
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
+     var venderHome: VenderHomeVC!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,10 +75,23 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     // ** Need to change placeholder info in price and vendorUID **
     @IBAction func addItemBtn(_ sender: Any) {
-
+        
+        for image in arrayOfItemPictures {
+            
+        }
+        
       FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
+        
+        uploadImage()
       
       }
+    
+    func uploadImage() {
+        for image in arrayOfItemPictures {
+        
+            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(nameTextField.text!) \(arrayOfItemPictures.index(of: image)!)" )
+        }
+    }
     
     
 //MARK: PickerView Properties and Methods=========================================

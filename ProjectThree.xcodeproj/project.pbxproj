@@ -46,6 +46,8 @@
 		D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */; };
 		D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */; };
 		D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */; };
+		D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAD4031E312749005F42E0 /* Vendor.storyboard */; };
+		D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD4051E314896005F42E0 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,8 @@
 		D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D5EAD4031E312749005F42E0 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
+		D5EAD4051E314896005F42E0 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.debug.xcconfig"; sourceTree = "<group>"; };
 		FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -272,6 +276,7 @@
 				377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */,
 				52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
+				D5EAD4031E312749005F42E0 /* Vendor.storyboard */,
 				5221420F1E29565100170BA7 /* Assets.xcassets */,
 			);
 			name = UI;
@@ -284,6 +289,7 @@
 				D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */,
 				D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */,
 				D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */,
+				D5EAD4051E314896005F42E0 /* ItemCell.swift */,
 			);
 			name = "Vendor Logic";
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */,
 				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
+				D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */,
 				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -473,6 +480,7 @@
 				37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
+				D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */,
 				52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
