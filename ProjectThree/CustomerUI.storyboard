@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NPw-VK-Zi2">
+
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NPw-VK-Zi2">
+
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -48,6 +52,9 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="fbQ-e6-dE4" id="skm-2m-zFe"/>
+                                </connections>
                             </searchBar>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xg9-Ok-9gg">
                                 <rect key="frame" x="0.0" y="108" width="375" height="559"/>
@@ -152,6 +159,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="allItemsCollection" destination="Xg9-Ok-9gg" id="RM3-LM-U6m"/>
+                        <outlet property="searchBar" destination="jCn-Ij-aTY" id="IPz-VI-2ua"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zs-Pe-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -272,6 +280,11 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                     </navigationItem>
+                    <connections>
+                        <outlet property="itemDescriptionTextView" destination="MJv-CG-dM7" id="D4L-jG-yIV"/>
+                        <outlet property="itemNameLabel" destination="5qK-QB-Sff" id="XwW-TX-6yH"/>
+                        <outlet property="itemPriceLabel" destination="veq-q9-LqU" id="x1m-JA-cdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntp-hE-06H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

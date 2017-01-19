@@ -10,6 +10,16 @@ import UIKit
 
 class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
+    var selectedIndex: Int?
+    
+    var arrayOfItems: [Item?] = []
+    
+    @IBOutlet weak var itemNameLabel: UILabel!
+    
+    @IBOutlet weak var itemPriceLabel: UILabel!
+    
+    @IBOutlet weak var itemDescriptionTextView: UITextView!
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailCell", for: indexPath) as! ItemDetailCollectionViewCell
         
@@ -21,6 +31,10 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        itemNameLabel.text = arrayOfItems[selectedIndex!]!.name
+        itemPriceLabel.text = "\(AllItemsCollectionViewController().convertToCurrency(num: arrayOfItems[selectedIndex!]!.price))"
+        itemDescriptionTextView.text = arrayOfItems[selectedIndex!]!.description
 
         // Do any additional setup after loading the view.
     }
