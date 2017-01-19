@@ -26,7 +26,7 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
         
         let cartItem = CartItem.insertNewObject(in: managedObjectContext)
         cart.addToItems(cartItem)
-                
+        
         
 //        UserDefaults.standard.set(cart.objectID.uriRepresentation(), forKey: "user's cart")
   
