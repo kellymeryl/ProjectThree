@@ -20,6 +20,9 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBOutlet weak var itemDescriptionTextView: UITextView!
     
+    @IBAction func addToCartButton(_ sender: UIButton) {
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailCell", for: indexPath) as! ItemDetailCollectionViewCell
         
@@ -29,6 +32,11 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 1
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -44,7 +52,6 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 

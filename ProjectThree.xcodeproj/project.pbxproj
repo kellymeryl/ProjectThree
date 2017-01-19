@@ -158,6 +158,8 @@
 				BA3179A01E2D7F540006D532 /* AllItemsCollectionViewCell.swift */,
 				BA3179A71E2DC7A70006D532 /* ItemDetailViewController.swift */,
 				BA3179A91E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift */,
+				BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */,
+				BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */,
 			);
 			name = "Shopper Home";
 			sourceTree = "<group>";
@@ -167,8 +169,6 @@
 			children = (
 				BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */,
 				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
-				BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */,
-				BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */,
 				37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */,
 				37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */,
 			);
