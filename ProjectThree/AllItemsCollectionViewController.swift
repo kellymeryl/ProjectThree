@@ -21,25 +21,43 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-    var allItemsFiltered: [Item] = []
+    var allItemsFiltered = [DataModel.sharedInstance.item] {
+        didSet {
+            allItemsCollection.reloadData()
+        }
+    }
+    
+    var searchActive: Bool = false
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return allItems.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
-        
-        cell.itemNameLabel.text = allItems[indexPath.item]?.name
-        if let price = allItems[indexPath.item]?.price {
-            cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
+        if searchActive {
+            return allItemsFiltered.count
+        } else {
+            return allItems.count
         }
-        
-        return cell
     }
+        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
+            
+            if searchActive {
+                cell.itemNameLabel.text = allItemsFiltered[indexPath.item]?.name
+                if let price = allItemsFiltered[indexPath.item]?.price {
+                    cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
+                    
+                }
+                return cell
+            } else {
+                cell.itemNameLabel.text = allItems[indexPath.item]?.name
+                if let price = allItems[indexPath.item]?.price {
+                    cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
+                }
+                
+                return cell
+            }
+        }
     
-    func convertToCurrency(num: Float) -> String {
+        func convertToCurrency(num: Float) -> String {
         
         let number = NSDecimalNumber(value: num)
         
@@ -51,13 +69,24 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         return result!
     }
     
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            if searchActive == false {
+                allItemsCollection.reloadData()
+            } else {
+                searchActive = true
+                let searchLower = searchBar.text?.lowercased()
+                allItemsFiltered = allItemsFiltered.filter({ ($0?.name.range(of: searchLower!) != nil)})
+                allItemsCollection.reloadData()
+                
+            }
+        }
+        
+        allItemsCollection.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
-        //         guard let strongSelf = self else {return}
-        //         strongSelf.allItems = items
-        //      })
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -86,6 +115,5 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
      // Pass the selected object to the new view controller.
      }
      */
-    
-    
 }
+    
