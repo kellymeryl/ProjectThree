@@ -40,10 +40,8 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         } else {
             //error message
         }
-        
-        //        loadedPhotos.append(pickedImage)
-        self.dismiss(animated: true, completion: nil)
-    }
+          self.dismiss(animated: true, completion: nil)
+        }
     
 //MARK: @IBOUTLETS==============================================================
     
@@ -57,7 +55,7 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var addPhotoBtnOutlet: UIButton!
     
-//MARK: @IBACTIONS==============================================================
+//MARK: @IBACTIONS===============================================================
     
     @IBAction func categoryBtnTapped(_ sender: Any) {
         categoryPickerView.isHidden = false
