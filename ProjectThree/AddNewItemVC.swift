@@ -7,37 +7,43 @@
 //
 
 import UIKit
+import Firebase
 
 class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         imagePicker.delegate = self
-        // Do any additional setup after loading the view.
     }
-
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if arrayOfItemPictures.count == 3 {
+            addPhotoBtnOutlet.isHidden = true
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-//MARK: ImagePicker Methods and Properties====================================
     
-    let photoPicker = UIImagePickerController()
+//MARK: ImagePicker Methods and Properties===================================
+    
+    var arrayOfItemPictures = [UIImage]()
+    var photo: PhotoCell!
     let imagePicker = UIImagePickerController()
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            //imageOutlet.image = pickedImage
+            arrayOfItemPictures.append(pickedImage)
+            self.imageCollectionViewOutlet.reloadData()
+        } else {
+            //error message
         }
-//        loadedPhotos.append(pickedImage)
-        imagePicker.dismiss(animated: true, completion: nil)
-    }
-//MARK: @IBOUTLETS================================================
+          self.dismiss(animated: true, completion: nil)
+        }
+    
+//MARK: @IBOUTLETS==============================================================
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageCollectionViewOutlet: UICollectionView!
@@ -47,9 +53,10 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     @IBOutlet weak var sizePickerView: UIPickerView!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
+    @IBOutlet weak var addPhotoBtnOutlet: UIButton!
     
-//MARK: @IBACTIONS================================================
-
+//MARK: @IBACTIONS===============================================================
+    
     @IBAction func categoryBtnTapped(_ sender: Any) {
         categoryPickerView.isHidden = false
     }
@@ -57,13 +64,24 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     @IBAction func sizeBtnTapped(_ sender: Any) {
         sizePickerView.isHidden = false
     }
+    
     @IBAction func photoBtnTapped(_ sender: Any) {
-        photoPicker.sourceType = .photoLibrary
-        present(photoPicker, animated: true, completion: nil)
-        
+        imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        present(imagePicker, animated: true, completion: nil)
     }
     
-//MARK: PickerView Properties and Methods==========================
+    
+    // ** Need to change placeholder info in price and vendorUID **
+    @IBAction func addItemBtn(_ sender: Any) {
+ /*       FirebaseModel.sharedInstance.observeVendors(success: { success in
+            
+        })
+        */
+        FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text)!, size: (sizeBtn.titleLabel?.text)!, price: 9, vendorUID: (FIRAuth.auth()?.currentUser?.uid)!)
+    }
+    
+    
+//MARK: PickerView Properties and Methods=========================================
     
     var categories = ["Men", "Woman", "Kids"]
     
@@ -80,6 +98,7 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
             return sizes.count
         }
     }
+    
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView.tag == 1) {
             return categories[row]
@@ -91,47 +110,29 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if (pickerView.tag == 1) {
             categoryBtn.setTitle(categories[row], for: UIControlState.normal)
-                    categoryPickerView.isHidden = true
+            categoryPickerView.isHidden = true
         } else {
             sizeBtn.setTitle(sizes[row], for: UIControlState.normal)
             sizePickerView.isHidden = true
         }
-//MARK: CollectionView Methods and Properties
-        
     }
     
+    
+//MARK: CollectionView Methods and Properties========================================
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return arrayOfItemPictures.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! PhotoCell
+        let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! PhotoCell
+        imageCell.imageOutlet.image = arrayOfItemPictures[indexPath.row]
         
-//        return UICollectionViewCell()
+        return imageCell
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
