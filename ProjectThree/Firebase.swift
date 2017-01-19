@@ -21,8 +21,11 @@ class FirebaseModel {
    
    //Change name input to Vendor.name property
    func addVendor(name: String) {
+      guard let user = FIRAuth.auth()?.currentUser else {
+         return
+      }
       let vendorRef = FIRDatabase.database().reference(withPath: "vendor")
-      let vendorChild = vendorRef.childByAutoId()
+      let vendorChild = vendorRef.child(user.uid)
       
       let vendorName = vendorChild.child("name")
       vendorName.setValue(name)
@@ -30,8 +33,11 @@ class FirebaseModel {
    
    //Change name input to Customer.name property
    func addCustomer(name: String) {
+      guard let user = FIRAuth.auth()?.currentUser else {
+         return
+      }
       let customerRef = FIRDatabase.database().reference(withPath: "customer")
-      let customerChild = customerRef.childByAutoId()
+      let customerChild = customerRef.child(user.uid)
       let customerName = customerChild.child("name")
       customerName.setValue(name)
    }
@@ -163,7 +169,7 @@ class FirebaseModel {
    //MARK: AUTH FUNCTIONS
    
    
-   func newUserSignup(viewController:UIViewController, emailTextField:String, passwordTextField:String) {
+   func newVendorSignup(viewController:UIViewController, name: String, emailTextField:String, passwordTextField:String, complete: @escaping (Bool)->()) {
       if emailTextField == "" {
          let alertController = UIAlertController(title: "Error", message: "Please enter a valid email address", preferredStyle: .alert)
          
@@ -175,13 +181,36 @@ class FirebaseModel {
          FIRAuth.auth()?.createUser(withEmail: emailTextField, password: passwordTextField, completion: { (user, error) in
             
             if error == nil {
-               print("Signup successful")
+               self.addVendor(name: name)
+            complete(user != nil)
                
-               let homeStoryboard: UIStoryboard = UIStoryboard(name: "CustomerUI", bundle: nil)
+            } else {
+               let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                
-               let vc = homeStoryboard.instantiateInitialViewController()
+               let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+               alertController.addAction(defaultAction)
                
-               viewController.present(vc!, animated: true, completion: nil)
+               viewController.present(alertController, animated: true, completion: nil)
+            }
+         })
+      }
+   }
+   
+   
+   func newCustomerSignup(viewController:UIViewController, name: String, emailTextField:String, passwordTextField:String, complete: @escaping (Bool)->()) {
+      if emailTextField == "" {
+         let alertController = UIAlertController(title: "Error", message: "Please enter a valid email address", preferredStyle: .alert)
+         
+         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+         alertController.addAction(defaultAction)
+         
+         viewController.present(alertController, animated: true, completion: nil)
+      } else {
+         FIRAuth.auth()?.createUser(withEmail: emailTextField, password: passwordTextField, completion: { (user, error) in
+            
+            if error == nil {
+               self.addCustomer(name: name)
+               complete(user != nil)
                
             } else {
                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
