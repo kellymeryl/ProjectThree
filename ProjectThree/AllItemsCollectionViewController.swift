@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 
 
-class AllItemsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+class AllItemsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     @IBOutlet weak var allItemsCollection: UICollectionView!
     
@@ -22,40 +22,22 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-    var allItemsFiltered = [DataModel.sharedInstance.item] {
-        didSet {
-            allItemsCollection.reloadData()
-        }
-    }
-    
-    var searchActive: Bool = false
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if searchActive {
-            return allItemsFiltered.count
-        } else {
+
             return allItems.count
-        }
+
     }
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
             
-            if searchActive {
-                cell.itemNameLabel.text = allItemsFiltered[indexPath.item]?.name
-                if let price = allItemsFiltered[indexPath.item]?.price {
-                    cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
-                    
-                }
-                return cell
-            } else {
                 cell.itemNameLabel.text = allItems[indexPath.item]?.name
                 if let price = allItems[indexPath.item]?.price {
                     cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
-                }
-                
-                return cell
             }
+            return cell
         }
     
         func convertToCurrency(num: String) -> String {
@@ -70,21 +52,6 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         return result!
     }
     
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
-            if searchActive == false {
-                allItemsCollection.reloadData()
-            } else {
-                searchActive = true
-                let searchLower = searchBar.text?.lowercased()
-                allItemsFiltered = allItemsFiltered.filter({ ($0?.name.range(of: searchLower!) != nil)})
-                allItemsCollection.reloadData()
-                
-            }
-        }
-        
-        allItemsCollection.reloadData()
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
