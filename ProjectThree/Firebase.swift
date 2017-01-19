@@ -44,12 +44,14 @@ class FirebaseModel {
    
    
    //Change inputs to Item properties
-   func addItem(name: String, description:String, category: String, size: String, price: Int, vendorUID: String) {
+   
+   
+   func addItem(name: String, description:String, category: String, size: String, price: String) {
       let itemRef = FIRDatabase.database().reference(withPath: "item")
       let itemChild = itemRef.childByAutoId()
       let itemName = itemChild.child("name")
       itemName.setValue(name)
-      let itemDescription = itemRef.childByAutoId()
+      let itemDescription = itemChild.child("description")
       itemDescription.setValue(description)
       let itemCategory = itemChild.child("category")
       itemCategory.setValue(category)
@@ -57,12 +59,47 @@ class FirebaseModel {
       itemSize.setValue(size)
       let itemPrice = itemChild.child("price")
       itemPrice.setValue(price)
-      let vendor = itemRef.childByAutoId()
-      vendor.setValue(vendorUID)
+      let vendor = itemChild.child("vendor")
+      vendor.setValue(FIRAuth.auth()?.currentUser?.uid)
    }
    
    
    //MARK: Observing Firebase Functions
+   
+   
+   func queryItems(searchPath: String, key:String, valueToSearch:String) {
+      
+      let updatesRef = FIRDatabase.database().reference(withPath: searchPath)
+      let query = updatesRef.queryOrdered(byChild: key).queryEqual(toValue: valueToSearch)
+      
+      query.observeSingleEvent(of: .value, with: { snapshot in
+         
+         let searchPath = searchPath
+         
+         for child in snapshot.children {
+            if searchPath == "items" {
+               
+               if let itemSnapshot = child as? FIRDataSnapshot {
+                  
+                  var itemInstance = Item(snapshot: itemSnapshot)
+               }
+            } else if searchPath == "vendors" {
+               if let vendorSnapshot = child as? FIRDataSnapshot {
+                  
+                  var vendorInstance = Vendor(snapshot: vendorSnapshot)
+                  
+               } else {
+                  if let customerSnapshot = child as? FIRDataSnapshot {
+                     
+                     var customerInstance = Vendor(snapshot: customerSnapshot)
+                  }
+               }
+            }
+         }
+      })
+   }
+   
+   
    
    func observeItems(success: @escaping ([Item]) -> ()) {
       var arrayOfItems = [Item]()
@@ -182,7 +219,7 @@ class FirebaseModel {
             
             if error == nil {
                self.addVendor(name: name)
-            complete(user != nil)
+               complete(user != nil)
                
             } else {
                let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)

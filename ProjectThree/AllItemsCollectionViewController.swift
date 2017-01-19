@@ -14,7 +14,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
    @IBOutlet weak var allItemsCollection: UICollectionView!
    
    
-   var allItems = [DataModel.sharedInstance.item] {
+   var allItems = [Item]() {
       didSet {
          allItemsCollection.reloadData()
       }
@@ -28,10 +28,8 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
       
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
       
-      cell.itemNameLabel.text = allItems[indexPath.item]?.name
-      if let price = allItems[indexPath.item]?.price {
-         cell.itemPriceLabel.text = "\(price)"
-      }
+      cell.itemNameLabel.text = allItems[indexPath.item].name
+         cell.itemPriceLabel.text = allItems[indexPath.item].price
       
       return cell
    }

@@ -112,14 +112,14 @@ struct Item {
    var name: String
    var category: String
    var size: String
-   var price: Float
+   var price: String
    var image: [UIImage] = [UIImage]()
    var description: String
    var vendor: String?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   init(name:String, category:String, size:String, price:Float, image:[UIImage], description:String) {
+   init(name:String, category:String, size:String, price:String, image:[UIImage], description:String) {
       self.name = name
       self.category = category
       self.size = size
@@ -137,7 +137,7 @@ struct Item {
       let itemSize = snapshot.childSnapshot(forPath: "size")
       size = itemSize.value as! String
       let itemPrice = snapshot.childSnapshot(forPath: "price")
-      price = itemPrice.value as! Float
+      price = itemPrice.value as! String
       let itemDescription = snapshot.childSnapshot(forPath: "description")
       description = itemDescription.value as! String
 

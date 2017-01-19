@@ -63,8 +63,11 @@ class ConsumerSignUpViewController: UIViewController {
         }
        
         else {
-         FirebaseModel.sharedInstance.addCustomer(name: consumerUsernameTextField.text!)
-         FirebaseModel.sharedInstance.newUserSignup(viewController: self, emailTextField: consumerEmailTextField.text!, passwordTextField: consumerPasswordTextField.text!)
+         FirebaseModel.sharedInstance.newCustomerSignup(viewController: self, name: consumerEmailTextField.text!, emailTextField: consumerEmailTextField.text!, passwordTextField: consumerPasswordTextField.text!, complete: { success in
+            let customerStoryboard: UIStoryboard = UIStoryboard(name: "CustomerUI", bundle: nil)
+            let vc = customerStoryboard.instantiateInitialViewController()
+            self.present(vc!, animated: true, completion: nil)
+         })
         }
         
     }

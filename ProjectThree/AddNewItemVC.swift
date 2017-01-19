@@ -73,12 +73,10 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     // ** Need to change placeholder info in price and vendorUID **
     @IBAction func addItemBtn(_ sender: Any) {
- /*       FirebaseModel.sharedInstance.observeVendors(success: { success in
-            
-        })
-        */
-        FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text)!, size: (sizeBtn.titleLabel?.text)!, price: 9, vendorUID: (FIRAuth.auth()?.currentUser?.uid)!)
-    }
+
+      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
+      
+      }
     
     
 //MARK: PickerView Properties and Methods=========================================
