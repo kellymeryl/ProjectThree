@@ -9,18 +9,53 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import CoreData
 
 var itemsInCart = [Item]()
 
 class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    var persistentStoreCoordinator = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
+
+    @IBAction func confirmPurchaseWasTapped(_ sender: Any) {
+       
+        let cart = Cart.insertNewObject(in: managedObjectContext)
+   //     print(cart)
+        
+        let cartItem = CartItem.insertNewObject(in: managedObjectContext)
+        cart.addToItems(cartItem)
+                
+        
+//        UserDefaults.standard.set(cart.objectID.uriRepresentation(), forKey: "user's cart")
+  
+        do {
+            try  managedObjectContext.save()
+        } catch {
+            ()
+        }
+        
+        do {
+            if let url = UserDefaults.standard.url(forKey: "user's cart") {
+                if let objectID = managedObjectContext.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) {
+                let persistedCart = managedObjectContext.object(with: objectID)
+                    print(persistedCart)
+                }
+            }
+        } catch {
+            ()
+        }
+        
+        print(cart)
+        
+    }
    
    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
    
    

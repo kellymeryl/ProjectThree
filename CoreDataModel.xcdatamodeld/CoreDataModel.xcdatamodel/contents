@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cart" representedClassName="Cart" syncable="YES" codeGenerationType="class">
-        <relationship name="manytoone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CartItem" inverseName="onetoone" inverseEntity="CartItem" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItem" inverseName="cart" inverseEntity="CartItem" syncable="YES"/>
     </entity>
     <entity name="CartItem" representedClassName="CartItem" syncable="YES" codeGenerationType="class">
         <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
@@ -12,10 +12,10 @@
         <attribute name="size" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vendor" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="onetoone" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="manytoone" inverseEntity="Cart" syncable="YES"/>
+        <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="items" inverseEntity="Cart" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Cart" positionX="-63" positionY="-18" width="128" height="60"/>
-        <element name="CartItem" positionX="-54" positionY="-9" width="128" height="180"/>
+        <element name="Cart" positionX="-63" positionY="-18" width="128" height="58"/>
+        <element name="CartItem" positionX="196" positionY="81" width="128" height="178"/>
     </elements>
 </model>
