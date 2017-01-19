@@ -62,39 +62,41 @@ class VendorSignupViewController: UIViewController {
          
          self.present(alertController, animated: true, completion: nil)
       } else {
-         FirebaseModel.sharedInstance.newUserSignup(viewController: self, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!)
-         
-         FirebaseModel.sharedInstance.addVendor(name: vendorNameTF.text!)
-      }   
+         FirebaseModel.sharedInstance.newVendorSignup(viewController: self, name: vendorNameTF.text!, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!, complete: { success in
+            let vendorStoryboard: UIStoryboard = UIStoryboard(name: "VendorUI", bundle: nil)
+            let vc = vendorStoryboard.instantiateInitialViewController()
+            self.present(vc!, animated: true, completion: nil)
+         })
+      }
    }
    
    
    
    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+   override func viewDidLoad() {
+      super.viewDidLoad()
+      
+      // Do any additional setup after loading the view.
+   }
+   
+   override func didReceiveMemoryWarning() {
+      super.didReceiveMemoryWarning()
+      // Dispose of any resources that can be recreated.
+   }
    
    
    @IBAction func unwindFromVendorLoginVCToVendorSignupVC(_ sender: UIStoryboardSegue) {
       
    }
-
-    /*
+   
+   /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+   
 }

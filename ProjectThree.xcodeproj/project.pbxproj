@@ -15,12 +15,16 @@
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
+		37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */; };
+		37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
 		522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522142111E29565100170BA7 /* LaunchScreen.storyboard */; };
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
 		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
+		52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */; };
+		52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */; };
 		52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */; };
 		52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */; };
 		BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31799E1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift */; };
@@ -62,6 +66,8 @@
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
+		37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutViewController.swift; sourceTree = "<group>"; };
+		37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +78,8 @@
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
+		52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCartModelExtensions.swift; sourceTree = "<group>"; };
 		52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerSignUpViewController.swift; sourceTree = "<group>"; };
 		7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +169,8 @@
 				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
 				BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */,
 				BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */,
+				37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */,
+				37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */,
 			);
 			name = "Shopper Cart";
 			sourceTree = "<group>";
@@ -168,6 +178,8 @@
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
+				52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */,
+				52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */,
 				522142071E29565100170BA7 /* ProjectThree */,
 				5221421C1E29565200170BA7 /* ProjectThreeTests */,
 				522142061E29565100170BA7 /* Products */,
@@ -188,6 +200,7 @@
 		522142071E29565100170BA7 /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+				52A71DAD1E30358F00906D1E /* Core Data Models */,
 				D5EAD34B1E2EBEB5005F42E0 /* Vendor Logic */,
 				377FE3DF1E2EC71100D2F422 /* VendorSignup */,
 				52A71DA51E2EDADB00906D1E /* Consumer Login */,
@@ -219,6 +232,13 @@
 				52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */,
 			);
 			name = "Consumer Login";
+			sourceTree = "<group>";
+		};
+		52A71DAD1E30358F00906D1E /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Core Data Models";
 			sourceTree = "<group>";
 		};
 		BA3179A31E2D7FB10006D532 /* View Controllers */ = {
@@ -439,17 +459,21 @@
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
 				52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
+				52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */,
 				377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */,
 				BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */,
 				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
 				D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */,
 				BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */,
 				37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */,
+				37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */,
 				D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */,
 				D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
+				37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
+				52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 				377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */,
@@ -587,7 +611,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -602,7 +626,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -671,6 +695,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */,
+			);
+			currentVersion = 52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */;
+			path = CoreDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 522141FD1E29565100170BA7 /* Project object */;
 }
