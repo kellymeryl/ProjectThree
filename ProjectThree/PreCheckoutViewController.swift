@@ -58,7 +58,6 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
    
     override func viewDidLoad() {
         super.viewDidLoad()
-      
         
     }
    
@@ -74,7 +73,7 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
    }
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return 3
+      return CoreDataModel.sharedInstance.cartItems.count
    }
    
    
