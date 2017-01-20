@@ -83,19 +83,19 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
         
       FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
         
-        uploadImage()
+//        uploadImage()
       
       }
     
-    func uploadImage() {
-        for image in arrayOfItemPictures {
-            let randomKey = arc4random()
-//        print(FIRAuth.auth()?.currentUser?.uid)
-            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(randomKey)") {
-                      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
-            }
-        }
-    }
+//    func uploadImage() {
+//        for image in arrayOfItemPictures {
+//            let randomKey = arc4random()
+////        print(FIRAuth.auth()?.currentUser?.uid)
+//            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(randomKey)") {
+//                      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
+//            }
+//        }
+//    }
     
     
 //MARK: PickerView Properties and Methods=========================================

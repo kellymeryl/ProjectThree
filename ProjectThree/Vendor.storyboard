@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Vendor Home-->
+        <!--Vender HomeVC-->
         <scene sceneID="d06-G2-qCN">
             <objects>
                 <viewController id="vDk-7P-Ts8" customClass="VenderHomeVC" customModule="ProjectThree" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Vendor Home" id="Wx9-Xl-ALx"/>
+                    <navigationItem key="navigationItem" id="Wx9-Xl-ALx"/>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="U7o-Xq-Dbi" id="5oE-yE-DIi"/>
                     </connections>
@@ -243,9 +243,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-cP-MLS">
-                                <rect key="frame" x="11" y="68" width="135" height="21"/>
+                                <rect key="frame" x="100" y="41" width="175" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -266,7 +266,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPF-Kz-yqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1142" y="116"/>
+            <point key="canvasLocation" x="1141.5999999999999" y="115.59220389805098"/>
         </scene>
         <!--Edit ItemVC-->
         <scene sceneID="o4Q-4C-evF">
