@@ -21,7 +21,7 @@ class CheckoutViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemsInCart.count
+        return 1
     }
    
 

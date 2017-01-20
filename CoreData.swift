@@ -12,8 +12,7 @@ import UIKit
 
 class CoreDataModel {
    
-   
-   
+    
    static let sharedInstance = CoreDataModel()
    private init(){}
    
@@ -33,22 +32,25 @@ class CoreDataModel {
    }
 
    
-   func createCart() {
-      let cart = Cart(context:context)
-   }
+    func createCart() -> Cart {
+        let cart = Cart(context:context)
+        return cart
+    }
    
-   
-   func createItem(category:String, desc:String, name:String, price:String, quantity:Int16, size:String, vendor:String, uID:String, reference:String, imageArray:[UIImage]) {
+    
+    func createItem(firebaseItem: Item) -> CartItem {
+        
       let item = CartItem(context:context)
-      item.category = category
-      item.desc = desc
-      item.name = name
-      item.price = price
-      item.size = size
-      item.quantity = quantity
-      item.vendor = vendor
-      item.uID = uID
-   }
+      item.category = firebaseItem.category
+      item.desc = firebaseItem.description
+      item.name = firebaseItem.name
+      item.price = firebaseItem.price
+      item.size = firebaseItem.size
+      item.vendor = firebaseItem.vendor
+      item.uID = firebaseItem.uID
+        return item
+   
+    }
    
    
    
