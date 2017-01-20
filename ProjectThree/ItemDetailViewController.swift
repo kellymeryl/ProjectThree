@@ -28,49 +28,31 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var itemDescriptionTextView: UITextView!
     
     @IBAction func addToCartButton(_ sender: UIButton) {
-      
-      let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CartItem")
-      let itemuID = selectedItem?.uID
-      let predicate = NSPredicate(format: "name == %@", "Shirt")
-      request.predicate = predicate
-      request.fetchLimit = 1
-      
-      do {
-         var items = try managedObjectContext.fetch(request) as! [CartItem]
-         print(items.first?.quantity)
         
-        if items.first?.name != selectedItem?.name {
-            let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: selectedItem!)
-            cartItems.append(currentItem)
-            print("Item is not already in the cart")
-            print(items.first?.name)
-         }
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CartItem")
+        let itemUID = selectedItem?.uID
+        let predicate = NSPredicate(format: "uID == %@", itemUID!)
+        request.predicate = predicate
+        request.fetchLimit = 1
         
-        else {
-            let newItem = CoreDataModel.sharedInstance.addToItem(firebaseItem: selectedItem!)
-            cartItems.append(newItem)
-            items.first?.quantity += 1
-            print(items.first?.quantity)
-            print(items.count)
-         }
-      }
-      
-      catch let error as NSError {
-         print("Could not fetch \(error), \(error.userInfo)")
-      }
-    
+        do {
+            var items = try managedObjectContext.fetch(request) as! [CartItem]
+            if items.first?.uID != selectedItem?.uID {
+                let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: selectedItem!)
+                CoreDataModel.sharedInstance.cart.addToItems(currentItem)
+                try managedObjectContext.save()
+                cartItems.append(currentItem)
+                print(itemUID)
+            } else {
+                items.first?.quantity += 1
+                print(itemUID)
+            }
+        }
+        catch let error as NSError {
+            print("Could not fetch \(error), \(error.userInfo)")
+        }
+        
     }
-   /*
-
-   
-   do {
-   try managedObjectContext.save()
-   } catch {
-   print(error.localizedDescription)
-   }
-   
-   */
-    
   
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
