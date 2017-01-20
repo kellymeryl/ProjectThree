@@ -11,18 +11,20 @@ import Firebase
 import FirebaseAuth
 import CoreData
 
-var itemsInCart = [Item]()
 
 class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+   
+   var itemsInCart = [Item]()
+
 
     var persistentStoreCoordinator = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
 
     @IBAction func confirmPurchaseWasTapped(_ sender: Any) {
-       
-        let cart = Cart.insertNewObject(in: managedObjectContext)
-   //     print(cart)
+      
+      CoreDataModel.sharedInstance.createCart()
+      CoreDataModel.sharedInstance.createItem(category: <#T##String#>, desc: <#T##String#>, name: <#T##String#>, price: <#T##String#>, quantity: <#T##Int16#>, size: <#T##String#>, vendor: <#T##String#>, uID: <#T##String#>, reference: <#T##String#>, imageArray: <#T##[UIImage]#>)
         
         let cartItem = CartItem.insertNewObject(in: managedObjectContext)
         cart.addToItems(cartItem)
@@ -54,7 +56,7 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         
     }
    
