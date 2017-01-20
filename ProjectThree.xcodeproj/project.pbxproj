@@ -13,6 +13,8 @@
 		377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */; };
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
+		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
+		37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */; };
@@ -66,6 +68,8 @@
 		377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorSignup.storyboard; sourceTree = "<group>"; };
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
+		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKItemDetailViewController.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 		522142191E29565200170BA7 /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A6B3CC1E3181B1003FE120 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCartModelExtensions.swift; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
+				37847ACB1E31718400F870AB /* CoreData.swift */,
 				52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */,
 				52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */,
 				522142071E29565100170BA7 /* ProjectThree */,
@@ -216,6 +222,7 @@
 				522142141E29565100170BA7 /* Info.plist */,
 				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
 				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
+				37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -461,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */,
 				377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
@@ -486,6 +494,7 @@
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 				377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */,
 				52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */,
+				37847ACC1E31718400F870AB /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,6 +717,7 @@
 		52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				52A6B3CC1E3181B1003FE120 /* CoreDataModel 2.xcdatamodel */,
 				52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */,
 			);
 			currentVersion = 52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */;
