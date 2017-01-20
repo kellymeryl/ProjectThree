@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class NewVendorLoginViewController: UIViewController {
    
@@ -20,6 +21,9 @@ class NewVendorLoginViewController: UIViewController {
       FirebaseModel.sharedInstance.login(email: vendorEmailTF.text!, password: vendorPasswordTF.text!, complete: { success in
          if success {
             print("login successful!")
+            self.performSegue(withIdentifier: "Login2Vendor", sender: self)
+            print(FIRAuth.auth()?.currentUser?.uid)
+            print()
          } else {
             let alertController = UIAlertController(title: "Error", message: "Username/Password Not Recognized", preferredStyle: .alert)
             
@@ -29,6 +33,7 @@ class NewVendorLoginViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
          }
       })
+    
    }
    
    
@@ -53,7 +58,10 @@ class NewVendorLoginViewController: UIViewController {
     }
    
    
-   
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let vendorHomeVC = segue.destination as! VenderHomeVC
+        vendorHomeVC.userID = (FIRAuth.auth()?.currentUser?.uid)!
+    }
    
 
     

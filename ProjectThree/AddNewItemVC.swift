@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseAuth
 
 class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -88,8 +89,11 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
     
     func uploadImage() {
         for image in arrayOfItemPictures {
-        
-            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(nameTextField.text!) \(arrayOfItemPictures.index(of: image)!)" )
+            let randomKey = arc4random()
+//        print(FIRAuth.auth()?.currentUser?.uid)
+            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(randomKey)") {
+                      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
+            }
         }
     }
     

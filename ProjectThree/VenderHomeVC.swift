@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+    var userID = ""
     
     
     override func viewDidLoad() {
