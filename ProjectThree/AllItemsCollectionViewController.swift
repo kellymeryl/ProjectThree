@@ -15,6 +15,8 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var allItemsCollection: UICollectionView!
     
     @IBOutlet weak var searchBar: UISearchBar!
+   
+   var selectedItem: Int?
     
     var allItems = [DataModel.sharedInstance.item] {
         didSet {
@@ -53,7 +55,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let itemDetailViewController = segue.destination as! ItemDetailViewController
         itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
-        itemDetailViewController.arrayOfItems = allItems
+      itemDetailViewController.selectedItem = allItems[(allItemsCollection.indexPathsForSelectedItems?.first?.item)!]
     }
     
     override func viewDidLoad() {

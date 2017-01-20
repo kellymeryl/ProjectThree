@@ -32,6 +32,12 @@ class CoreDataModel {
    }
 
    
+   var cart: Cart {
+      let cart = CoreDataModel.sharedInstance.createCart()
+      return cart
+   }
+   
+   
     func createCart() -> Cart {
         let cart = Cart(context:context)
         return cart

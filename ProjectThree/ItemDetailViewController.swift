@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     var selectedIndex: Int?
     
-    var arrayOfItems: [Item?] = []
+    var selectedItem = DataModel.sharedInstance.item
+   
+   var persistentStoreCoordinator = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+   var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+   
+   
     
     @IBOutlet weak var itemNameLabel: UILabel!
     
@@ -21,8 +27,46 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var itemDescriptionTextView: UITextView!
     
     @IBAction func addToCartButton(_ sender: UIButton) {
-    }
+      
+      let request = NSFetchRequest<NSFetchRequestResult>(entityName: "CartItem")
+      let itemuID = selectedItem?.uID
+      let predicate = NSPredicate(format: "name == %@", "Shirt")
+      request.predicate = predicate
+      request.fetchLimit = 1
+      
+      do {
+         var items = try managedObjectContext.fetch(request) as! [CartItem]
+         print(items.first?.quantity)
+         if items.first?.name != selectedItem?.name {
+            print("Item is not already in the cart")
+            print(items.first?.name)
+         } else {
+            items.first?.quantity += 1
+            print(items.first?.quantity)
+
+            print(items.count)
+         }
+      }
+      catch let error as NSError {
+         print("Could not fetch \(error), \(error.userInfo)")
+      }
     
+    }
+   
+   /*
+   let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: selectedItem!)
+   CoreDataModel.sharedInstance.cart.addToItems(currentItem)
+   
+   do {
+   try managedObjectContext.save()
+   } catch {
+   print(error.localizedDescription)
+   }
+   
+   */
+   
+  
+   
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailCell", for: indexPath) as! ItemDetailCollectionViewCell
         
@@ -40,9 +84,9 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        itemNameLabel.text = arrayOfItems[selectedIndex!]!.name
-        itemPriceLabel.text = "\(AllItemsCollectionViewController().convertToCurrency(num: arrayOfItems[selectedIndex!]!.price))"
-        itemDescriptionTextView.text = arrayOfItems[selectedIndex!]!.description
+        itemNameLabel.text = selectedItem?.name
+        itemPriceLabel.text = "\(AllItemsCollectionViewController().convertToCurrency(num: selectedItem!.price))"
+        itemDescriptionTextView.text = selectedItem?.description
 
         // Do any additional setup after loading the view.
     }
@@ -52,14 +96,5 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
         // Dispose of any resources that can be recreated.
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
