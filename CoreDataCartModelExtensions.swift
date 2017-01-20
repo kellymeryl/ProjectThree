@@ -9,17 +9,7 @@
 import Foundation
 import CoreData
 
-extension Cart {
-    static func entityName() -> String {
-        return "Cart"
-    }
-    
-    static func insertNewObject(in managedObjectContext : NSManagedObjectContext) -> Cart {
-        return NSEntityDescription.insertNewObject(forEntityName: Cart.entityName(), into: managedObjectContext) as! Cart
-    }
-    
-    
-}
+
 
 extension CartItem {
     

@@ -11,25 +11,29 @@ import Firebase
 import FirebaseAuth
 import CoreData
 
-var itemsInCart = [Item]()
+var item1 = Item(name: "name", category: "m", size: "s", price: "10", image: [#imageLiteral(resourceName: "Lumber Placeholder.png")] , description: "description")
+var item2 = Item(name: "name2", category: "m", size: "M", price: "12", image: [#imageLiteral(resourceName: "Shopping Cart.png")], description: "desc")
 
 class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
+    
+    var itemsInCart = [item1, item2]
+    
+    //Core Data
     var persistentStoreCoordinator = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
     var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
-
     @IBAction func confirmPurchaseWasTapped(_ sender: Any) {
-       
-        let cart = Cart.insertNewObject(in: managedObjectContext)
-   //     print(cart)
         
-        let cartItem = CartItem.insertNewObject(in: managedObjectContext)
-        cart.addToItems(cartItem)
+        let newCart = CoreDataModel.sharedInstance.createCart()
+        
+        for item in itemsInCart {
+            let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: item)
+            newCart.addToItems(currentItem)
+            
+        }
         
         
-//        UserDefaults.standard.set(cart.objectID.uriRepresentation(), forKey: "user's cart")
-  
         do {
             try  managedObjectContext.save()
         } catch {
@@ -39,7 +43,7 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
         do {
             if let url = UserDefaults.standard.url(forKey: "user's cart") {
                 if let objectID = managedObjectContext.persistentStoreCoordinator?.managedObjectID(forURIRepresentation: url) {
-                let persistedCart = managedObjectContext.object(with: objectID)
+                    let persistedCart = managedObjectContext.object(with: objectID)
                     print(persistedCart)
                 }
             }
@@ -47,14 +51,14 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
             ()
         }
         
-        print(cart)
+        print(newCart)
         
     }
    
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+      
         
     }
    
@@ -62,17 +66,15 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "PreCheckoutTableViewCell", for: indexPath) as! PreCheckoutTableViewCell
       
- //     cell.itemName.text = itemsInCart[indexPath.row].item
- //     if let price = itemsInCart[indexPath.row]?.price {
- //        cell.itemPrice.text = "\(price)"
- //     }
+      cell.itemName.text = CoreDataModel.sharedInstance.cartItems[indexPath.row].name
+      cell.itemPrice.text = CoreDataModel.sharedInstance.cartItems[indexPath.row].price
       
       return cell
       
    }
    
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return itemsInCart.count
+      return 3
    }
    
    
@@ -96,15 +98,4 @@ class PreCheckoutViewController: UIViewController, UITableViewDataSource, UITabl
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
