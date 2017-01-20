@@ -24,20 +24,64 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return allItems.count
-        
+    var filteredItems = [DataModel.sharedInstance.item] {
+        didSet {
+            allItemsCollection.reloadData()
+        }
     }
+
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText != "" {
+            filteredItems = []
+            
+            for item in allItems {
+                if (item?.name.contains(searchBar.text!))! {
+                    filteredItems.append(item)
+                }
+                print(item)
+            }
+        }
+        else {
+            filteredItems = []
+        }
+        allItemsCollection.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     
+   /*    let filteredItems = filteredItems {
+            return filteredItems.count
+        }
+        else {*/
+            return allItems.count
+      //  }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
         
+      /*  if let filteredItems = filteredItems {
+            
+            let filteredItem = filteredItems[indexPath.row]
+            cell.itemNameLabel.text = filteredItem.name
+            if let price = filteredItems[indexPath.item]?.price {
+                cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
+            }
+            return cell
+        }
+        else {
+        */
         cell.itemNameLabel.text = allItems[indexPath.item]?.name
         if let price = allItems[indexPath.item]?.price {
             cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
         }
         return cell
+   
+  //      }
     }
     
     func convertToCurrency(num: String) -> String {
@@ -68,6 +112,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
             strongSelf.allItems = items
         })
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

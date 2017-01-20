@@ -18,7 +18,8 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
    var persistentStoreCoordinator = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
    var managedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
    
-   
+    var cart = CoreDataModel.sharedInstance.cart
+    var cartItems = CoreDataModel.sharedInstance.cartItems
     
     @IBOutlet weak var itemNameLabel: UILabel!
     
@@ -37,25 +38,30 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
       do {
          var items = try managedObjectContext.fetch(request) as! [CartItem]
          print(items.first?.quantity)
-         if items.first?.name != selectedItem?.name {
+        
+        if items.first?.name != selectedItem?.name {
+            let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: selectedItem!)
+            cartItems.append(currentItem)
             print("Item is not already in the cart")
             print(items.first?.name)
-         } else {
+         }
+        
+        else {
+            let newItem = CoreDataModel.sharedInstance.addToItem(firebaseItem: selectedItem!)
+            cartItems.append(newItem)
             items.first?.quantity += 1
             print(items.first?.quantity)
-
             print(items.count)
          }
       }
+      
       catch let error as NSError {
          print("Could not fetch \(error), \(error.userInfo)")
       }
     
     }
-   
    /*
-   let currentItem = CoreDataModel.sharedInstance.createItem(firebaseItem: selectedItem!)
-   CoreDataModel.sharedInstance.cart.addToItems(currentItem)
+
    
    do {
    try managedObjectContext.save()
@@ -64,7 +70,7 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
    }
    
    */
-   
+    
   
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -78,6 +84,9 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let shoppingCartViewController = segue.destination as! ShoppingCartViewController
+        shoppingCartViewController.cartItems = cartItems
 
     }
     
