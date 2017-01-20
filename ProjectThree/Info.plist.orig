@@ -31,8 +31,11 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-	<string>VendorSignup</string>
-	<string>Checkout</string>
+<<<<<<< Updated upstream
+	<string>CustomerUI</string>
+=======
+	<string>Vendor</string>
+>>>>>>> Stashed changes
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

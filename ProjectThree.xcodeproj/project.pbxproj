@@ -13,6 +13,8 @@
 		377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */; };
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
+		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
+		37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */; };
@@ -46,6 +48,8 @@
 		D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */; };
 		D5EAD3511E2EC956005F42E0 /* EditItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */; };
 		D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */; };
+		D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAD4031E312749005F42E0 /* Vendor.storyboard */; };
+		D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD4051E314896005F42E0 /* ItemCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,8 @@
 		377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorSignup.storyboard; sourceTree = "<group>"; };
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
+		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKItemDetailViewController.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +83,7 @@
 		522142191E29565200170BA7 /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52A6B3CC1E3181B1003FE120 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCartModelExtensions.swift; sourceTree = "<group>"; };
@@ -102,6 +109,8 @@
 		D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		D5EAD4031E312749005F42E0 /* Vendor.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Vendor.storyboard; sourceTree = "<group>"; };
+		D5EAD4051E314896005F42E0 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.debug.xcconfig"; sourceTree = "<group>"; };
 		FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjectThree.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -178,6 +187,7 @@
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
+				37847ACB1E31718400F870AB /* CoreData.swift */,
 				52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */,
 				52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */,
 				522142071E29565100170BA7 /* ProjectThree */,
@@ -212,6 +222,7 @@
 				522142141E29565100170BA7 /* Info.plist */,
 				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
 				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
+				37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 				377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */,
 				52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
+				D5EAD4031E312749005F42E0 /* Vendor.storyboard */,
 				5221420F1E29565100170BA7 /* Assets.xcassets */,
 			);
 			name = UI;
@@ -284,6 +296,7 @@
 				D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */,
 				D5EAD3501E2EC956005F42E0 /* EditItemVC.swift */,
 				D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */,
+				D5EAD4051E314896005F42E0 /* ItemCell.swift */,
 			);
 			name = "Vendor Logic";
 			sourceTree = "<group>";
@@ -388,6 +401,7 @@
 				377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */,
 				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
+				D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */,
 				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -454,6 +468,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */,
 				377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
@@ -473,11 +488,13 @@
 				37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
+				D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */,
 				52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,
 				377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */,
 				52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */,
+				37847ACC1E31718400F870AB /* CoreData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +717,7 @@
 		52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				52A6B3CC1E3181B1003FE120 /* CoreDataModel 2.xcdatamodel */,
 				52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */,
 			);
 			currentVersion = 52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */;

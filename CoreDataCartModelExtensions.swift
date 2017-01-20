@@ -9,17 +9,7 @@
 import Foundation
 import CoreData
 
-extension Cart {
-    static func entityName() -> String {
-        return "Cart"
-    }
-    
-    static func insertNewObject(in managedObjectContext : NSManagedObjectContext) -> Cart {
-        return NSEntityDescription.insertNewObject(forEntityName: Cart.entityName(), into: managedObjectContext) as! Cart
-    }
-    
-    
-}
+
 
 extension CartItem {
     
@@ -35,7 +25,7 @@ extension CartItem {
         self.category = firebaseCartItem.category
         self.desc = firebaseCartItem.description
         self.name = firebaseCartItem.name
-        self.price = firebaseCartItem.price
+       // self.price = firebaseCartItem.price
         self.size = firebaseCartItem.size
     }
     

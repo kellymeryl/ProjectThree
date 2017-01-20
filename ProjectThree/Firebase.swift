@@ -177,7 +177,7 @@ class FirebaseModel {
    func uploadImageToFirebase(data: Data, imageName: String) {
       
       let storageRef = FIRStorage.storage().reference()
-      let imageRef = storageRef.child(NSUUID().uuidString)
+      let imageRef = storageRef.child(imageName)
       
       let _ = imageRef.put(data, metadata: nil) { (metadata, error) in
          guard let metadata = metadata else {
