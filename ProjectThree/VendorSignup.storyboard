@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16A2323a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-0v-P75">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wI5-0v-P75">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -155,6 +155,7 @@
                                 <connections>
                                     <action selector="signUpButtonWasTapped:" destination="zJh-WA-PFU" eventType="touchUpInside" id="4Jy-tX-pH9"/>
                                     <action selector="vendorLoginPressed:" destination="Z7Z-zW-doc" eventType="touchUpInside" id="QrZ-Ao-eRu"/>
+                                    <segue destination="bgd-rl-NGb" kind="show" identifier="Login2Vendor" id="CdZ-dl-0To"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-kg-wZa">
@@ -192,6 +193,14 @@
                 <exit id="Wgn-ga-uAW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1804" y="139"/>
+        </scene>
+        <!--Vendor-->
+        <scene sceneID="7Sq-rm-ZXL">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Vendor" id="bgd-rl-NGb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S9U-Fk-6HG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2503" y="159"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="vwi-tT-6Yd">

@@ -10,31 +10,40 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class VenderHomeVC: UIViewController {
+class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    var userID = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    //MARK: @IBOUTLETS================================================
+//MARK: @IBOUTLETS================================================
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
+ //MARK: CollectionView Methods and Properties====================
     
+    var homeScreenPhotos = [UIImage]()
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return homeScreenPhotos.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! ItemCell
+        
+        cell.homeImageOutlet.image = homeScreenPhotos[indexPath.row]
+        
+        return cell
+    }
 }

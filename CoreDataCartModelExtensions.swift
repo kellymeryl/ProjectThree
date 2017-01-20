@@ -25,7 +25,7 @@ extension CartItem {
         self.category = firebaseCartItem.category
         self.desc = firebaseCartItem.description
         self.name = firebaseCartItem.name
-        self.price = firebaseCartItem.price
+       // self.price = firebaseCartItem.price
         self.size = firebaseCartItem.size
     }
     
