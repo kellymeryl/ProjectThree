@@ -14,6 +14,8 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     var cart = CoreDataModel.sharedInstance.cart
     var cartItems = CoreDataModel.sharedInstance.cartItems
     
+    @IBOutlet weak var priceLabel: UILabel!
+    
     @IBOutlet weak var shoppingCartTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,9 +44,27 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         return result!
     }
     
+    func setTotalPrice() {
+        
+        var integerPrice: Int
+        var quantity: Int
+        var totalPrice = 0
+        var stringTotalPrice: String
+
+        for items in cartItems {
+            integerPrice = Int(items.price!)!
+            quantity = Int(items.quantity)
+            totalPrice += (integerPrice * quantity)
+        }
+        
+        stringTotalPrice = String(describing: totalPrice)
+        priceLabel.text = stringTotalPrice
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTotalPrice()
     }
 
     override func didReceiveMemoryWarning() {
