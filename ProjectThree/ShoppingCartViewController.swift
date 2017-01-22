@@ -16,6 +16,11 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var priceLabel: UILabel!
     
+    var integerPrice = Int()
+    var quantity = Int()
+    var totalPrice = 0
+    var stringTotalPrice = String()
+
     @IBOutlet weak var shoppingCartTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,11 +51,6 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     
     func setTotalPrice() {
         
-        var integerPrice: Int
-        var quantity: Int
-        var totalPrice = 0
-        var stringTotalPrice: String
-
         for items in cartItems {
             integerPrice = Int(items.price!)!
             quantity = Int(items.quantity)
@@ -59,6 +59,12 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         
         stringTotalPrice = String(describing: totalPrice)
         priceLabel.text = stringTotalPrice + ".00"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let checkoutViewController = segue.destination as! CheckoutViewController
+        checkoutViewController.cartSubtotal = priceLabel.text!
+        checkoutViewController.cartItems = cartItems
     }
     
     
