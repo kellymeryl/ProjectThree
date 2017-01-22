@@ -51,12 +51,12 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
      
-   /*    let filteredItems = filteredItems {
-            return filteredItems.count
+        if searchBar.text != "" {
+            return self.filteredItems.count
         }
-        else {*/
-            return allItems.count
-      //  }
+        else {
+            return self.allItems.count
+        }
     }
     
     
@@ -64,24 +64,24 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
         
-      /*  if let filteredItems = filteredItems {
+        if searchBar.text != "" {
             
             let filteredItem = filteredItems[indexPath.row]
-            cell.itemNameLabel.text = filteredItem.name
+            cell.itemNameLabel.text = filteredItem?.name
             if let price = filteredItems[indexPath.item]?.price {
                 cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
             }
             return cell
         }
         else {
-        */
+        
         cell.itemNameLabel.text = allItems[indexPath.item]?.name
         if let price = allItems[indexPath.item]?.price {
             cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
         }
         return cell
    
-  //      }
+        }
     }
     
     func convertToCurrency(num: String) -> String {
@@ -99,7 +99,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let itemDetailViewController = segue.destination as! ItemDetailViewController
         itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
-      itemDetailViewController.selectedItem = allItems[(allItemsCollection.indexPathsForSelectedItems?.first?.item)!]
+        itemDetailViewController.selectedItem = allItems[(allItemsCollection.indexPathsForSelectedItems?.first?.item)!]
     }
     
     override func viewDidLoad() {
@@ -115,6 +115,5 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

@@ -58,7 +58,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         stringTotalPrice = String(describing: totalPrice)
-        priceLabel.text = stringTotalPrice
+        priceLabel.text = stringTotalPrice + ".00"
     }
     
     
