@@ -10,9 +10,15 @@ import UIKit
 
 class ItemCell: UICollectionViewCell {
     
-    @IBOutlet weak var homeLblOutlet: UILabel!
-    @IBOutlet weak var homeImageOutlet: UIImageView!
-    
+   @IBOutlet weak var itemImage: UIImageView!
+   @IBOutlet weak var itemName: UILabel!
+   
+   var itemImageURL: String? {
+      didSet {
+         itemImage.setImageWithURL(urlString: itemImageURL)
+      }
+   }
+   
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
     
     func didTap(_ sender: UITapGestureRecognizer) {

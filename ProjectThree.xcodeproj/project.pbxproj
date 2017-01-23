@@ -15,6 +15,7 @@
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
 		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
 		37847AD61E36855300F870AB /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD51E36855300F870AB /* ColorCell.swift */; };
+		37847AD81E36B6FD00F870AB /* ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD71E36B6FD00F870AB /* ImageFetch.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
@@ -66,6 +67,7 @@
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
 		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		37847AD51E36855300F870AB /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
+		37847AD71E36B6FD00F870AB /* ImageFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetch.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
+				37847AD71E36B6FD00F870AB /* ImageFetch.swift */,
 				37847ACB1E31718400F870AB /* CoreData.swift */,
 				52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */,
 				52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */,
@@ -473,6 +476,7 @@
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
 				D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */,
+				37847AD81E36B6FD00F870AB /* ImageFetch.swift in Sources */,
 				52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */,
 				BA3179AA1E2DC7FA0006D532 /* ItemDetailCollectionViewCell.swift in Sources */,
 				BA3179AE1E2DD9AA0006D532 /* CheckoutTableViewCell.swift in Sources */,

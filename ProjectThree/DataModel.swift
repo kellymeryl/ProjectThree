@@ -113,18 +113,16 @@ struct Item {
    var color: String
    var price: String
    var size: [String] = [String]()
-   var image: [UIImage] = [UIImage]()
    var description: String
    var imageURLs: [String] = [String]()
    var vendor: String?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   init(name:String, color:String, price:String, image:[UIImage], description:String, size: [String], imageURLs:[String]) {
+   init(name:String, color:String, price:String, description:String, size: [String], imageURLs:[String]) {
       self.name = name
       self.color = color
       self.price = price
-      self.image = image
       self.size = size
       self.imageURLs = imageURLs
       self.description = description
@@ -140,7 +138,7 @@ struct Item {
       price = itemPrice.value as! String
       let itemDescription = snapshot.childSnapshot(forPath: "description")
       description = itemDescription.value as! String
-      let itemSize = snapshot.childSnapshot(forPath: "size")
+      let itemSize = snapshot.childSnapshot(forPath: "sizes")
       size = itemSize.value as! [String]
       let itemImageURLs = snapshot.childSnapshot(forPath: "imageURLs")
       imageURLs = itemImageURLs.value as! [String]

@@ -13,12 +13,16 @@ import FirebaseAuth
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var tempVenID = "test123"
-    
-    var vendorsItems = [DataModel.sharedInstance.item] {
+   
+   var allItemsFromVendor = [DataModel.sharedInstance.item] {
         didSet {
             collectionViewOutlet.reloadData()
         }
     }
+   
+   var imagesForItems = [UIImage]()
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +33,28 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+   
     override func viewDidAppear(_ animated: Bool) {
-        FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
-            guard let strongSelf = self else {return}
-            strongSelf.vendorsItems = items
-        })
+      FirebaseModel.sharedInstance.queryItems(searchPath: "item", key: "vendor", valueToSearch: "z7oLKBBeBGb0HScKrRkpIthhv9N2", success: { [weak self] arrayOfItems in
+         guard let strongSelf = self else {return}
+         strongSelf.allItemsFromVendor = arrayOfItems
+         
+         
+         for item in arrayOfItems {
+            for (index, imageURL) in item.imageURLs.enumerated() {
+               FirebaseModel.sharedInstance.downloadImage(name: imageURL, complete: { image in
+                  print(image!)
+                  self?.imagesForItems.append(image!)
+                  
+                  if index == arrayOfItems.count {
+                     
+                     self?.collectionViewOutlet.reloadData()
+                  }
+                  
+               })
+            }
+         }
+      })
     }
     
 //MARK: @IBOUTLETS================================================
@@ -45,18 +65,16 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return vendorsItems.count
+        return allItemsFromVendor.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
           let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell1", for: indexPath) as! ItemCell
-//        if tempVenID == (vendorsItems[indexPath.item]?.vendor) {
-//            cell.homeLblOutlet.text = vendorsItems[indexPath.item]?.name
-//            return cell
-//        } else {
-//            return UICollectionViewCell()
-//        }
-            return cell
-    }
-    
-}
+      cell.itemName.text = self.allItemsFromVendor[indexPath.item]?.name
+      
+      cell.itemImageURL = self.allItemsFromVendor[indexPath.item]?.imageURLs[0]
+      return cell
+
+
+      }
+   }

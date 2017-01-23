@@ -108,8 +108,7 @@ class FirebaseModel {
         
         query.observeSingleEvent(of: .value, with: { snapshot in
             
-            let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
-            for child in allItemsSnapshot.children {
+            for child in snapshot.children {
                 
                 if let itemSnapshot = child as? FIRDataSnapshot {
                     var itemInstance = Item(snapshot: itemSnapshot)
@@ -215,13 +214,16 @@ class FirebaseModel {
     
     func downloadImage(name: String, complete: @escaping (UIImage?) -> ()) {
         
-        let imageRef = FIRStorage.storage().reference(withPath: name)
-        imageRef.data(withMaxSize: 1 * 1024 * 1024) { data, error in
+        let imageRef = FIRStorage.storage().reference(forURL: name)
+        imageRef.data(withMaxSize: 1 * 1000024 * 1024) { data, error in
             
             if let data = data,
                 let image = UIImage(data: data) {
                 complete(image)
-            }
+            } else {
+               complete(nil)
+         }
+         
         }
     }
     
