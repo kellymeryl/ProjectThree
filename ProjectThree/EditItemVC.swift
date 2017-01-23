@@ -5,7 +5,7 @@
 //  Created by Benjamin Landau on 1/17/17.
 //  Copyright © 2017 Kelly McNevin. All rights reserved.
 //
-
+/*
 import UIKit
 
 class EditItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -28,17 +28,17 @@ class EditItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     @IBOutlet weak var editDescTextFieldOutlet: UITextField!
     @IBOutlet weak var editCategoryBtnOutlet: UIButton!
     @IBOutlet weak var editSizeBtnOutlet: UIButton!
-    @IBOutlet weak var categoryPickerViewOutlet: UIPickerView!
-    @IBOutlet weak var editSizePickerViewOutlet: UIPickerView!
+//    @IBOutlet weak var categoryPickerViewOutlet: UIPickerView!
+//    @IBOutlet weak var editSizePickerViewOutlet: UIPickerView!
     
     //MARK: @IBACTIONS========================================
     
-    @IBAction func editCategoryBtnTapped(_ sender: Any) {
-        categoryPickerViewOutlet.isHidden = false
-    }
-    @IBAction func editSizeBtnTapped(_ sender: Any) {
-        editSizePickerViewOutlet.isHidden = false
-    }
+//    @IBAction func editCategoryBtnTapped(_ sender: Any) {
+//        categoryPickerViewOutlet.isHidden = false
+//    }
+//    @IBAction func editSizeBtnTapped(_ sender: Any) {
+//        editSizePickerViewOutlet.isHidden = false
+//    }
     //MARK: PickerView Methods and Properties=================
     
     var categories = ["Men", "Woman", "Kids"]
@@ -64,15 +64,15 @@ class EditItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         }
     }
     
-    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if (pickerView.tag == 1) {
-            editCategoryBtnOutlet.setTitle(categories[row], for: UIControlState.normal)
-            categoryPickerViewOutlet.isHidden = true
-        } else {
-            editSizeBtnOutlet.setTitle(sizes[row], for: UIControlState.normal)
-            editSizePickerViewOutlet.isHidden = true
-        }
-        
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//        if (pickerView.tag == 1) {
+//            editCategoryBtnOutlet.setTitle(categories[row], for: UIControlState.normal)
+//            categoryPickerViewOutlet.isHidden = true
+//        } else {
+//            editSizeBtnOutlet.setTitle(sizes[row], for: UIControlState.normal)
+//            editSizePickerViewOutlet.isHidden = true
+//        }
+    
         
         
         
@@ -85,4 +85,4 @@ class EditItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
         
     }
 }
-
+*/

@@ -46,7 +46,7 @@ class FirebaseModel {
    //Change inputs to Item properties
    
    
-   func addItem(name: String, description:String, category: String, size: String, price: String) {
+   func addItem(name: String, description:String, category: String, price: String) {
       let itemRef = FIRDatabase.database().reference(withPath: "item")
       let itemChild = itemRef.childByAutoId()
       let itemName = itemChild.child("name")
@@ -55,8 +55,8 @@ class FirebaseModel {
       itemDescription.setValue(description)
       let itemCategory = itemChild.child("category")
       itemCategory.setValue(category)
-      let itemSize = itemChild.child("size")
-      itemSize.setValue(size)
+//      let itemSize = itemChild.child("size")
+//      itemSize.setValue(size)
       let itemPrice = itemChild.child("price")
       itemPrice.setValue(price)
       let vendor = itemChild.child("vendor")

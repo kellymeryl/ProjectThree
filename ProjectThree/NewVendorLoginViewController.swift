@@ -20,7 +20,8 @@ class NewVendorLoginViewController: UIViewController {
       
       FirebaseModel.sharedInstance.login(email: vendorEmailTF.text!, password: vendorPasswordTF.text!, complete: { success in
          if success {
-            print("login successful!")
+            print("==============login successful!==============")
+            print(DataModel.sharedInstance.vendor?.uID)
             self.performSegue(withIdentifier: "Login2Vendor", sender: self)
             print(FIRAuth.auth()?.currentUser?.uid)
             print()
@@ -59,10 +60,10 @@ class NewVendorLoginViewController: UIViewController {
     }
    
    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vendorHomeVC = segue.destination as! VenderHomeVC
-        vendorHomeVC.userID = (FIRAuth.auth()?.currentUser?.uid)!
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        let vendorHomeVC = segue.destination as! VenderHomeVC
+//        vendorHomeVC.userID = (FIRAuth.auth()?.currentUser?.uid)!
+//    }
    
 
     
