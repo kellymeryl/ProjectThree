@@ -9,10 +9,12 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseStorage
 
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     var userID = ""
+   var allItems = [DataModel.sharedInstance.item]
     
     
     override func viewDidLoad() {
@@ -22,6 +24,23 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+   
+   
+   override func viewDidAppear(_ animated: Bool) {
+      
+
+      
+      FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
+            guard let strongSelf = self else {return}
+            strongSelf.allItems = items
+         print(strongSelf.allItems)
+         for item in strongSelf.allItems {
+            print(item)
+         }
+         })
+      
+      
+   }
     
 //MARK: @IBOUTLETS================================================
     

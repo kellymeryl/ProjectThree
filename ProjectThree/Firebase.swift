@@ -46,7 +46,7 @@ class FirebaseModel {
    //Change inputs to Item properties
    
    
-   func addItem(name: String, description:String, category: String, size: String, price: String) {
+   func addItem(name: String, description:String, category: String, size: String, price: String, imageURL: String) {
       let itemRef = FIRDatabase.database().reference(withPath: "item")
       let itemChild = itemRef.childByAutoId()
       let itemName = itemChild.child("name")
@@ -61,13 +61,15 @@ class FirebaseModel {
       itemPrice.setValue(price)
       let vendor = itemChild.child("vendor")
       vendor.setValue(FIRAuth.auth()?.currentUser?.uid)
+      let imageURLs = itemChild.child("imageURLs")
+      imageURLs.setValue(imageURL)
    }
    
    
    //MARK: Observing Firebase Functions
    
    
-   func queryItems(searchPath: String, key:String, valueToSearch:String) {
+   func queryDatabase(searchPath: String, key:String, valueToSearch:String, success: (Bool) -> ()) {
       
       let updatesRef = FIRDatabase.database().reference(withPath: searchPath)
       let query = updatesRef.queryOrdered(byChild: key).queryEqual(toValue: valueToSearch)
@@ -98,6 +100,30 @@ class FirebaseModel {
          }
       })
    }
+   
+   
+   func queryItems(searchPath: String, key:String, valueToSearch:String, success: @escaping ([Item]) -> ()) {
+      var arrayOfQueriedItems = [Item]()
+      
+      let updatesRef = FIRDatabase.database().reference(withPath: searchPath)
+      let query = updatesRef.queryOrdered(byChild: key).queryEqual(toValue: valueToSearch)
+      
+      query.observeSingleEvent(of: .value, with: { snapshot in
+         
+         let allItemsSnapshot = snapshot.childSnapshot(forPath: "item")
+         for child in allItemsSnapshot.children {
+            
+            if let itemSnapshot = child as? FIRDataSnapshot {
+               var itemInstance = Item(snapshot: itemSnapshot)
+               arrayOfQueriedItems.append(itemInstance)
+            }
+         }
+         DispatchQueue.main.async {
+            success(arrayOfQueriedItems)
+         }
+      })
+   }
+   
    
    
    

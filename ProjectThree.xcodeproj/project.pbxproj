@@ -625,7 +625,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -640,7 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
 				DEVELOPMENT_TEAM = C67VLY25J7;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
