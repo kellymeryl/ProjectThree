@@ -51,6 +51,27 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
           self.dismiss(animated: true, completion: nil)
         }
     
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        
+    }
+    
+    func noCamera(){
+        let alertVC = UIAlertController(
+            title: "No Camera",
+            message: "Sorry, this device has no camera",
+            preferredStyle: .alert)
+        let okAction = UIAlertAction(
+            title: "OK",
+            style:.default,
+            handler: nil)
+        alertVC.addAction(okAction)
+        present(
+            alertVC,
+            animated: true,
+            completion: nil)
+    }
+    
 //MARK: @IBOUTLETS==============================================================
     
     @IBOutlet weak var chooseCategoryLbl: UILabel!
@@ -75,10 +96,26 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     
     @IBAction func photoBtnTapped(_ sender: Any) {
+        
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func accessCameraBtn(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            
+            imagePicker.allowsEditing = false
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            imagePicker.cameraCaptureMode = .photo
+            imagePicker.modalPresentationStyle = .fullScreen
+            present(imagePicker, animated: true, completion: nil)
+            
+        } else {
+            noCamera()
+        }
+    
+        
+    }
     // ** Need to change placeholder info in price and vendorUID **
     @IBAction func addItemBtn(_ sender: Any) {
         
