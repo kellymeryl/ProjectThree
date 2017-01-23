@@ -32,15 +32,15 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vre-tU-4ka">
-                                        <rect key="frame" x="256" y="51" width="119" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAK-Ii-isl">
+                                        <rect key="frame" x="205" y="34" width="162" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                        <state key="normal" title="Add Neww Item">
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <state key="normal" title="ADD NEW ITEM">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="hgr-9I-LdK" kind="show" id="FzQ-tA-6vN"/>
+                                            <segue destination="hgr-9I-LdK" kind="show" id="2Oo-GZ-ckI"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -81,7 +81,6 @@
                                         <connections>
                                             <outlet property="homeImageOutlet" destination="t7Z-8l-AhZ" id="92M-5r-SuC"/>
                                             <outlet property="homeLblOutlet" destination="fXO-nD-1iP" id="0Pg-cQ-Lux"/>
-                                            <segue destination="hgr-9I-LdK" kind="show" id="DuY-sE-h0Y"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -90,6 +89,14 @@
                                     <outlet property="delegate" destination="vDk-7P-Ts8" id="peU-Zr-lHf"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-hG-XgX">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="hgr-9I-LdK" kind="show" id="06v-Qf-c5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -100,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p8-JN-1Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="240.80000000000001" y="115.59220389805098"/>
+            <point key="canvasLocation" x="527.5" y="115.5"/>
         </scene>
         <!--Add New ItemVC-->
         <scene sceneID="D67-nZ-qrk">
@@ -142,13 +149,13 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427-6t-a5X">
                                                     <rect key="frame" x="8" y="8" width="78" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" patternImage="772E707C-CF6D-464F-BC09-5C46D5570210" colorSpace="pattern"/>
+                                                    <color key="backgroundColor" patternImage="0962A944-7A0B-4558-A790-9D8B94968161" colorSpace="pattern"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
-                                            <outlet property="imageOutlet" destination="427-6t-a5X" id="zeC-x2-GQJ"/>
+                                            <outlet property="imageOutlet" destination="427-6t-a5X" id="qGg-rv-f52"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -228,7 +235,6 @@
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="categoryLbl" destination="hEE-Gs-hDl" id="ppC-zl-MR3"/>
                                                     <outlet property="itemColor" destination="hEE-Gs-hDl" id="sFB-Jj-7zl"/>
                                                 </connections>
                                             </tableViewCell>
@@ -239,19 +245,6 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
-                            </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-el-nFy">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-cP-MLS">
-                                        <rect key="frame" x="108" y="31" width="175" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Upload Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bmk-bf-tHn">
                                 <rect key="frame" x="6" y="139" width="111" height="21"/>
@@ -267,6 +260,19 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Auu-el-nFy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-cP-MLS">
+                                        <rect key="frame" x="108" y="31" width="175" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="22"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -275,9 +281,9 @@
                         <outlet property="categoryBtn" destination="PhQ-Is-Ed9" id="GxF-2C-lce"/>
                         <outlet property="categoryTableViewOutlet" destination="6q2-bn-rir" id="QG5-Ot-z0T"/>
                         <outlet property="categoryView" destination="QoE-pz-ucE" id="mzK-b5-uqr"/>
-                        <outlet property="chooseCategoryLbl" destination="oeS-5z-jOF" id="paC-wZ-aBl"/>
                         <outlet property="descriptionTextField" destination="qs5-7L-sUq" id="m9m-Da-F7D"/>
                         <outlet property="imageCollectionViewOutlet" destination="kqk-Ea-Dph" id="Vwq-59-Xaa"/>
+                        <outlet property="itemColorLabel" destination="oeS-5z-jOF" id="Pin-6P-N8Z"/>
                         <outlet property="nameTextField" destination="xRt-tU-DDY" id="J0A-on-O05"/>
                         <outlet property="priceTextField" destination="D2i-8g-3nl" id="XGj-Bl-aEJ"/>
                     </connections>
@@ -375,7 +381,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="772E707C-CF6D-464F-BC09-5C46D5570210" width="640" height="920">
+        <image name="0962A944-7A0B-4558-A790-9D8B94968161" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -39705,6 +39711,6 @@ ACP/UQAj/1YAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAACP/WA
         </image>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DuY-sE-h0Y"/>
+        <segue reference="2Oo-GZ-ckI"/>
     </inferredMetricsTieBreakers>
 </document>

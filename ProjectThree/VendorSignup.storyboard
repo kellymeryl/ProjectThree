@@ -154,7 +154,6 @@
                                 </state>
                                 <connections>
                                     <action selector="vendorLoginPressed:" destination="Z7Z-zW-doc" eventType="touchUpInside" id="QrZ-Ao-eRu"/>
-                                    <segue destination="bgd-rl-NGb" kind="show" identifier="Login2Vendor" id="CdZ-dl-0To"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Hr-kg-wZa">
@@ -186,6 +185,7 @@
                     <connections>
                         <outlet property="vendorEmailTF" destination="CeH-FN-Po1" id="cgg-uw-351"/>
                         <outlet property="vendorPasswordTF" destination="tDT-Kr-NO3" id="5IO-hb-tOR"/>
+                        <segue destination="bgd-rl-NGb" kind="show" identifier="Login2Vendor" id="pjF-o3-Ywr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E4I-MA-4qn" userLabel="First Responder" sceneMemberID="firstResponder"/>

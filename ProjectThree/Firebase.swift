@@ -288,15 +288,16 @@ class FirebaseModel {
     
    func login(email: String, password: String, viewController: UIViewController, complete: @escaping (Bool)->()) {
         
-        FIRAuth.auth()?.signIn(withEmail: email, password: password) { user, error in
+        FIRAuth.auth()?.signIn(withEmail: email, password: password) { [weak viewController] user, error in
          if user == nil {
                let alertController = UIAlertController(title: "Error", message: "Username/Password Not Recognized", preferredStyle: .alert)
                
                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
                alertController.addAction(defaultAction)
                
-               viewController.present(alertController, animated: true, completion: nil)
+               viewController?.present(alertController, animated: true, completion: nil)
             }
+            complete(user != nil)
         }
     }
     

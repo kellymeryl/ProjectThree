@@ -20,8 +20,10 @@ class NewVendorLoginViewController: UIViewController {
       
       FirebaseModel.sharedInstance.login(email: vendorEmailTF.text!, password: vendorPasswordTF.text!, viewController: self, complete: { [weak self] success in
          guard let strongSelf = self else {return}
-               print("==============login successful!==============")
-               strongSelf.performSegue(withIdentifier: "Login2Vendor", sender: self)
+         DispatchQueue.main.async {
+            print("==============login successful!==============")
+            strongSelf.performSegue(withIdentifier: "Login2Vendor", sender: self)
+         }
       })
     
    }

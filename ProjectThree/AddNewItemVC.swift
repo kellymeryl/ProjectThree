@@ -59,11 +59,11 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
 //MARK: @IBOUTLETS==============================================================
     
-    @IBOutlet weak var chooseCategoryLbl: UILabel!
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageCollectionViewOutlet: UICollectionView!
     @IBOutlet weak var categoryBtn: UIButton!
+   @IBOutlet weak var itemColorLabel: UILabel!
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var addPhotoBtnOutlet: UIButton!
@@ -100,7 +100,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
          self.testingImagesURLArray.append(downloadURL!)
          
          
-         FirebaseModel.sharedInstance.addItem(name: self.nameTextField.text!, description: self.descriptionTextField.text!, color: self.chooseCategoryLbl.text!, price: self.priceTextField.text!, imageURLs: self.testingImagesURLArray)
+         FirebaseModel.sharedInstance.addItem(name: self.nameTextField.text!, description: self.descriptionTextField.text!, color: self.itemColorLabel.text!, price: self.priceTextField.text!, imageURLs: self.testingImagesURLArray)
          
             
             print("-------------- THIS IS THE URL \(downloadURL) --------------")
@@ -145,7 +145,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        chooseCategoryLbl.text = arrayOfColors[indexPath.row]
+        self.itemColorLabel.text = arrayOfColors[indexPath.row]
         categoryTableViewOutlet.isHidden = true
         
     }
