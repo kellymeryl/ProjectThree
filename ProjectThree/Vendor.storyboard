@@ -142,7 +142,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427-6t-a5X">
                                                     <rect key="frame" x="8" y="8" width="78" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" patternImage="D550DF28-A1EF-4447-B6F3-AA34AA118441" colorSpace="pattern"/>
+                                                    <color key="backgroundColor" patternImage="F7881D16-55A9-41A4-AE63-41C00755394D" colorSpace="pattern"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -374,7 +374,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="D550DF28-A1EF-4447-B6F3-AA34AA118441" width="640" height="920">
+        <image name="F7881D16-55A9-41A4-AE63-41C00755394D" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
