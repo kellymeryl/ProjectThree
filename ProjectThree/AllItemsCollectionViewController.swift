@@ -15,6 +15,8 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     @IBOutlet weak var allItemsCollection: UICollectionView!
     
     @IBOutlet weak var searchBar: UISearchBar!
+   
+   var selectedItem: Int?
     
     var allItems = [DataModel.sharedInstance.item] {
         didSet {
@@ -22,20 +24,64 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
         }
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return allItems.count
-        
+    var filteredItems = [DataModel.sharedInstance.item] {
+        didSet {
+            allItemsCollection.reloadData()
+        }
     }
+
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        if searchText != "" {
+            filteredItems = []
+            
+            for item in allItems {
+                if (item?.name.contains(searchBar.text!))! {
+                    filteredItems.append(item)
+                }
+                print(item)
+            }
+        }
+        else {
+            filteredItems = []
+        }
+        allItemsCollection.reloadData()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     
+        if searchBar.text != "" {
+            return self.filteredItems.count
+        }
+        else {
+            return self.allItems.count
+        }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell", for: indexPath) as! AllItemsCollectionViewCell
+        
+        if searchBar.text != "" {
+            
+            let filteredItem = filteredItems[indexPath.row]
+            cell.itemNameLabel.text = filteredItem?.name
+            if let price = filteredItems[indexPath.item]?.price {
+                cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
+            }
+            return cell
+        }
+        else {
         
         cell.itemNameLabel.text = allItems[indexPath.item]?.name
         if let price = allItems[indexPath.item]?.price {
             cell.itemPriceLabel.text = "\(convertToCurrency(num: price))"
         }
         return cell
+   
+        }
     }
     
     func convertToCurrency(num: String) -> String {
@@ -53,7 +99,7 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let itemDetailViewController = segue.destination as! ItemDetailViewController
         itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
-        itemDetailViewController.arrayOfItems = allItems
+        itemDetailViewController.selectedItem = allItems[(allItemsCollection.indexPathsForSelectedItems?.first?.item)!]
     }
     
     override func viewDidLoad() {
@@ -66,8 +112,8 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
             strongSelf.allItems = items
         })
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }

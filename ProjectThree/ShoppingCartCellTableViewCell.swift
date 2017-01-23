@@ -14,6 +14,8 @@ class ShoppingCartCellTableViewCell: UITableViewCell {
     
     @IBOutlet weak var itemNameCart: UILabel!
     
+    @IBOutlet weak var itemSizeCart: UILabel!
+    
     @IBOutlet weak var itemQuantityCart: UILabel!
     
     @IBOutlet weak var itemPriceCart: UILabel!
