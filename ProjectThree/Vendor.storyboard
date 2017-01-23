@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vDk-7P-Ts8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hgr-9I-LdK">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -28,7 +28,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vre-tU-4ka">
                                         <rect key="frame" x="256" y="51" width="119" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="14"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="16"/>
                                         <state key="normal" title="Add New Item">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -142,7 +142,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427-6t-a5X">
                                                     <rect key="frame" x="8" y="8" width="78" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" patternImage="030D1E13-3430-485F-83F8-02ACE3BA3F6C" colorSpace="pattern"/>
+                                                    <color key="backgroundColor" patternImage="FB6E152B-7734-4677-BB5C-1F68B2BFBCE4" colorSpace="pattern"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -280,6 +280,7 @@
                     </view>
                     <connections>
                         <outlet property="addPhotoBtnOutlet" destination="T7J-Xv-5eg" id="lP4-kK-1Vd"/>
+                        <outlet property="cameraAccessOutlet" destination="21b-7Y-zFH" id="Sdz-0S-pMM"/>
                         <outlet property="categoryBtn" destination="PhQ-Is-Ed9" id="GxF-2C-lce"/>
                         <outlet property="categoryTableViewOutlet" destination="6q2-bn-rir" id="QG5-Ot-z0T"/>
                         <outlet property="categoryView" destination="QoE-pz-ucE" id="mzK-b5-uqr"/>
@@ -383,7 +384,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="030D1E13-3430-485F-83F8-02ACE3BA3F6C" width="640" height="920">
+        <image name="Compact Camera_000000_25" width="25" height="25"/>
+        <image name="FB6E152B-7734-4677-BB5C-1F68B2BFBCE4" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -39711,7 +39713,6 @@ ACP+8wAj/vcAI/7+ACP/BgAj/xMAI/8YACP/GgAj/xwAI/8hACP/KQAj/ywAI/8xACP/OQAj/zwAI/9O
 ACP/UQAj/1YAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAACP/WA
 </mutableData>
         </image>
-        <image name="Compact Camera_000000_25" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="DuY-sE-h0Y"/>

@@ -28,7 +28,9 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     override func viewDidAppear(_ animated: Bool) {
         if arrayOfItemPictures.count == 3 {
             addPhotoBtnOutlet.isHidden = true
+            cameraAccessOutlet.isHidden = true
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -41,39 +43,34 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     var photo: PhotoCell!
     let imagePicker = UIImagePickerController()
     
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             arrayOfItemPictures.append(pickedImage)
             self.imageCollectionViewOutlet.reloadData()
         } else {
             //error message
-        }
+      }
           self.dismiss(animated: true, completion: nil)
-        }
+    }
     
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         
     }
     
+    
+    
     func noCamera(){
-        let alertVC = UIAlertController(
-            title: "No Camera",
-            message: "Sorry, this device has no camera",
-            preferredStyle: .alert)
-        let okAction = UIAlertAction(
-            title: "OK",
-            style:.default,
-            handler: nil)
+        let alertVC = UIAlertController(title: "No Camera", message: "Sorry, this device has no camera", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style:.default, handler: nil)
         alertVC.addAction(okAction)
-        present(
-            alertVC,
-            animated: true,
-            completion: nil)
+        present(alertVC, animated: true, completion: nil)
     }
     
 //MARK: @IBOUTLETS==============================================================
     
+    @IBOutlet weak var cameraAccessOutlet: UIButton!
     @IBOutlet weak var chooseCategoryLbl: UILabel!
     @IBOutlet weak var categoryView: UIView!
     @IBOutlet weak var nameTextField: UITextField!
@@ -83,6 +80,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var addPhotoBtnOutlet: UIButton!
     @IBOutlet weak var categoryTableViewOutlet: UITableView!
+    
 //MARK: @IBACTIONS===============================================================
     
     @IBAction func categoryBtnTapped(_ sender: Any) {

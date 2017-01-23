@@ -66,10 +66,10 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "add2cart" {
         let shoppingCartViewController = segue.destination as! ShoppingCartViewController
         shoppingCartViewController.cartItems = cartItems
-
+        }
     }
     
     override func viewDidLoad() {
