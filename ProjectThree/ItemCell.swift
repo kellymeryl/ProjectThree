@@ -12,4 +12,13 @@ class ItemCell: UICollectionViewCell {
     
     @IBOutlet weak var homeLblOutlet: UILabel!
     @IBOutlet weak var homeImageOutlet: UIImageView!
+    
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
+    
+    func didTap(_ sender: UITapGestureRecognizer) {
+    
+      // let tappedImageView = gestureRecognizers(
+       // tappedImageView.
+        
+    }
 }

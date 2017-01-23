@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NPw-VK-Zi2">
     <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -16,7 +17,7 @@
         <scene sceneID="gxi-4V-eaH">
             <objects>
                 <navigationController id="NPw-VK-Zi2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="15w-LN-ZMz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="15w-LN-ZMz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -26,7 +27,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQl-pN-O4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="188"/>
+            <point key="canvasLocation" x="-582" y="125"/>
         </scene>
         <!--All Items Collection View Controller-->
         <scene sceneID="aU5-m4-tps">
@@ -40,8 +41,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Ij-aTY">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -123,27 +127,31 @@
                     <navigationItem key="navigationItem" id="0gO-fE-aAz">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu 3 Lines.png" id="nkn-JN-dts">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="zM4-x6-AMU">
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cza-Iz-NDi">
+                                    <rect key="frame" x="-113" y="-27" width="376" height="66"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THB-ZC-hAg">
                                     <rect key="frame" x="3" y="0.0" width="143" height="31"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="SzZ-FG-SFQ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="TVW-bE-FBW" kind="show" id="8xQ-Gn-084"/>
+                                <segue destination="TVW-bE-FBW" kind="show" id="eT7-Kf-cQh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -154,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zs-Pe-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445.60000000000002" y="188.45577211394306"/>
+            <point key="canvasLocation" x="257" y="125"/>
         </scene>
         <!--Item Detail View Controller-->
         <scene sceneID="QlN-tO-V4e">
@@ -168,8 +176,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-QB-Sff">
                                 <rect key="frame" x="21" y="214" width="335" height="18"/>
+
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-sD-jhS">
+                                <rect key="frame" x="16" y="72" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ztM-sS-jIZ">
+                                    <size key="itemSize" width="129" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemDetailCell" id="lYZ-kG-W4m" customClass="ItemDetailCollectionViewCell" customModule="ProjectThree" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-32" width="129" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="129" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Lumber Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="y9s-Mh-Tmd">
+                                                    <rect key="frame" x="8" y="8" width="113" height="112"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <connections>
+                                            <outlet property="itemImageView" destination="y9s-Mh-Tmd" id="mZo-1e-ric"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="GBd-nA-ZSW" id="syR-tq-uPh"/>
+                                    <outlet property="delegate" destination="GBd-nA-ZSW" id="ZQZ-Ry-xK9"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-QB-Sff">
+                                <rect key="frame" x="16" y="223" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -189,7 +241,9 @@
                                 <rect key="frame" x="21" y="674" width="373" height="42"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
                                 <state key="normal" title="Add to cart">
+
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+
                                 </state>
                                 <connections>
                                     <action selector="addToCartButton:" destination="GBd-nA-ZSW" eventType="touchUpInside" id="pyZ-Wy-pIl"/>
@@ -284,17 +338,27 @@
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hO0-Rj-RwB">
+                                    <rect key="frame" x="-112" y="-28" width="374" height="74"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BW5-Uu-OgX">
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="beX-Q8-wFy">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="TVW-bE-FBW" kind="show" id="hkb-tv-R9C"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="imageOne" destination="r2X-Ha-62t" id="gkD-sS-spu"/>
@@ -323,6 +387,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-Vf-mxr">
                                 <rect key="frame" x="0.0" y="107" width="414" height="571"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingCartCell" rowHeight="120" id="b71-xP-aDU" customClass="ShoppingCartCellTableViewCell" customModule="ProjectThree" customModuleProvider="target">
@@ -386,6 +451,7 @@
                                             <outlet property="itemNameCart" destination="tj9-xa-HlQ" id="p4k-im-TO3"/>
                                             <outlet property="itemPriceCart" destination="Vd3-bM-e8w" id="x3I-px-5Fh"/>
                                             <outlet property="itemQuantityCart" destination="gJ1-AC-qYV" id="jUa-5F-Gnh"/>
+                                            <outlet property="itemSizeCart" destination="ENn-zL-Xht" id="KDy-lp-myo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -396,6 +462,7 @@
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart Subtotal: $###.##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-ju-0f3">
                                 <rect key="frame" x="0.0" y="81" width="414" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -410,6 +477,20 @@
                                     <segue destination="7Qx-cK-kWR" kind="show" id="87O-Yq-I4u"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN0-zk-HcP">
+                                <rect key="frame" x="171" y="81" width="188" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAM-h1-wIz">
+                                <rect key="frame" x="154" y="81" width="19" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -426,24 +507,36 @@
                             <constraint firstItem="Ahf-47-xx5" firstAttribute="top" secondItem="1vs-Vf-mxr" secondAttribute="bottom" constant="8" id="zzN-Gj-jEh"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="NFP-ZM-2KL">
+                    <navigationItem key="navigationItem" id="NFP-ZM-2KL" colorLabel="IBBuiltInLabel-Red">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="IUa-JV-7F7">
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zfC-5P-ezI">
+                                    <rect key="frame" x="-115" y="-27" width="376" height="71"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-e5-HQ1">
-                                    <rect key="frame" x="3" y="0.0" width="144" height="33"/>
+                                    <rect key="frame" x="-107" y="0.0" width="359" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
+                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="85T-lG-Mgn">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="priceLabel" destination="WN0-zk-HcP" id="qJQ-Zq-aYc"/>
+                        <outlet property="shoppingCartTableView" destination="1vs-Vf-mxr" id="LOs-bs-pyT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6d-a1-w6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -455,7 +548,7 @@
                 <viewControllerPlaceholder storyboardName="Checkout" id="7Qx-cK-kWR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnF-J4-KbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="-136.28185907046478"/>
+            <point key="canvasLocation" x="2501" y="124"/>
         </scene>
     </scenes>
     <resources>
@@ -465,5 +558,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8xQ-Gn-084"/>
+
     </inferredMetricsTieBreakers>
 </document>

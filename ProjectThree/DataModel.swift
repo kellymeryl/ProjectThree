@@ -17,7 +17,7 @@ class DataModel {
    static let sharedInstance = DataModel()
 
    var vendor: Vendor?
-   var item:Item?
+   var item: Item?
    var customer:Customer?
 }
 

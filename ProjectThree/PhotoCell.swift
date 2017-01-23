@@ -12,12 +12,4 @@ class PhotoCell: UICollectionViewCell {
     
     @IBOutlet weak var imageOutlet: UIImageView!
     
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTap(_:)))
-    
-    func didTap(_ sender: UITapGestureRecognizer) {
-        
-        if imageOutlet == nil { return }
-        
-    }
-    
-}
+ }

@@ -12,8 +12,13 @@ import FirebaseAuth
 
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    var userID = ""
+    var tempVenID = "test123"
     
+    var vendorsItems = [DataModel.sharedInstance.item] {
+        didSet {
+            collectionViewOutlet.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,27 +28,34 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
         super.didReceiveMemoryWarning()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        FirebaseModel.sharedInstance.observeItems(success: { [weak self]
+            items in
+            guard let strongSelf = self else {return}
+            strongSelf.vendorsItems = items
+        })
+    }
+    
 //MARK: @IBOUTLETS================================================
     
     @IBOutlet weak var collectionViewOutlet: UICollectionView!
     
  //MARK: CollectionView Methods and Properties====================
     
-    var homeScreenPhotos = [UIImage]()
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
-    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeScreenPhotos.count
+        return vendorsItems.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! ItemCell
-        
-        cell.homeImageOutlet.image = homeScreenPhotos[indexPath.row]
-        
-        return cell
+          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell1", for: indexPath) as! ItemCell
+//        if tempVenID == (vendorsItems[indexPath.item]?.vendor) {
+//            cell.homeLblOutlet.text = vendorsItems[indexPath.item]?.name
+//            return cell
+//        } else {
+//            return UICollectionViewCell()
+//        }
+            return cell
     }
+    
 }
