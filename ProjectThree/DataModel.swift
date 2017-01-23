@@ -140,7 +140,7 @@ struct Item {
       price = itemPrice.value as! String
       let itemDescription = snapshot.childSnapshot(forPath: "description")
       description = itemDescription.value as! String
-      let itemSize = snapshot.childSnapshot(forPath: "size")
+      let itemSize = snapshot.childSnapshot(forPath: "sizes")
       size = itemSize.value as! [String]
       let itemImageURLs = snapshot.childSnapshot(forPath: "imageURLs")
       imageURLs = itemImageURLs.value as! [String]

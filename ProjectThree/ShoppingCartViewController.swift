@@ -37,6 +37,20 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         return cell
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            cartItems.remove(at: indexPath.row)
+            shoppingCartTableView.reloadData()
+        }
+    }
+    
     func convertToCurrency(num: String) -> String {
         
         let number = NSDecimalNumber(value: Float(num)!)

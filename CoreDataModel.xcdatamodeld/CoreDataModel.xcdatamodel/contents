@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16A2323a" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11759" systemVersion="16C67" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Cart" representedClassName="Cart" syncable="YES" codeGenerationType="class">
         <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CartItem" inverseName="cart" inverseEntity="CartItem" syncable="YES"/>
     </entity>
     <entity name="CartItem" representedClassName="CartItem" syncable="YES" codeGenerationType="class">
-        <attribute name="category" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="price" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,9 +13,32 @@
         <attribute name="uID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vendor" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="cart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="items" inverseEntity="Cart" syncable="YES"/>
+        <relationship name="cartToColor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Color" inverseName="colorToCart" inverseEntity="Color" syncable="YES"/>
+        <relationship name="cartToSize" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Size" inverseName="sizeToCart" inverseEntity="Size" syncable="YES"/>
+    </entity>
+    <entity name="Color" representedClassName="Color" parentEntity="CartItem" syncable="YES" codeGenerationType="class">
+        <attribute name="black" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="blue" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="green" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="orange" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="pink" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="purple" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="red" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="white" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="yellow" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="colorToCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CartItem" inverseName="cartToColor" inverseEntity="CartItem" syncable="YES"/>
+    </entity>
+    <entity name="Size" representedClassName="Size" syncable="YES" codeGenerationType="class">
+        <attribute name="large" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="medium" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="small" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="xlarge" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="sizeToCart" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CartItem" inverseName="cartToSize" inverseEntity="CartItem" syncable="YES"/>
     </entity>
     <elements>
         <element name="Cart" positionX="-63" positionY="-18" width="128" height="58"/>
-        <element name="CartItem" positionX="196" positionY="81" width="128" height="180"/>
+        <element name="CartItem" positionX="196" positionY="81" width="128" height="210"/>
+        <element name="Color" positionX="63" positionY="108" width="128" height="195"/>
+        <element name="Size" positionX="72" positionY="117" width="128" height="120"/>
     </elements>
 </model>
