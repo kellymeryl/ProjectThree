@@ -53,8 +53,8 @@ class CoreDataModel {
       item.color = firebaseItem.color
       item.vendor = firebaseItem.vendor
       item.uID = firebaseItem.uID
-    
-    return item
+      item.quantity = 1
+        return item
    
     }
     
