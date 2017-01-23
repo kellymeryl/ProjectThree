@@ -12,11 +12,15 @@ import FirebaseAuth
 import FirebaseStorage
 
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
+   
+   
     var userID = ""
-   var allItems = [DataModel.sharedInstance.item]
-    
-    
+   var allItems = [DataModel.sharedInstance.item] {
+      didSet {
+         allItemsCollection.reloadData()
+      }
+   }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -33,19 +37,16 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
       FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
             guard let strongSelf = self else {return}
             strongSelf.allItems = items
-         print(strongSelf.allItems)
-         for item in strongSelf.allItems {
-            print(item)
-         }
          })
       
       
    }
     
 //MARK: @IBOUTLETS================================================
-    
-    @IBOutlet weak var collectionViewOutlet: UICollectionView!
-    
+
+   @IBOutlet weak var allItemsCollection: UICollectionView!
+   
+   
  //MARK: CollectionView Methods and Properties====================
     
     var homeScreenPhotos = [UIImage]()
@@ -55,14 +56,35 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return homeScreenPhotos.count
+        return allItems.count
     }
+   
+
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! ItemCell
-        
-        cell.homeImageOutlet.image = homeScreenPhotos[indexPath.row]
-        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell1", for: indexPath) as! ItemCell
+      
+      cell.itemName.text = allItems[indexPath.item]?.name
+      if let price = allItems[indexPath.item]?.price {
+         cell.itemPrice.text = "\(convertToCurrency(num: price))"
+      }
+//      cell.itemImageView.image = allItems[indexPath.item]?.image
         return cell
     }
+   
+   
+   
+   func convertToCurrency(num: String) -> String {
+      
+      let number = NSDecimalNumber(value: Float(num)!)
+      
+      let numberFormatter = NumberFormatter()
+      numberFormatter.numberStyle = .currency
+      
+      let result = numberFormatter.string(from: number)
+      
+      return result!
+   }
+   
+   
 }

@@ -2,14 +2,16 @@
 //  ItemCell.swift
 //  ProjectThree
 //
-//  Created by Benjamin Landau on 1/19/17.
+//  Created by Dan Hefter on 1/23/17.
 //  Copyright © 2017 Kelly McNevin. All rights reserved.
 //
 
 import UIKit
 
 class ItemCell: UICollectionViewCell {
-    
-    @IBOutlet weak var homeLblOutlet: UILabel!
-    @IBOutlet weak var homeImageOutlet: UIImageView!
+   
+   @IBOutlet weak var itemImageView: UIImageView!
+   @IBOutlet weak var itemPrice: UILabel!
+   @IBOutlet weak var itemName: UILabel!
+   
 }

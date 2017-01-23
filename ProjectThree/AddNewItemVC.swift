@@ -80,11 +80,12 @@ class AddNewItemVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSour
    @IBAction func addItemBtn(_ sender: Any) {
       
       
+      let imageStorageUID = UUID().uuidString
       
       let uploadData = UIImagePNGRepresentation(self.pictureSaved!)
          
          let storageRef = FIRStorage.storage().reference()
-         let imageRef = storageRef.child(self.nameTextField.text!)
+         let imageRef = storageRef.child(imageStorageUID)
          
          let _ = imageRef.put(uploadData!, metadata: nil, completion: { (metadata, error) in
            let downloadURL = metadata?.downloadURL()?.absoluteString

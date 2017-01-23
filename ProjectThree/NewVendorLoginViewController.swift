@@ -59,10 +59,10 @@ class NewVendorLoginViewController: UIViewController {
     }
    
    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vendorHomeVC = segue.destination as! VenderHomeVC
-        vendorHomeVC.userID = (FIRAuth.auth()?.currentUser?.uid)!
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//      let vendorHomeVC = segue.destination as! VenderHomeVC
+//        vendorHomeVC.userID = (FIRAuth.auth()?.currentUser?.uid)!
+//    }
    
 
     
