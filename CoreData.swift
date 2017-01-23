@@ -32,6 +32,12 @@ class CoreDataModel {
    }
 
    
+   var cart: Cart {
+      let cart = CoreDataModel.sharedInstance.createCart()
+      return cart
+   }
+   
+   
     func createCart() -> Cart {
         let cart = Cart(context:context)
         return cart
@@ -50,6 +56,21 @@ class CoreDataModel {
       item.uID = firebaseItem.uID
         return item
    
+    }
+    
+    func addToItem(firebaseItem: Item) -> CartItem {
+        
+        let item = CartItem(context:context)
+        item.category = firebaseItem.category
+        item.desc = firebaseItem.description
+        item.name = firebaseItem.name
+        item.price = firebaseItem.price
+        item.size = firebaseItem.size
+        item.vendor = firebaseItem.vendor
+        item.uID = firebaseItem.uID
+        item.quantity += 1
+        return item
+        
     }
    
    
