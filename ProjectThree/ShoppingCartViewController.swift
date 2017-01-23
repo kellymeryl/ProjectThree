@@ -24,6 +24,7 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet weak var shoppingCartTableView: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        setTotalPrice()
         return cartItems.count
     }
     
@@ -35,6 +36,21 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
         cell.itemSizeCart.text = cartItems[indexPath.row].size
         cell.itemQuantityCart.text = String(describing: cartItems[indexPath.row].quantity)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
+    {
+        if editingStyle == .delete
+        {
+            cartItems.remove(at: indexPath.row)
+            shoppingCartTableView.reloadData()
+        }
+        
     }
     
     func convertToCurrency(num: String) -> String {
@@ -50,6 +66,8 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func setTotalPrice() {
+        
+        totalPrice = 0
         
         for items in cartItems {
             integerPrice = Int(items.price!)!

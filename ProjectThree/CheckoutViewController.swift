@@ -36,6 +36,9 @@ class CheckoutViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
