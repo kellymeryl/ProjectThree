@@ -21,11 +21,27 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
     var cart = CoreDataModel.sharedInstance.cart
     var cartItems = CoreDataModel.sharedInstance.cartItems
     
+    @IBOutlet weak var imageOne: UIImageView!
+    @IBOutlet weak var imageTwo: UIImageView!
+    @IBOutlet weak var imageThree: UIImageView!
+    
     @IBOutlet weak var itemNameLabel: UILabel!
     
     @IBOutlet weak var itemPriceLabel: UILabel!
     
     @IBOutlet weak var itemDescriptionTextView: UITextView!
+    
+    @IBAction func xlButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func largeButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func mediumButton(_ sender: UIButton) {
+    }
+    
+    @IBAction func smallButton(_ sender: UIButton) {
+    }
     
     @IBAction func addToCartButton(_ sender: UIButton) {
         

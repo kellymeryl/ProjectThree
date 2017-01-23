@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fbQ-e6-dE4">
+    <device id="retina4_7" orientation="portrait">
+=======
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NPw-VK-Zi2">
     <device id="retina5_5" orientation="portrait">
+>>>>>>> NewAutoLayout
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -16,7 +21,7 @@
         <scene sceneID="gxi-4V-eaH">
             <objects>
                 <navigationController id="NPw-VK-Zi2" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="15w-LN-ZMz">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="15w-LN-ZMz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -26,7 +31,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQl-pN-O4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-476" y="188"/>
+            <point key="canvasLocation" x="-582" y="125"/>
         </scene>
         <!--All Items Collection View Controller-->
         <scene sceneID="aU5-m4-tps">
@@ -40,8 +45,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <searchBar contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Ij-aTY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+=======
                             <searchBar contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jCn-Ij-aTY">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
+>>>>>>> NewAutoLayout
                                 <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -109,6 +120,9 @@
                                 </connections>
                             </collectionView>
                         </subviews>
+<<<<<<< HEAD
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+=======
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Xg9-Ok-9gg" firstAttribute="width" secondItem="j1D-UJ-z9P" secondAttribute="width" id="Auf-MA-cpb"/>
@@ -119,14 +133,19 @@
                             <constraint firstItem="4Ay-2x-Vc7" firstAttribute="top" secondItem="Xg9-Ok-9gg" secondAttribute="bottom" id="i1O-ER-oHn"/>
                             <constraint firstItem="Xg9-Ok-9gg" firstAttribute="centerX" secondItem="j1D-UJ-z9P" secondAttribute="centerX" id="mrq-1a-nNg"/>
                         </constraints>
+>>>>>>> NewAutoLayout
                     </view>
                     <navigationItem key="navigationItem" id="0gO-fE-aAz">
                         <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" image="Menu 3 Lines.png" id="nkn-JN-dts">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                         <view key="titleView" contentMode="scaleToFill" id="zM4-x6-AMU">
+<<<<<<< HEAD
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+=======
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
+>>>>>>> NewAutoLayout
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cza-Iz-NDi">
@@ -139,16 +158,15 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="SzZ-FG-SFQ">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="TVW-bE-FBW" kind="show" id="8xQ-Gn-084"/>
+                                <segue destination="TVW-bE-FBW" kind="show" id="eT7-Kf-cQh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -159,7 +177,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7zs-Pe-0Y0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="445.60000000000002" y="188.45577211394306"/>
+            <point key="canvasLocation" x="257" y="125"/>
         </scene>
         <!--Item Detail View Controller-->
         <scene sceneID="QlN-tO-V4e">
@@ -173,6 +191,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ffj-sD-jhS">
                                 <rect key="frame" x="16" y="72" width="343" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -213,6 +232,16 @@
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veq-q9-LqU">
+                                <rect key="frame" x="16" y="252" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+=======
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qK-QB-Sff">
+                                <rect key="frame" x="21" y="214" width="335" height="18"/>
+>>>>>>> NewAutoLayout
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="veq-q9-LqU">
                                 <rect key="frame" x="21" y="244" width="302" height="18"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
@@ -229,7 +258,11 @@
                                 <rect key="frame" x="21" y="674" width="373" height="42"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
                                 <state key="normal" title="Add to cart">
+<<<<<<< HEAD
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+=======
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+>>>>>>> NewAutoLayout
                                 </state>
                                 <connections>
                                     <action selector="addToCartButton:" destination="GBd-nA-ZSW" eventType="touchUpInside" id="pyZ-Wy-pIl"/>
@@ -293,6 +326,8 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<<<<<<< HEAD
+=======
                         <constraints>
                             <constraint firstItem="MJv-CG-dM7" firstAttribute="width" secondItem="Ku7-yo-U3P" secondAttribute="width" multiplier="0.9" id="1fD-Iu-S4W"/>
                             <constraint firstItem="veq-q9-LqU" firstAttribute="top" secondItem="5qK-QB-Sff" secondAttribute="bottom" constant="11.666666666666657" id="5Zb-jn-qvi"/>
@@ -317,11 +352,16 @@
                             <constraint firstItem="rGz-eR-E0E" firstAttribute="top" secondItem="umq-gY-dft" secondAttribute="bottom" constant="8" id="ubj-Xl-Dhz"/>
                             <constraint firstItem="7GR-eR-GAI" firstAttribute="top" secondItem="MJv-CG-dM7" secondAttribute="bottom" constant="30" id="zq7-WY-lcJ"/>
                         </constraints>
+>>>>>>> NewAutoLayout
                     </view>
                     <navigationItem key="navigationItem" id="1AW-Cc-ywp">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="Um0-Xu-YqZ">
+<<<<<<< HEAD
+                            <rect key="frame" x="113" y="6" width="150" height="33"/>
+=======
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
+>>>>>>> NewAutoLayout
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hO0-Rj-RwB">
@@ -334,7 +374,6 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -358,7 +397,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ntp-hE-06H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1049" y="108"/>
+=======
             <point key="canvasLocation" x="1320.289855072464" y="562.5"/>
+>>>>>>> NewAutoLayout
         </scene>
         <!--Shopping Cart View Controller-->
         <scene sceneID="YQL-oo-Rtl">
@@ -372,15 +415,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+<<<<<<< HEAD
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-Vf-mxr">
+                                <rect key="frame" x="0.0" y="110" width="375" height="507"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+=======
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="117" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1vs-Vf-mxr">
                                 <rect key="frame" x="0.0" y="107" width="414" height="571"/>
+>>>>>>> NewAutoLayout
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ShoppingCartCell" rowHeight="120" id="b71-xP-aDU" customClass="ShoppingCartCellTableViewCell" customModule="ProjectThree" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="120"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b71-xP-aDU" id="q7C-sx-jXK">
+<<<<<<< HEAD
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="119"/>
+=======
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="119"/>
+>>>>>>> NewAutoLayout
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lumber Placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="tud-ux-w92">
@@ -394,8 +447,13 @@
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+<<<<<<< HEAD
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-AC-qYV">
+                                                    <rect key="frame" x="131" y="28" width="236" height="18"/>
+=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-AC-qYV">
                                                     <rect key="frame" x="131" y="28" width="275" height="18"/>
+>>>>>>> NewAutoLayout
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -404,8 +462,13 @@
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+<<<<<<< HEAD
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-zL-Xht">
+                                                    <rect key="frame" x="131" y="61" width="236" height="21"/>
+=======
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-zL-Xht">
                                                     <rect key="frame" x="131" y="59" width="275" height="18"/>
+>>>>>>> NewAutoLayout
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -446,8 +509,14 @@
                                     <outlet property="delegate" destination="TVW-bE-FBW" id="lc7-63-LlH"/>
                                 </connections>
                             </tableView>
+<<<<<<< HEAD
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cart Subtotal: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-ju-0f3">
+                                <rect key="frame" x="16" y="81" width="136" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+=======
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart Subtotal: $###.##" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJv-ju-0f3">
                                 <rect key="frame" x="0.0" y="81" width="414" height="18"/>
+>>>>>>> NewAutoLayout
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -456,7 +525,11 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
                                 <state key="normal" title="CHECKOUT">
+<<<<<<< HEAD
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+=======
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+>>>>>>> NewAutoLayout
                                 </state>
                                 <connections>
                                     <segue destination="7Qx-cK-kWR" kind="show" id="87O-Yq-I4u"/>
@@ -478,6 +551,8 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+<<<<<<< HEAD
+=======
                         <constraints>
                             <constraint firstItem="Ahf-47-xx5" firstAttribute="width" secondItem="MEt-eN-f88" secondAttribute="width" id="1aO-Am-n1k"/>
                             <constraint firstItem="LJv-ju-0f3" firstAttribute="top" secondItem="dMb-fA-7HX" secondAttribute="bottom" constant="17" id="4XR-Fu-XMd"/>
@@ -491,8 +566,9 @@
                             <constraint firstItem="1vs-Vf-mxr" firstAttribute="centerX" secondItem="MEt-eN-f88" secondAttribute="centerX" id="vkU-zK-2X9"/>
                             <constraint firstItem="Ahf-47-xx5" firstAttribute="top" secondItem="1vs-Vf-mxr" secondAttribute="bottom" constant="8" id="zzN-Gj-jEh"/>
                         </constraints>
+>>>>>>> NewAutoLayout
                     </view>
-                    <navigationItem key="navigationItem" id="NFP-ZM-2KL">
+                    <navigationItem key="navigationItem" id="NFP-ZM-2KL" colorLabel="IBBuiltInLabel-Red">
                         <nil key="title"/>
                         <view key="titleView" contentMode="scaleToFill" id="IUa-JV-7F7">
                             <rect key="frame" x="132" y="6" width="150" height="33"/>
@@ -504,11 +580,11 @@
                                     <color key="backgroundColor" red="1" green="0.063857726710000007" blue="0.090119143769999993" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MMc-e5-HQ1">
-                                    <rect key="frame" x="3" y="0.0" width="144" height="33"/>
+                                    <rect key="frame" x="-107" y="0.0" width="359" height="33"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="29"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
@@ -525,7 +601,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6d-a1-w6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+<<<<<<< HEAD
+            <point key="canvasLocation" x="1926" y="125"/>
+=======
             <point key="canvasLocation" x="1320.289855072464" y="-136.95652173913044"/>
+>>>>>>> NewAutoLayout
         </scene>
         <!--Checkout-->
         <scene sceneID="ncp-1E-3jR">
@@ -533,7 +613,7 @@
                 <viewControllerPlaceholder storyboardName="Checkout" id="7Qx-cK-kWR" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qnF-J4-KbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="-136.28185907046478"/>
+            <point key="canvasLocation" x="2501" y="124"/>
         </scene>
     </scenes>
     <resources>
@@ -542,6 +622,10 @@
         <image name="Shopping Cart.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+<<<<<<< HEAD
+        <segue reference="hkb-tv-R9C"/>
+=======
         <segue reference="8xQ-Gn-084"/>
+>>>>>>> NewAutoLayout
     </inferredMetricsTieBreakers>
 </document>

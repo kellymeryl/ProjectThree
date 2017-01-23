@@ -48,8 +48,8 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         } else {
             //error message
         }
-          self.dismiss(animated: true, completion: nil)
-        }
+        self.dismiss(animated: true, completion: nil)
+    }
     
 //MARK: @IBOUTLETS==============================================================
     

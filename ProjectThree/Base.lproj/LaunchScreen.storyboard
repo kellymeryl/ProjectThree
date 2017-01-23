@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Homestead-Display.ttf">
-            <string>Homestead-Display</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
@@ -50,90 +45,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="ded-fg-byk">
-            <objects>
-                <viewController id="LPH-KS-6G6" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="eiQ-sj-SZD"/>
-                        <viewControllerLayoutGuide type="bottom" id="xlS-SI-EUU"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fUI-aP-WRo">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dfd-sZ-OKY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fR-E0-Yia">
-                                        <rect key="frame" x="66.5" y="273" width="242" height="121"/>
-                                        <fontDescription key="fontDescription" name="Homestead-Display" family="Homestead" pointSize="100"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.67468088865280151" green="0.19268791377544403" blue="0.17254166305065155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="8fR-E0-Yia" firstAttribute="centerX" secondItem="Dfd-sZ-OKY" secondAttribute="centerX" id="eE3-tT-RqJ"/>
-                                    <constraint firstItem="8fR-E0-Yia" firstAttribute="centerY" secondItem="Dfd-sZ-OKY" secondAttribute="centerY" id="myo-dC-JBy"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Dfd-sZ-OKY" secondAttribute="trailing" id="6mw-Rd-B4S"/>
-                            <constraint firstItem="Dfd-sZ-OKY" firstAttribute="leading" secondItem="fUI-aP-WRo" secondAttribute="leading" id="OVY-7x-MB9"/>
-                            <constraint firstItem="xlS-SI-EUU" firstAttribute="top" secondItem="Dfd-sZ-OKY" secondAttribute="bottom" id="WdK-Lj-J1U"/>
-                            <constraint firstItem="Dfd-sZ-OKY" firstAttribute="top" secondItem="eiQ-sj-SZD" secondAttribute="bottom" constant="-20" id="kGf-IH-eiP"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3a5-ki-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="776.79999999999995" y="374.66266866566718"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qEo-ZP-r0j">
-            <objects>
-                <viewController id="eEa-Qx-pNl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mue-FS-V9J"/>
-                        <viewControllerLayoutGuide type="bottom" id="swZ-rO-bSe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oyf-Pl-yZS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gvt-Mm-jBR">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FLNL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Seu-4B-yhx">
-                                        <rect key="frame" x="67" y="273" width="242" height="121"/>
-                                        <fontDescription key="fontDescription" name="Homestead-Display" family="Homestead" pointSize="100"/>
-                                        <color key="textColor" red="0.67468088869999998" green="0.1926879138" blue="0.17254166309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="Seu-4B-yhx" firstAttribute="centerY" secondItem="gvt-Mm-jBR" secondAttribute="centerY" id="DR9-wE-BeL"/>
-                                    <constraint firstItem="Seu-4B-yhx" firstAttribute="centerX" secondItem="gvt-Mm-jBR" secondAttribute="centerX" id="Qhv-Qf-2PV"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="gvt-Mm-jBR" firstAttribute="top" secondItem="mue-FS-V9J" secondAttribute="bottom" constant="-20" id="2bO-eL-A31"/>
-                            <constraint firstAttribute="trailing" secondItem="gvt-Mm-jBR" secondAttribute="trailing" id="58v-zl-d6W"/>
-                            <constraint firstItem="gvt-Mm-jBR" firstAttribute="leading" secondItem="oyf-Pl-yZS" secondAttribute="leading" id="NlA-kI-aup"/>
-                            <constraint firstItem="swZ-rO-bSe" firstAttribute="top" secondItem="gvt-Mm-jBR" secondAttribute="bottom" id="rrI-RN-vu2"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Gh-Ev-JCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1534" y="375"/>
         </scene>
     </scenes>
     <resources>
