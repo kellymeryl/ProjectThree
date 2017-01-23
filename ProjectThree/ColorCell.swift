@@ -1,21 +1,16 @@
 //
-//  PreCheckoutTableViewCell.swift
+//  ColorCell.swift
 //  ProjectThree
 //
-//  Created by Dan Hefter on 1/18/17.
+//  Created by Dan Hefter on 1/23/17.
 //  Copyright © 2017 Kelly McNevin. All rights reserved.
 //
 
 import UIKit
 
-class PreCheckoutTableViewCell: UITableViewCell {
+class ColorCell: UITableViewCell {
    
-   @IBOutlet weak var itemImage: UIImageView!
-   @IBOutlet weak var itemName: UILabel!
-   @IBOutlet weak var itemPrice: UILabel!
-   @IBOutlet weak var itemQuantity: UILabel!
-   
-   
+   @IBOutlet weak var itemColor: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

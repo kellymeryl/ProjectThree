@@ -22,15 +22,16 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      print("==============I just loaded!==============")
+
     }
-    
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        FirebaseModel.sharedInstance.observeItems(success: { [weak self]
-            items in
+        FirebaseModel.sharedInstance.observeItems(success: { [weak self] items in
             guard let strongSelf = self else {return}
             strongSelf.vendorsItems = items
         })

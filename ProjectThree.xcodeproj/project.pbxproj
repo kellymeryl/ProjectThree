@@ -14,11 +14,9 @@
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
 		377FE3E31E2ECF3700D2F422 /* NewVendorLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */; };
 		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
-		37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */; };
+		37847AD61E36855300F870AB /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD51E36855300F870AB /* ColorCell.swift */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
-		37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */; };
-		37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
 		5221420B1E29565100170BA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221420A1E29565100170BA7 /* ViewController.swift */; };
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
@@ -43,8 +41,6 @@
 		BAF6E20C1E2B3CE000AD89C2 /* Lumber Placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = BAF6E20B1E2B3CE000AD89C2 /* Lumber Placeholder.png */; };
 		BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */; };
 		BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */; };
-		D5132D741E327D1200F2D646 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5132D731E327D1200F2D646 /* CategoryCell.swift */; };
-		D5EAD34A1E2EBE5B005F42E0 /* VendorUI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */; };
 		D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */; };
 		D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */; };
 		D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */; };
@@ -69,11 +65,9 @@
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
 		377FE3E21E2ECF3700D2F422 /* NewVendorLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewVendorLoginViewController.swift; sourceTree = "<group>"; };
 		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
-		37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DKItemDetailViewController.swift; sourceTree = "<group>"; };
+		37847AD51E36855300F870AB /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
-		37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutViewController.swift; sourceTree = "<group>"; };
-		37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreCheckoutTableViewCell.swift; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		522142081E29565100170BA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5221420A1E29565100170BA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,8 +98,6 @@
 		BAF6E20B1E2B3CE000AD89C2 /* Lumber Placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lumber Placeholder.png"; sourceTree = "<group>"; };
 		BAF6E20D1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		BAF6E20F1E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingCartCellTableViewCell.swift; sourceTree = "<group>"; };
-		D5132D731E327D1200F2D646 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
-		D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorUI.storyboard; sourceTree = "<group>"; };
 		D5EAD34C1E2EC913005F42E0 /* VenderHomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenderHomeVC.swift; sourceTree = "<group>"; };
 		D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNewItemVC.swift; sourceTree = "<group>"; };
 		D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
@@ -178,8 +170,6 @@
 			children = (
 				BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */,
 				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
-				37A2B1441E300F7A006699B4 /* PreCheckoutViewController.swift */,
-				37A2B1461E30101D006699B4 /* PreCheckoutTableViewCell.swift */,
 			);
 			name = "Shopper Cart";
 			sourceTree = "<group>";
@@ -222,7 +212,6 @@
 				522142141E29565100170BA7 /* Info.plist */,
 				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
 				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
-				37847ACD1E3187CE00F870AB /* DKItemDetailViewController.swift */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -279,7 +268,6 @@
 			children = (
 				BA3179B11E2E714B0006D532 /* CustomerUI.storyboard */,
 				37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */,
-				D5EAD3491E2EBE5B005F42E0 /* VendorUI.storyboard */,
 				377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */,
 				52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */,
 				522142111E29565100170BA7 /* LaunchScreen.storyboard */,
@@ -296,7 +284,7 @@
 				D5EAD34E1E2EC948005F42E0 /* AddNewItemVC.swift */,
 				D5EAD3541E2EE662005F42E0 /* PhotoCell.swift */,
 				D5EAD4051E314896005F42E0 /* ItemCell.swift */,
-				D5132D731E327D1200F2D646 /* CategoryCell.swift */,
+				37847AD51E36855300F870AB /* ColorCell.swift */,
 			);
 			name = "Vendor Logic";
 			sourceTree = "<group>";
@@ -395,7 +383,6 @@
 				52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */,
 				377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */,
 				BAF6E20C1E2B3CE000AD89C2 /* Lumber Placeholder.png in Resources */,
-				D5EAD34A1E2EBE5B005F42E0 /* VendorUI.storyboard in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
 				BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */,
 				377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */,
@@ -468,24 +455,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37847ACE1E3187CE00F870AB /* DKItemDetailViewController.swift in Sources */,
 				377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
-				D5132D741E327D1200F2D646 /* CategoryCell.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
 				52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
 				52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */,
 				377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */,
+				37847AD61E36855300F870AB /* ColorCell.swift in Sources */,
 				BAF6E20E1E2B3D2B00AD89C2 /* ShoppingCartViewController.swift in Sources */,
 				BAF6E2101E2B3E8D00AD89C2 /* ShoppingCartCellTableViewCell.swift in Sources */,
 				D5EAD34D1E2EC913005F42E0 /* VenderHomeVC.swift in Sources */,
 				BA3179A11E2D7F540006D532 /* AllItemsCollectionViewCell.swift in Sources */,
 				37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */,
-				37A2B1451E300F7A006699B4 /* PreCheckoutViewController.swift in Sources */,
 				D5EAD34F1E2EC948005F42E0 /* AddNewItemVC.swift in Sources */,
 				BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */,
-				37A2B1471E30101D006699B4 /* PreCheckoutTableViewCell.swift in Sources */,
 				BA3179AC1E2DD38C0006D532 /* CheckoutViewController.swift in Sources */,
 				D5EAD3551E2EE662005F42E0 /* PhotoCell.swift in Sources */,
 				D5EAD4061E314896005F42E0 /* ItemCell.swift in Sources */,

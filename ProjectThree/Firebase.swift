@@ -44,7 +44,7 @@ class FirebaseModel {
     //Change inputs to Item properties
     
     
-    func addItem(name: String, description:String, color: String, price: String, imageURL: String) {
+   func addItem(name: String, description:String, color: String, price: String, imageURLs: [String]) {
         let itemRef = FIRDatabase.database().reference(withPath: "item")
         let itemChild = itemRef.childByAutoId()
         let itemName = itemChild.child("name")
@@ -57,8 +57,10 @@ class FirebaseModel {
         itemPrice.setValue(price)
         let vendor = itemChild.child("vendor")
         vendor.setValue(FIRAuth.auth()?.currentUser?.uid)
-        let imageURLs = itemChild.child("imageURLs")
-        imageURLs.setValue(imageURL)
+        let itemImageURLs = itemChild.child("imageURLs")
+        itemImageURLs.setValue(imageURLs)
+      let itemSizes = itemChild.child("sizes")
+      itemSizes.setValue(["small", "medium", "large", "x-large"])
     }
     
     
@@ -284,10 +286,17 @@ class FirebaseModel {
     }
     
     
-    func login(email: String, password: String, complete: @escaping (Bool)->()) {
+   func login(email: String, password: String, viewController: UIViewController, complete: @escaping (Bool)->()) {
         
         FIRAuth.auth()?.signIn(withEmail: email, password: password) { user, error in
-            complete(user != nil)
+         if user == nil {
+               let alertController = UIAlertController(title: "Error", message: "Username/Password Not Recognized", preferredStyle: .alert)
+               
+               let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+               alertController.addAction(defaultAction)
+               
+               viewController.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     

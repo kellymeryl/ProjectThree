@@ -22,11 +22,11 @@ extension CartItem {
     }
     
   func updateWithFirebaseCartItem(firebaseCartItem: Item) {
-        self.category = firebaseCartItem.category
+        self.category = firebaseCartItem.color
         self.desc = firebaseCartItem.description
         self.name = firebaseCartItem.name
        // self.price = firebaseCartItem.price
-        self.size = firebaseCartItem.size
+        //self.size = firebaseCartItem.size
     }
     
 }

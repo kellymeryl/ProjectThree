@@ -15,16 +15,10 @@ class ConsumerLogInViewController: UIViewController {
     
     @IBAction func signInButtonWasTapped(_ sender: Any) {
       
-      FirebaseModel.sharedInstance.login(email: userUserNameTextField.text!, password: userPasswordTextField.text!, complete: { success in
-         
-            if success {
+      FirebaseModel.sharedInstance.login(email: userUserNameTextField.text!, password: userPasswordTextField.text!, viewController: self, complete: { [weak self] success in
+         guard let strongSelf = self else {return}
             print("success")
-            } else {
-            let alertController = UIAlertController(title: "Error", message: "Please enter a valid Email or Password", preferredStyle: .alert)
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            self.present(alertController, animated: true, completion: nil)
-            }})
+            })
     }
     
     @IBAction func doesntHaveAccountWasTapped(_ sender: Any) {

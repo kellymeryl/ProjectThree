@@ -110,21 +110,23 @@ struct ShippingInformation {
 struct Item {
    
    var name: String
-   var category: String
-   var size: String
+   var color: String
    var price: String
+   var size: [String] = [String]()
    var image: [UIImage] = [UIImage]()
    var description: String
+   var imageURLs: [String] = [String]()
    var vendor: String?
    var uID: String?
    var reference: FIRDatabaseReference?
    
-   init(name:String, category:String, size:String, price:String, image:[UIImage], description:String) {
+   init(name:String, color:String, price:String, image:[UIImage], description:String, size: [String], imageURLs:[String]) {
       self.name = name
-      self.category = category
-      self.size = size
+      self.color = color
       self.price = price
       self.image = image
+      self.size = size
+      self.imageURLs = imageURLs
       self.description = description
    }
    
@@ -132,14 +134,16 @@ struct Item {
    init(snapshot: FIRDataSnapshot) {
       let itemName = snapshot.childSnapshot(forPath: "name")
       name = itemName.value as! String
-      let itemCategory = snapshot.childSnapshot(forPath: "category")
-      category = itemCategory.value as! String
-      let itemSize = snapshot.childSnapshot(forPath: "size")
-      size = itemSize.value as! String
+      let itemColor = snapshot.childSnapshot(forPath: "color")
+      color = itemColor.value as! String
       let itemPrice = snapshot.childSnapshot(forPath: "price")
       price = itemPrice.value as! String
       let itemDescription = snapshot.childSnapshot(forPath: "description")
       description = itemDescription.value as! String
+      let itemSize = snapshot.childSnapshot(forPath: "size")
+      size = itemSize.value as! [String]
+      let itemImageURLs = snapshot.childSnapshot(forPath: "imageURLs")
+      imageURLs = itemImageURLs.value as! [String]
 
       
       uID = snapshot.key

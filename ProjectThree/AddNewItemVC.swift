@@ -14,6 +14,10 @@ import FirebaseAuth
 class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
      var venderHome: VenderHomeVC!
+   
+   //To be deleted after testing!!
+   var testingImagesURLArray = [String]()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,13 +97,17 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         
         let _ = imageRef.put(uploadData!, metadata: nil, completion: { (metadata, error) in
             let downloadURL = metadata?.downloadURL()?.absoluteString
-            FirebaseModel.sharedInstance.addItem(name: self.nameTextField.text!, description: self.descriptionTextField.text!, color: self.chooseCategoryLbl.text!, price: self.priceTextField.text!, imageURL: downloadURL!)
+         self.testingImagesURLArray.append(downloadURL!)
+         
+         
+         FirebaseModel.sharedInstance.addItem(name: self.nameTextField.text!, description: self.descriptionTextField.text!, color: self.chooseCategoryLbl.text!, price: self.priceTextField.text!, imageURLs: self.testingImagesURLArray)
+         
             
             print("-------------- THIS IS THE URL \(downloadURL) --------------")
             
         })
         }
-    
+   
 
 
     
@@ -122,7 +130,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
 //MARK: TableView Methods and Properties============================================
-    var categories: CategoryCell!
+    var categories: ColorCell!
     var arrayOfColors = ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "White"]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -130,8 +138,8 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CategoryCell
-        cell.categoryLbl.text = arrayOfColors[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! ColorCell
+         cell.itemColor.text = arrayOfColors[indexPath.row]
         
         return cell
     }
