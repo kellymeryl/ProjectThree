@@ -40,10 +40,12 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     var arrayOfItemPictures = [UIImage]()
     var photo: PhotoCell!
     let imagePicker = UIImagePickerController()
+    var pictureSaved: UIImage!
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             arrayOfItemPictures.append(pickedImage)
+            pictureSaved = pickedImage
             self.imageCollectionViewOutlet.reloadData()
         } else {
             //error message
@@ -82,25 +84,21 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     // ** Need to change placeholder info in price and vendorUID **
     @IBAction func addItemBtn(_ sender: Any) {
         
-        //for image in arrayOfItemPictures {
-            
-        }
+        let imageStorageUID = UUID().uuidString
         
-//      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
-//        
-//        uploadImage()
-//    
-//      
-//    
-//    func uploadImage() {
-//        for image in arrayOfItemPictures {
-//            let randomKey = arc4random()
-//        print(FIRAuth.auth()?.currentUser?.uid)
-//            FirebaseModel.sharedInstance.uploadImageToFirebase(data: UIImagePNGRepresentation(image)!, imageName: "\(randomKey)") {
-//                      FirebaseModel.sharedInstance.addItem(name: nameTextField.text!, description: descriptionTextField.text!, category: (categoryBtn.titleLabel?.text!)!, size: (sizeBtn.titleLabel?.text!)!, price: priceTextField.text!)
-//            }
-//        }
-//    }
+        let uploadData = UIImagePNGRepresentation(self.pictureSaved!)
+        
+        let storageRef = FIRStorage.storage().reference()
+        let imageRef = storageRef.child(imageStorageUID)
+        
+        let _ = imageRef.put(uploadData!, metadata: nil, completion: { (metadata, error) in
+            let downloadURL = metadata?.downloadURL()?.absoluteString
+            FirebaseModel.sharedInstance.addItem(name: self.nameTextField.text!, description: self.descriptionTextField.text!, color: self.chooseCategoryLbl.text!, price: self.priceTextField.text!, imageURL: downloadURL!)
+            
+            print("-------------- THIS IS THE URL \(downloadURL) --------------")
+            
+        })
+        }
     
 
 
