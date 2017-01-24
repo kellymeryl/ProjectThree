@@ -8,7 +8,7 @@
 
 import UIKit
 
-class VendorSignupViewController: UIViewController {
+class VendorSignupViewController: UIViewController, UITextFieldDelegate {
    
    @IBOutlet weak var vendorNameTF: UITextField!
    @IBOutlet weak var vendorEmailTF: UITextField!
@@ -71,10 +71,22 @@ class VendorSignupViewController: UIViewController {
    }
    
    
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      
+      self.view.endEditing(true)
+      return false
+   }
+   
+   
    
    
    override func viewDidLoad() {
       super.viewDidLoad()
+      self.vendorNameTF.delegate = self
+      self.vendorEmailTF.delegate = self
+      self.vendorPasswordTF.delegate = self
+      self.vendorConfirmPasswordTF.delegate = self
+
       
       // Do any additional setup after loading the view.
    }
