@@ -57,12 +57,14 @@ class ItemDetailViewController: UIViewController, UICollectionViewDataSource, UI
    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemDetailCell", for: indexPath) as! ItemDetailCollectionViewCell
-        
+      
+      
+        cell.itemImageURL = self.selectedItem?.imageURLs[indexPath.row]
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return (self.selectedItem?.imageURLs.count)!
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

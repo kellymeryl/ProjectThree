@@ -15,6 +15,7 @@
 		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
 		37847AD61E36855300F870AB /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD51E36855300F870AB /* ColorCell.swift */; };
 		37847AD81E36B6FD00F870AB /* ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD71E36B6FD00F870AB /* ImageFetch.swift */; };
+		37847ADA1E36E66500F870AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37847AD91E36E66500F870AB /* GoogleService-Info.plist */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
@@ -67,6 +68,8 @@
 		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		37847AD51E36855300F870AB /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		37847AD71E36B6FD00F870AB /* ImageFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetch.swift; sourceTree = "<group>"; };
+		37847AD91E36E66500F870AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37847ADB1E36EFB600F870AB /* ProjectThree.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectThree.entitlements; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +206,7 @@
 		522142071E29565100170BA7 /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+				37847ADB1E36EFB600F870AB /* ProjectThree.entitlements */,
 				52A71DAD1E30358F00906D1E /* Core Data Models */,
 				D5EAD34B1E2EBEB5005F42E0 /* Vendor Logic */,
 				377FE3DF1E2EC71100D2F422 /* VendorSignup */,
@@ -345,8 +349,13 @@
 				TargetAttributes = {
 					522142041E29565100170BA7 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = C67VLY25J7;
+						DevelopmentTeam = R92756Z4HH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					522142181E29565200170BA7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -392,6 +401,7 @@
 				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
 				D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */,
+				37847ADA1E36E66500F870AB /* GoogleService-Info.plist in Resources */,
 				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,12 +623,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C67VLY25J7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				CODE_SIGN_ENTITLEMENTS = ProjectThree/ProjectThree.entitlements;
+				DEVELOPMENT_TEAM = R92756Z4HH;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanHefter.GATeamProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -628,12 +639,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = C67VLY25J7;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				CODE_SIGN_ENTITLEMENTS = ProjectThree/ProjectThree.entitlements;
+				DEVELOPMENT_TEAM = R92756Z4HH;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.kelly.ProjectThree;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DanHefter.GATeamProjectThree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
