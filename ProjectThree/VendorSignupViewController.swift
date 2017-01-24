@@ -63,7 +63,7 @@ class VendorSignupViewController: UIViewController {
          self.present(alertController, animated: true, completion: nil)
       } else {
          FirebaseModel.sharedInstance.newVendorSignup(viewController: self, name: vendorNameTF.text!, emailTextField: vendorEmailTF.text!, passwordTextField: vendorPasswordTF.text!, complete: { success in
-            let vendorStoryboard: UIStoryboard = UIStoryboard(name: "VendorUI", bundle: nil)
+            let vendorStoryboard: UIStoryboard = UIStoryboard(name: "Vendor", bundle: nil)
             let vc = vendorStoryboard.instantiateInitialViewController()
             self.present(vc!, animated: true, completion: nil)
          })

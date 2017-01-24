@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1B4C012183FBD985700E8BB4 /* Pods_ProjectThree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB436028EC96F57D5AF58C1A /* Pods_ProjectThree.framework */; };
-		377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */; };
 		377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3D51E2D168500D2F422 /* DataModel.swift */; };
 		377FE3DE1E2EC1EC00D2F422 /* VendorSignup.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */; };
 		377FE3E11E2EC74700D2F422 /* VendorSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */; };
@@ -16,6 +15,7 @@
 		37847ACC1E31718400F870AB /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847ACB1E31718400F870AB /* CoreData.swift */; };
 		37847AD61E36855300F870AB /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD51E36855300F870AB /* ColorCell.swift */; };
 		37847AD81E36B6FD00F870AB /* ImageFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37847AD71E36B6FD00F870AB /* ImageFetch.swift */; };
+		37847ADA1E36E66500F870AB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37847AD91E36E66500F870AB /* GoogleService-Info.plist */; };
 		37A2B13F1E2FE909006699B4 /* Firebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A2B13E1E2FE909006699B4 /* Firebase.swift */; };
 		37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */; };
 		522142091E29565100170BA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522142081E29565100170BA7 /* AppDelegate.swift */; };
@@ -60,7 +60,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		377FE3D51E2D168500D2F422 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		377FE3DD1E2EC1EC00D2F422 /* VendorSignup.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = VendorSignup.storyboard; sourceTree = "<group>"; };
 		377FE3E01E2EC74700D2F422 /* VendorSignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VendorSignupViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +67,8 @@
 		37847ACB1E31718400F870AB /* CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		37847AD51E36855300F870AB /* ColorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		37847AD71E36B6FD00F870AB /* ImageFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageFetch.swift; sourceTree = "<group>"; };
+		37847AD91E36E66500F870AB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		37847ADB1E36EFB600F870AB /* ProjectThree.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectThree.entitlements; sourceTree = "<group>"; };
 		37A2B13E1E2FE909006699B4 /* Firebase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Firebase.swift; sourceTree = "<group>"; };
 		37A2B1421E2FEE9B006699B4 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		522142051E29565100170BA7 /* ProjectThree.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectThree.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +204,7 @@
 		522142071E29565100170BA7 /* ProjectThree */ = {
 			isa = PBXGroup;
 			children = (
+				37847ADB1E36EFB600F870AB /* ProjectThree.entitlements */,
 				52A71DAD1E30358F00906D1E /* Core Data Models */,
 				D5EAD34B1E2EBEB5005F42E0 /* Vendor Logic */,
 				377FE3DF1E2EC71100D2F422 /* VendorSignup */,
@@ -213,7 +215,7 @@
 				377FE3D51E2D168500D2F422 /* DataModel.swift */,
 				522142081E29565100170BA7 /* AppDelegate.swift */,
 				522142141E29565100170BA7 /* Info.plist */,
-				377FE3D31E2D15F200D2F422 /* GoogleService-Info.plist */,
+				37847AD91E36E66500F870AB /* GoogleService-Info.plist */,
 				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
 			);
 			path = ProjectThree;
@@ -347,6 +349,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = R92756Z4HH;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					522142181E29565200170BA7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -384,7 +391,6 @@
 				522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */,
 				522142101E29565100170BA7 /* Assets.xcassets in Resources */,
 				52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */,
-				377FE3D41E2D15F200D2F422 /* GoogleService-Info.plist in Resources */,
 				BAF6E20C1E2B3CE000AD89C2 /* Lumber Placeholder.png in Resources */,
 				BAF6E2021E2ADE0600AD89C2 /* FLNL Background.png in Resources */,
 				BAF6E2081E2B30A400AD89C2 /* Shopping Cart.png in Resources */,
@@ -392,6 +398,7 @@
 				BA3179B21E2E714B0006D532 /* CustomerUI.storyboard in Resources */,
 				BAF6E2061E2AE12F00AD89C2 /* Homestead-Display.ttf in Resources */,
 				D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */,
+				37847ADA1E36E66500F870AB /* GoogleService-Info.plist in Resources */,
 				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -613,7 +620,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F72B93BDCC50A244578B1B12 /* Pods-ProjectThree.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				CODE_SIGN_ENTITLEMENTS = ProjectThree/ProjectThree.entitlements;
 				DEVELOPMENT_TEAM = R92756Z4HH;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
@@ -628,7 +636,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon1;
+				CODE_SIGN_ENTITLEMENTS = ProjectThree/ProjectThree.entitlements;
 				DEVELOPMENT_TEAM = R92756Z4HH;
 				INFOPLIST_FILE = ProjectThree/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.1;

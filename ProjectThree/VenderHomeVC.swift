@@ -35,7 +35,7 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
     }
    
     override func viewDidAppear(_ animated: Bool) {
-      FirebaseModel.sharedInstance.queryItems(searchPath: "item", key: "vendor", valueToSearch: "z7oLKBBeBGb0HScKrRkpIthhv9N2", success: { [weak self] arrayOfItems in
+      FirebaseModel.sharedInstance.queryItems(searchPath: "item", key: "vendor", valueToSearch: (FIRAuth.auth()?.currentUser?.uid)!, success: { [weak self] arrayOfItems in
          guard let strongSelf = self else {return}
          strongSelf.allItemsFromVendor = arrayOfItems
          
@@ -78,4 +78,14 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
 
 
       }
+   
+   
+   @IBAction func unwindFromAddNewItemVCToVendorHomeVC(_ sender: UIStoryboardSegue) {
+      
    }
+   
+   }
+
+
+
+
