@@ -74,6 +74,8 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
             return cell
         }
         else {
+         cell.itemImageURL = self.allItems[indexPath.item]?.imageURLs[0]
+
         
         cell.itemNameLabel.text = allItems[indexPath.item]?.name
         if let price = allItems[indexPath.item]?.price {

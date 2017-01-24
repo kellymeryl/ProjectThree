@@ -39,7 +39,7 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
          guard let strongSelf = self else {return}
          strongSelf.allItemsFromVendor = arrayOfItems
          
-         
+         /*
          for item in arrayOfItems {
             for (index, imageURL) in item.imageURLs.enumerated() {
                FirebaseModel.sharedInstance.downloadImage(name: imageURL, complete: { image in
@@ -54,6 +54,7 @@ class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionView
                })
             }
          }
+         */
       })
     }
     

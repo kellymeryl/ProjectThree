@@ -89,14 +89,6 @@
                                     <outlet property="delegate" destination="vDk-7P-Ts8" id="peU-Zr-lHf"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-hG-XgX">
-                                <rect key="frame" x="164" y="318" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="hgr-9I-LdK" kind="show" id="06v-Qf-c5g"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -149,7 +141,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427-6t-a5X">
                                                     <rect key="frame" x="8" y="8" width="78" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" patternImage="76F00FE2-F7B6-4294-900C-2D2CB1AF38AE" colorSpace="pattern"/>
+                                                    <color key="backgroundColor" patternImage="4256B208-FD7A-48F7-96B8-51CC8D9E8B75" colorSpace="pattern"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -381,7 +373,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="76F00FE2-F7B6-4294-900C-2D2CB1AF38AE" width="640" height="920">
+        <image name="4256B208-FD7A-48F7-96B8-51CC8D9E8B75" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -39710,7 +39702,4 @@ ACP/UQAj/1YAAAAAAAAEAQAAAAAAAABBAAAAAAAAAAAAAAAAACP/WA
 </mutableData>
         </image>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="2Oo-GZ-ckI"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -11,4 +11,10 @@ import UIKit
 class ItemDetailCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var itemImageView: UIImageView!
+   
+   var itemImageURL: String? {
+      didSet {
+         itemImageView.setImageWithURL(urlString: itemImageURL)
+      }
+   }
 }
