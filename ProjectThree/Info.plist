@@ -31,7 +31,6 @@
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
-<<<<<<< HEAD
 	<string>Vendor</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>

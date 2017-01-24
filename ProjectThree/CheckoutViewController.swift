@@ -12,7 +12,6 @@ class CheckoutViewController: UIViewController, UITableViewDataSource, UITableVi
    
     @IBOutlet weak var checkoutTableView: UITableView!
    
-    @IBOutlet weak var shippingNamebLabel: UILabel!
     var cartSubtotal = String()
     var cartItems = CoreDataModel.sharedInstance.cartItems
     var cartSubtotalInt = Double()
