@@ -11,7 +11,7 @@ import Firebase
 import FirebaseStorage
 import FirebaseAuth
 
-class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
    
    var venderHome: VenderHomeVC!
    
@@ -21,6 +21,9 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
    override func viewDidLoad() {
       super.viewDidLoad()
       imagePicker.delegate = self
+      self.nameTextField.delegate = self
+      self.descriptionTextField.delegate = self
+      self.priceTextField.delegate = self
       categoryView.alpha = 0.0
       nameTextField.borderStyle = UITextBorderStyle.bezel
       descriptionTextField.borderStyle = UITextBorderStyle.bezel
@@ -173,6 +176,13 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         }
     }
     }
+   
+   
+   func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+      
+      self.view.endEditing(true)
+      return false
+   }
 
    
    func dismissViewController() {
