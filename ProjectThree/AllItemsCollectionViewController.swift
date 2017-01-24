@@ -11,6 +11,11 @@ import Firebase
 
 
 class AllItemsCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+   
+   @IBAction func shoppingCartPressed(_ sender: Any) {
+      self.performSegue(withIdentifier: "ShopperHomeVCToCartSummary", sender: self)
+   }
+
     
     @IBOutlet weak var allItemsCollection: UICollectionView!
     
@@ -99,10 +104,15 @@ class AllItemsCollectionViewController: UIViewController, UICollectionViewDelega
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+      if segue.identifier == "ShopperHomeVCToCartSummary"{
+      } else {
         let itemDetailViewController = segue.destination as! ItemDetailViewController
         itemDetailViewController.selectedIndex = allItemsCollection.indexPathsForSelectedItems?.first?.item
         itemDetailViewController.selectedItem = allItems[(allItemsCollection.indexPathsForSelectedItems?.first?.item)!]
     }
+   }
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

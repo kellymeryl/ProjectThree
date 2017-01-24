@@ -168,12 +168,16 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
                 }
                 semaphore.wait()
                 FirebaseModel.sharedInstance.addItem(name: strongSelf.nameTextField.text!, description: strongSelf.descriptionTextField.text!, color: strongSelf.itemColorLabel.text!, price: strongSelf.priceTextField.text!, imageURLs: strongSelf.arrayOfURLDownloadStrings)
-                
+                strongSelf.dismissViewController()
             }
         }
     }
     }
 
+   
+   func dismissViewController() {
+      self.performSegue(withIdentifier: "unwindFromAddNewItemVCToVendorHomeVC", sender: self)
+   }
 
    
    
