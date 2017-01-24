@@ -23,7 +23,7 @@
 		522142101E29565100170BA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5221420F1E29565100170BA7 /* Assets.xcassets */; };
 		522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 522142111E29565100170BA7 /* LaunchScreen.storyboard */; };
 		5221421E1E29565200170BA7 /* ProjectThreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5221421D1E29565200170BA7 /* ProjectThreeTests.swift */; };
-		52767EE11E3706F1007D719A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52767EE01E3706F1007D719A /* GoogleService-Info.plist */; };
+		52767EE71E370C7C007D719A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 52767EE61E370C7C007D719A /* GoogleService-Info.plist */; };
 		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
 		52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */; };
 		52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */; };
@@ -81,7 +81,7 @@
 		522142191E29565200170BA7 /* ProjectThreeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectThreeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5221421D1E29565200170BA7 /* ProjectThreeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectThreeTests.swift; sourceTree = "<group>"; };
 		5221421F1E29565200170BA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52767EE01E3706F1007D719A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		52767EE61E370C7C007D719A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		52A6B3CC1E3181B1003FE120 /* CoreDataModel 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataModel 2.xcdatamodel"; sourceTree = "<group>"; };
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
@@ -182,6 +182,7 @@
 		522141FC1E29565100170BA7 = {
 			isa = PBXGroup;
 			children = (
+				52767EE61E370C7C007D719A /* GoogleService-Info.plist */,
 				37847AD71E36B6FD00F870AB /* ImageFetch.swift */,
 				37847ACB1E31718400F870AB /* CoreData.swift */,
 				52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */,
@@ -218,7 +219,6 @@
 				522142081E29565100170BA7 /* AppDelegate.swift */,
 				522142141E29565100170BA7 /* Info.plist */,
 				37A2B13E1E2FE909006699B4 /* Firebase.swift */,
-				52767EE01E3706F1007D719A /* GoogleService-Info.plist */,
 			);
 			path = ProjectThree;
 			sourceTree = "<group>";
@@ -389,7 +389,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52767EE11E3706F1007D719A /* GoogleService-Info.plist in Resources */,
 				BAF6E20A1E2B311F00AD89C2 /* Menu 3 Lines.png in Resources */,
 				522142131E29565100170BA7 /* LaunchScreen.storyboard in Resources */,
 				522142101E29565100170BA7 /* Assets.xcassets in Resources */,
@@ -403,6 +402,7 @@
 				D5EAD4041E312749005F42E0 /* Vendor.storyboard in Resources */,
 				37847ADA1E36E66500F870AB /* GoogleService-Info.plist in Resources */,
 				37A2B1431E2FEE9B006699B4 /* Checkout.storyboard in Resources */,
+				52767EE71E370C7C007D719A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
