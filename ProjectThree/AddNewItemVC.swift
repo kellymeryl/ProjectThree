@@ -125,7 +125,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
-    } else if photo.imageOutlet.image == nil {
+    } else if self.arrayOfItemPictures.count == 0 {
         let alertController = UIAlertController(title: "Error", message: "Please upload an Image", preferredStyle: .alert)
         let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertController.addAction(defaultAction)
