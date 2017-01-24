@@ -41,7 +41,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
    //MARK: ImagePicker Methods and Properties===================================
    
    var arrayOfItemPictures = [UIImage]()
-   var photo: PhotoCell!
+   var photo = PhotoCell()
    let imagePicker = UIImagePickerController()
    var pictureSaved: UIImage!
    
@@ -56,7 +56,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
       self.dismiss(animated: true, completion: nil)
    }
    
-   //MARK: @IBOUTLETS==============================================================
+//MARK: @IBOUTLETS==============================================================
    
    @IBOutlet weak var categoryView: UIView!
    @IBOutlet weak var nameTextField: UITextField!
@@ -67,7 +67,8 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
    @IBOutlet weak var priceTextField: UITextField!
    @IBOutlet weak var addPhotoBtnOutlet: UIButton!
    @IBOutlet weak var categoryTableViewOutlet: UITableView!
-   //MARK: @IBACTIONS===============================================================
+    
+//MARK: @IBACTIONS===============================================================
    
    @IBAction func categoryBtnTapped(_ sender: Any) {
       let alpha: CGFloat = categoryView.alpha == 0.0 ? 2.0 : 0.0
@@ -77,8 +78,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
          self.categoryTableViewOutlet.isHidden = false
       })
    }
-   
-   
+    
    @IBAction func photoBtnTapped(_ sender: Any) {
       imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
       present(imagePicker, animated: true, completion: nil)
@@ -86,7 +86,38 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
    
    // ** Need to change placeholder info in price and vendorUID **
    @IBAction func addItemBtn(_ sender: Any) {
-      
+    
+    if nameTextField.text == "" || nameTextField.text == nil {
+        let alertController = UIAlertController(title: "Error", message: "Please enter a name", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else if descriptionTextField.text == "" || descriptionTextField.text == nil {
+        let alertController = UIAlertController(title: "Error", message: "Please enter a description", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else if priceTextField.text == "" || priceTextField.text == nil {
+        let alertController = UIAlertController(title: "Error", message: "Please enter a price", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else if photo.imageOutlet.image == nil {
+        let alertController = UIAlertController(title: "Error", message: "Please upload an Image", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else if itemColorLabel.text == "Choose a Color" {
+        let alertController = UIAlertController(title: "Error", message: "Please choose a color", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else if Int(priceTextField.text!) == nil {
+        let alertController = UIAlertController(title: "Error", message: "Please enter a numerical price", preferredStyle: .alert)
+        let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
+    } else {
       DispatchQueue.global(qos: .background).async { [weak self] in
          guard let strongSelf = self else {return}
          if strongSelf.arrayOfItemPictures.count > 0 {
@@ -114,11 +145,12 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
             }
             semaphore.wait()
             FirebaseModel.sharedInstance.addItem(name: strongSelf.nameTextField.text!, description: strongSelf.descriptionTextField.text!, color: strongSelf.itemColorLabel.text!, price: strongSelf.priceTextField.text!, imageURLs: strongSelf.arrayOfURLDownloadStrings)
+        
          }
       }
-   }
-   
-   
+    }
+}
+
    
    
    //MARK: CollectionView Methods and Properties========================================
@@ -133,7 +165,7 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
    
    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! PhotoCell
-      imageCell.imageOutlet.image = arrayOfItemPictures[indexPath.row]
+      imageCell.imageOutlet.image = arrayOfItemPictures[indexPath.item]
       
       return imageCell
    }
