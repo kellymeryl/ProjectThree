@@ -27,6 +27,7 @@
 		52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */; };
 		52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DA61E2FFE4400906D1E /* CoreDataModel.xcdatamodeld */; };
 		52A71DCF1E30394B00906D1E /* CoreDataCartModelExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */; };
+		52C8984D1E3716D3009FE7EE /* FinalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8984C1E3716D3009FE7EE /* FinalViewController.swift */; };
 		52D198CA1E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */; };
 		52D198CC1E2EC2C400C166BA /* ConsumerSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */; };
 		BA31799F1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA31799E1E2D7ECB0006D532 /* AllItemsCollectionViewController.swift */; };
@@ -86,6 +87,7 @@
 		52A71DA31E2ED4AB00906D1E /* ConsumerLogInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerLogInViewController.swift; sourceTree = "<group>"; };
 		52A71DA71E2FFE4400906D1E /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		52A71DCE1E30394B00906D1E /* CoreDataCartModelExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCartModelExtensions.swift; sourceTree = "<group>"; };
+		52C8984C1E3716D3009FE7EE /* FinalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewController.swift; sourceTree = "<group>"; };
 		52D198C91E2EC20F00C166BA /* ConsumerSignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConsumerSignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		52D198CB1E2EC2C400C166BA /* ConsumerSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerSignUpViewController.swift; sourceTree = "<group>"; };
 		7EBEBCBDF6F023906E12EA4F /* Pods-ProjectThree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectThree.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjectThree/Pods-ProjectThree.release.xcconfig"; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			children = (
 				BA3179AB1E2DD38C0006D532 /* CheckoutViewController.swift */,
 				BA3179AD1E2DD9AA0006D532 /* CheckoutTableViewCell.swift */,
+				52C8984C1E3716D3009FE7EE /* FinalViewController.swift */,
 			);
 			name = "Shopper Cart";
 			sourceTree = "<group>";
@@ -471,6 +474,7 @@
 				377FE3D61E2D168500D2F422 /* DataModel.swift in Sources */,
 				5221420B1E29565100170BA7 /* ViewController.swift in Sources */,
 				BA3179A81E2DC7A70006D532 /* ItemDetailViewController.swift in Sources */,
+				52C8984D1E3716D3009FE7EE /* FinalViewController.swift in Sources */,
 				52A71DA41E2ED4AB00906D1E /* ConsumerLogInViewController.swift in Sources */,
 				522142091E29565100170BA7 /* AppDelegate.swift in Sources */,
 				52A71DA81E2FFE4400906D1E /* CoreDataModel.xcdatamodeld in Sources */,
