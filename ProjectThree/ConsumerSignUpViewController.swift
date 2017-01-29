@@ -15,6 +15,14 @@ class ConsumerSignUpViewController: UIViewController {
     @IBOutlet weak var consumerEmailTextField: UITextField!
     @IBOutlet weak var consumerPasswordTextField: UITextField!
     @IBOutlet weak var consumerConfirmPasswordTextField: UITextField!
+   
+   @IBAction func shopperSignUpAsVendorPressed(_ sender: Any) {
+      var storyboard: UIStoryboard = UIStoryboard(name: "VendorSignup", bundle: nil)
+      var vc = storyboard.instantiateViewController(withIdentifier: "VendorSignupViewController") as! VendorSignupViewController
+      self.show(vc, sender: self)
+   }
+   
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

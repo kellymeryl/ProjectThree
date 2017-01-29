@@ -24,6 +24,14 @@ class ConsumerLogInViewController: UIViewController {
     @IBAction func doesntHaveAccountWasTapped(_ sender: Any) {
         performSegue(withIdentifier: "unwindFromConsumerLoginVCToConsumerSignUpVC", sender: self)
     }
+   
+   @IBAction func ShopperLoginAsVendorPressed(_ sender: Any) {
+         var storyboard: UIStoryboard = UIStoryboard(name: "VendorSignup", bundle: nil)
+         var vc = storyboard.instantiateViewController(withIdentifier: "NewVendorLoginViewController") as! NewVendorLoginViewController
+         self.show(vc, sender: self)
+      }
+      
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

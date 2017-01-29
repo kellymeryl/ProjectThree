@@ -197,6 +197,7 @@
 				02E4022099F4215E175CC7CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			wrapsLines = 0;
 		};
 		522142061E29565100170BA7 /* Products */ = {
 			isa = PBXGroup;
