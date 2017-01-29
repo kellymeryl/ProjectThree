@@ -79,16 +79,20 @@ class ConsumerSignUpViewController: UIViewController {
         }
         
     }
+
+   @IBAction func shopperPressedSignUpAsVendor(_ sender: Any) {
+      
+      let storyboard = UIStoryboard(name: "VendorSignup", bundle: nil)
+      
+      let initialViewController = storyboard.instantiateViewController(withIdentifier: "VendorSignupViewController")
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
+      
+      appDelegate.window?.rootViewController = initialViewController
+      appDelegate.window?.makeKeyAndVisible()
+   }
    
-    @IBAction func consumerAlreadyAUserButtonWasTapped(_ sender: Any) {
-        //segues to consumer login page
-        
-        
-    }
-    @IBAction func consumerSignUpAsVendorWasTapped(_ sender: Any) {
-        //segues to vendor login page
-        
-    }
+   
     
 
     override func didReceiveMemoryWarning() {

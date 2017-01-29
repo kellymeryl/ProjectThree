@@ -38,9 +38,15 @@ class NewVendorLoginViewController: UIViewController {
    
    @IBAction func vendorLoginAsShopperPressed(_ sender: Any) {
       
-      var storyboard: UIStoryboard = UIStoryboard(name: "ConsumerSignUpStoryboard", bundle: nil)
-      var vc = storyboard.instantiateViewController(withIdentifier: "ConsumerLogInViewController") as! ConsumerLogInViewController
-      self.show(vc, sender: self)
+      
+      let storyboard = UIStoryboard(name: "ConsumerSignUpStoryboard", bundle: nil)
+      
+      let initialViewController = storyboard.instantiateViewController(withIdentifier: "ConsumerLogInViewController")
+      let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
+      
+      appDelegate.window?.rootViewController = initialViewController
+      appDelegate.window?.makeKeyAndVisible()
    }
    
 

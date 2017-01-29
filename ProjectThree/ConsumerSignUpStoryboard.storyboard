@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCN-yb-l7l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="394" y="139"/>
+            <point key="canvasLocation" x="319" y="139"/>
         </scene>
         <!--CustomerLoginViewController-->
         <scene sceneID="VAI-qb-4bO">
@@ -82,8 +82,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="consumerAlreadyAUserButtonWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="025-HH-sv0"/>
-                                    <segue destination="L28-H0-KHS" kind="show" id="gzw-61-kEz"/>
+                                    <segue destination="L28-H0-KHS" kind="show" id="MFD-Nw-ttW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCp-ez-bJ2">
@@ -94,8 +93,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="consumerSignUpAsVendorWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="fzS-Mr-b1A"/>
-                                    <action selector="shopperSignUpAsVendorPressed:" destination="N46-b3-DpR" eventType="touchUpInside" id="q8n-BC-29m"/>
+                                    <action selector="shopperPressedSignUpAsVendor:" destination="N46-b3-DpR" eventType="touchUpInside" id="Wee-e2-kXK"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1S-2f-Pqt">
@@ -198,7 +196,6 @@
                                 </state>
                                 <connections>
                                     <action selector="ShopperLoginAsVendorPressed:" destination="L28-H0-KHS" eventType="touchUpInside" id="H13-4U-ke9"/>
-                                    <action selector="consumerSignUpAsVendorWasTapped:" destination="N46-b3-DpR" eventType="touchUpInside" id="WWO-Fb-bss"/>
                                 </connections>
                             </button>
                         </subviews>

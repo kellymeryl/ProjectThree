@@ -79,21 +79,15 @@ class VendorSignupViewController: UIViewController, UITextFieldDelegate {
    
    
    @IBAction func vendorSignUpAsShopperPressed(_ sender: Any) {
-      //var vc = storyboard.instantiateViewController(withIdentifier: "ConsumerSignUpViewController") as! ConsumerSignUpViewController
-     // self.show(vc, sender: self)
       
-
-       let storyboard = UIStoryboard(name: "ConsumerSignUpStoryboard", bundle: nil)
+      let storyboard = UIStoryboard(name: "ConsumerSignUpStoryboard", bundle: nil)
       
       let initialViewController = storyboard.instantiateViewController(withIdentifier: "ConsumerSignUpViewController")
       let appDelegate = UIApplication.shared.delegate as! AppDelegate
       appDelegate.window = UIWindow(frame: UIScreen.main.bounds)
-
+      
       appDelegate.window?.rootViewController = initialViewController
       appDelegate.window?.makeKeyAndVisible()
-      
-
-      
    }
    
    
@@ -105,7 +99,7 @@ class VendorSignupViewController: UIViewController, UITextFieldDelegate {
       self.vendorEmailTF.delegate = self
       self.vendorPasswordTF.delegate = self
       self.vendorConfirmPasswordTF.delegate = self
-
+      
       
       // Do any additional setup after loading the view.
    }
