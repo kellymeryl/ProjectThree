@@ -31,10 +31,12 @@ class ShoppingCartViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ShoppingCartCell", for: indexPath) as! ShoppingCartCellTableViewCell
         cell.itemNameCart.text = cartItems[indexPath.row].name
-        cell.itemPriceCart.text = cartItems[indexPath.row].price
+      if let price = cartItems[indexPath.row].price {
+         cell.itemPriceCart.text = "\(convertToCurrency(num: price))"
+      }
        // cell.itemCartThumbnail.image = cartItems[indexPath.row].
-        cell.itemSizeCart.text = cartItems[indexPath.row].size
-        cell.itemQuantityCart.text = String(describing: cartItems[indexPath.row].quantity)
+      let quantity = String(describing: cartItems[indexPath.row].quantity)
+        cell.itemQuantityCart.text = "quantity: \(quantity)"
         return cell
     }
     

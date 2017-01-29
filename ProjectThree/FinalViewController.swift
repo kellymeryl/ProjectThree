@@ -9,7 +9,8 @@
 import UIKit
 
 class FinalViewController: UIViewController {
-
+   
+// When a shopper selects to go back to the app home screen we are also clearing their shopping cart from Core Data.
     @IBAction func homeScreenButtonWasTapped(_ sender: Any) {
         
         

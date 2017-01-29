@@ -310,42 +310,26 @@
                                                         <constraint firstAttribute="width" secondItem="tud-ux-w92" secondAttribute="height" multiplier="1:1" id="ptv-SN-5Xa"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj9-xa-HlQ">
-                                                    <rect key="frame" x="131" y="2" width="236" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tj9-xa-HlQ">
+                                                    <rect key="frame" x="131" y="16" width="236" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-AC-qYV">
-                                                    <rect key="frame" x="131" y="28" width="236" height="18"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-AC-qYV">
+                                                    <rect key="frame" x="131" y="50" width="236" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd3-bM-e8w">
-                                                    <rect key="frame" x="131" y="90" width="236" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENn-zL-Xht">
-                                                    <rect key="frame" x="131" y="61" width="236" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vd3-bM-e8w">
+                                                    <rect key="frame" x="131" y="82" width="236" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstItem="ENn-zL-Xht" firstAttribute="top" secondItem="gJ1-AC-qYV" secondAttribute="bottom" constant="13" id="0wh-lf-oRw"/>
-                                                <constraint firstItem="gJ1-AC-qYV" firstAttribute="top" secondItem="tj9-xa-HlQ" secondAttribute="bottom" constant="7.5" id="61G-2v-QeU"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="tj9-xa-HlQ" secondAttribute="trailing" id="6kV-3U-JeX"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="ENn-zL-Xht" secondAttribute="trailing" id="8d5-rv-IPd"/>
-                                                <constraint firstItem="ENn-zL-Xht" firstAttribute="leading" secondItem="tud-ux-w92" secondAttribute="trailing" constant="8" id="Aih-ik-Icx"/>
-                                                <constraint firstItem="gJ1-AC-qYV" firstAttribute="leading" secondItem="tud-ux-w92" secondAttribute="trailing" constant="8" id="Buj-EV-Qwj"/>
-                                                <constraint firstItem="Vd3-bM-e8w" firstAttribute="top" secondItem="ENn-zL-Xht" secondAttribute="bottom" constant="8" id="LXG-DR-UkH"/>
-                                                <constraint firstItem="Vd3-bM-e8w" firstAttribute="leading" secondItem="tud-ux-w92" secondAttribute="trailing" constant="8" id="WF7-my-KD2"/>
-                                                <constraint firstItem="tj9-xa-HlQ" firstAttribute="leading" secondItem="tud-ux-w92" secondAttribute="trailing" constant="8" id="Ylj-BH-nsK"/>
-                                                <constraint firstItem="tj9-xa-HlQ" firstAttribute="top" secondItem="tud-ux-w92" secondAttribute="top" id="Yp4-tu-Skt"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="gJ1-AC-qYV" secondAttribute="trailing" id="byC-cV-KLw"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Vd3-bM-e8w" secondAttribute="trailing" id="gDX-Y1-4hq"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -358,7 +342,6 @@
                                             <outlet property="itemNameCart" destination="tj9-xa-HlQ" id="p4k-im-TO3"/>
                                             <outlet property="itemPriceCart" destination="Vd3-bM-e8w" id="x3I-px-5Fh"/>
                                             <outlet property="itemQuantityCart" destination="gJ1-AC-qYV" id="jUa-5F-Gnh"/>
-                                            <outlet property="itemSizeCart" destination="ENn-zL-Xht" id="KDy-lp-myo"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -424,9 +407,6 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <barButtonItem key="rightBarButtonItem" image="Shopping Cart.png" id="85T-lG-Mgn">
-                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="priceLabel" destination="WN0-zk-HcP" id="qJQ-Zq-aYc"/>
@@ -435,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q6d-a1-w6o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="107"/>
+            <point key="canvasLocation" x="1709.5999999999999" y="106.59670164917542"/>
         </scene>
         <!--Checkout-->
         <scene sceneID="ncp-1E-3jR">
@@ -451,6 +431,6 @@
         <image name="Shopping Cart.png" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="uxW-nN-x9e"/>
+        <segue reference="vNn-Yf-wtg"/>
     </inferredMetricsTieBreakers>
 </document>

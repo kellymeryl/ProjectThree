@@ -253,6 +253,7 @@
                                 </state>
                                 <connections>
                                     <action selector="homeScreenButtonWasTapped:" destination="neA-bw-JUI" eventType="touchUpInside" id="6CF-kh-dhw"/>
+                                    <segue destination="bkE-eT-LwZ" kind="unwind" unwindAction="unwindFromPurchaseConfirmVCToShopperHomeVC:" id="D1C-Se-9k1"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you for shopping with FLNL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Id5-e8-bye">
@@ -289,6 +290,7 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR2-3c-otP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bkE-eT-LwZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2928.8000000000002" y="-136.28185907046478"/>
         </scene>
