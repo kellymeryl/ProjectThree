@@ -178,6 +178,11 @@ class AddNewItemVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     }
     }
    
+   @IBAction func backButtonPressed(_ sender: Any) {
+      self.dismissViewController()
+   }
+   
+   
    
    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
       

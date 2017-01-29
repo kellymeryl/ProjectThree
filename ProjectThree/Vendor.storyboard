@@ -92,14 +92,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Wx9-Xl-ALx"/>
+                    <navigationItem key="navigationItem" id="B6D-CR-Slz"/>
                     <connections>
                         <outlet property="collectionViewOutlet" destination="U7o-Xq-Dbi" id="5oE-yE-DIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0p8-JN-1Bq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320.80000000000001" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1260" y="115.59220389805098"/>
         </scene>
         <!--Add New ItemVC-->
         <scene sceneID="D67-nZ-qrk">
@@ -134,7 +134,7 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="427-6t-a5X">
                                                     <rect key="frame" x="8" y="8" width="78" height="58"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" patternImage="8ED25D00-8EFE-48C3-BEDB-8BC8EC264AB9" colorSpace="pattern"/>
+                                                    <color key="backgroundColor" patternImage="681D524C-DBBD-46FC-A57C-156B161427E1" colorSpace="pattern"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -234,11 +234,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add New Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FiC-cP-MLS">
-                                        <rect key="frame" x="8" y="8" width="359" height="66"/>
+                                        <rect key="frame" x="8" y="19" width="359" height="33"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="25"/>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="25"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xqh-fI-wOH">
+                                        <rect key="frame" x="8" y="52" width="53" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="17"/>
+                                        <state key="normal" title="BACK">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="hgr-9I-LdK" eventType="touchUpInside" id="CMf-7z-XnG"/>
+                                            <segue destination="H2H-aO-MNJ" kind="unwind" unwindAction="unwindFromAddNewItemVCToVendorHomeVC:" id="StG-3t-Q4K"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.77134817838668823" green="0.10765127092599869" blue="0.079600833356380463" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -287,7 +299,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wPF-Kz-yqc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="H2H-aO-MNJ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1141.5999999999999" y="115.59220389805098"/>
+            <point key="canvasLocation" x="2080.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Edit ItemVC-->
         <scene sceneID="o4Q-4C-evF">
@@ -374,11 +386,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yyv-0r-haw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2018" y="116"/>
+            <point key="canvasLocation" x="2956" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>
-        <image name="8ED25D00-8EFE-48C3-BEDB-8BC8EC264AB9" width="640" height="920">
+        <image name="681D524C-DBBD-46FC-A57C-156B161427E1" width="640" height="920">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPT5YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQrLjE3OlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

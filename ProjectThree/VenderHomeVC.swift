@@ -11,8 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class VenderHomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    var tempVenID = "test123"
+   
    
    var allItemsFromVendor = [DataModel.sharedInstance.item] {
         didSet {
