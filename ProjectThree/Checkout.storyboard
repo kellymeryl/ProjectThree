@@ -171,7 +171,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="neA-bw-JUI" kind="show" id="I4c-rt-B8g"/>
+                                    <action selector="confirmPurchasePressed:" destination="b41-DH-Suz" eventType="touchUpInside" id="SYr-XS-lw2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -201,7 +201,8 @@
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="checkoutTableView" destination="jpr-By-rwL" id="jnr-PZ-8G4"/>
+                        <outlet property="checkoutTableView" destination="jpr-By-rwL" id="EKk-y9-WNf"/>
+                        <segue destination="neA-bw-JUI" kind="show" identifier="CheckoutVCToFinalVC" id="gFc-Cg-QG3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJJ-RM-pg9" userLabel="First Responder" sceneMemberID="firstResponder"/>

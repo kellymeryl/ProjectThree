@@ -10,15 +10,27 @@ import UIKit
 
 class CheckoutViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
    
+   var cartSubtotal = String()
+   var cartItems = CoreDataModel.sharedInstance.cartItems
+   var cartSubtotalInt = Double()
+   var cartShippingTotal = Double()
+   var totalBeforeTax = Double()
+   var tax = Double()
+   var orderTotal = Double()
+   
+   // Actions and Outlets
+   
     @IBOutlet weak var checkoutTableView: UITableView!
    
-    var cartSubtotal = String()
-    var cartItems = CoreDataModel.sharedInstance.cartItems
-    var cartSubtotalInt = Double()
-    var cartShippingTotal = Double()
-    var totalBeforeTax = Double()
-    var tax = Double()
-    var orderTotal = Double()
+   @IBAction func confirmPurchasePressed(_ sender: Any) {
+      
+      CoreDataModel.sharedInstance.clearShoppingCart(cart: CoreDataModel.sharedInstance.cartItems)
+      self.performSegue(withIdentifier: "CheckoutVCToFinalVC", sender: self)
+      
+   }
+   
+   
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CheckoutTableViewCell", for: indexPath) as! CheckoutTableViewCell
