@@ -5,9 +5,7 @@ FLNL is an e-commerce marketplace for Lumbersexuals (those who aspire to dress o
 
 
 ##Screenshots
-![Home](Screenshots/FLNL Home Page.png "Home")
-![Cart Subtotal](Screenshots/Cart Subtotal.png "Cart Subtotal")
-![Cart with Core Data](Screenshots/Cart with Core Data.png "Cart with Core Data")
+![Home](Screenshots/FLNL Home Page.png "Home") ![Cart Subtotal](Screenshots/Cart Subtotal.png "Cart Subtotal") ![Cart with Core Data](Screenshots/Cart with Core Data.png "Cart with Core Data")
 ![Item Detail](Screenshots/Item Detail View.png "Item Detail")
 ![Purchase Confirmed](Screenshots/Purchase Confirmed.png "Purchase Confirmed")
 
